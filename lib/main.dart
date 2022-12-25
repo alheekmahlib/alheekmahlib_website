@@ -1,6 +1,10 @@
+import 'package:alheekmahlib_website/cubit/alheekmah_cubit.dart';
+import 'package:alheekmahlib_website/screens/alheekmah_screen.dart';
+import 'package:alheekmahlib_website/shared/widgets/theme_change.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:theme_provider/theme_provider.dart';
 
 void main() {
@@ -129,11 +133,18 @@ class MyApp extends StatelessWidget {
       child: ThemeConsumer(
         child: Builder(
           builder: (themeContext) {
-            return MaterialApp(
-              title: 'AlheekmahLib Website',
-              debugShowCheckedModeBanner: false,
-              theme: ThemeProvider.themeOf(themeContext).data,
-              home: const MyHomePage(title: 'Flutter Demo Home Page'),
+            return MultiBlocProvider(
+              providers: [
+                BlocProvider<AlheekmahCubit>(
+                  create: (BuildContext context) => AlheekmahCubit(),
+                ),
+              ],
+              child: MaterialApp(
+                title: 'AlheekmahLib Website',
+                debugShowCheckedModeBanner: false,
+                theme: ThemeProvider.themeOf(themeContext).data,
+                home: const MyHomePage(title: 'Flutter Demo Home Page'),
+              ),
             );
           }
         ),
@@ -153,21 +164,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool positive = false;
+  int value = 0;
+  bool loading = false;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).primaryColorDark,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
-        ),
-      ),
-    );
+    return AlheekmahScreen();
   }
 }
