@@ -5,16 +5,36 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:theme_provider/theme_provider.dart';
+
+import 'l10n/app_localizations.dart';
 
 void main() {
   runApp(MyApp(theme: ThemeData.light()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   MyApp({super.key,
     required this.theme,});
   final ThemeData theme;
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+
+  static _MyAppState? of(BuildContext context) =>
+      context.findAncestorStateOfType<_MyAppState>();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  Locale? initialLang;
+
+  void setLocale(Locale value) {
+    setState(() {
+      initialLang = value;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -142,6 +162,17 @@ class MyApp extends StatelessWidget {
               child: MaterialApp(
                 title: 'AlheekmahLib Website',
                 debugShowCheckedModeBanner: false,
+                localizationsDelegates: const [
+                  AppLocalizations.delegate,
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate,
+                ],
+                supportedLocales: const [
+                  Locale('ar', 'AE'),
+                  Locale('en', ''),
+                ],
+                locale: initialLang,
                 theme: ThemeProvider.themeOf(themeContext).data,
                 home: const MyHomePage(title: 'Flutter Demo Home Page'),
               ),

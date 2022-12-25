@@ -4,6 +4,7 @@ import '../../shared/widgets/theme_change.dart';
 import '../../shared/widgets/animated_stack.dart';
 import '../azkar/screens/alzkar_view.dart';
 import '../cubit/alheekmah_cubit.dart';
+import 'about_app.dart';
 import 'home_screen.dart';
 
 class AlheekmahScreen extends StatefulWidget {
@@ -25,7 +26,7 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
     const HomeScreen(),
     const HomeScreen(),
     const AzkarView(),
-    const HomeScreen(),
+    const AboutApp(),
   ];
 
   @override

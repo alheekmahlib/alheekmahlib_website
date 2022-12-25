@@ -212,7 +212,7 @@ class _AzkarViewState extends State<AzkarView> {
                         tabs: [
                           Tab(
                             child: Text(
-                              'AppLocalizations.of(context)!.azkar',
+                              AppLocalizations.of(context).azkar,
                               style: TextStyle(
                                 color: Theme.of(context).bottomAppBarColor,
                                 fontFamily: 'kufi',

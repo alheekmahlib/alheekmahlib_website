@@ -64,8 +64,8 @@ abstract class AppLocalizations {
 
   final String localeName;
 
-  static AppLocalizations? of(BuildContext context) {
-    return Localizations.of<AppLocalizations>(context, AppLocalizations);
+  static AppLocalizations of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations)!;
   }
 
   static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
@@ -120,7 +120,7 @@ abstract class AppLocalizations {
   /// note_title
   ///
   /// In en, this message translates to:
-  /// **'Tote Title'**
+  /// **'Title'**
   String get note_title;
 
   /// No description provided for @add_new_note.
@@ -168,7 +168,7 @@ abstract class AppLocalizations {
   /// No description provided for @azkar.
   ///
   /// In en, this message translates to:
-  /// **'Fortress of the Muslim'**
+  /// **'Athkar'**
   String get azkar;
 
   /// No description provided for @qibla.
@@ -222,13 +222,13 @@ abstract class AppLocalizations {
   /// No description provided for @about_app3.
   ///
   /// In en, this message translates to:
-  /// **'◉ Reading in portrait and landscape mode.\n◉ The application facilitates the text search feature in the verses of the Qur\'an through the instant search and display of results with pages in addition to the ability to go to the page.\n◉ Save reading sites so that the reader can save the page and return to it whenever he wants.\n◉ Add notes.\n◉ Listen to the sura of the Qur’an with the reading of the two sheikhs, \"Mahmoud Khalil Al-Hosary, Muhammad Siddiq Al-Minshawi.\".\n◉ The application provides tafseer for each verse.\n◉ Change the interpretation.\n◉ Change the font size of the tafsir.\n◉ Sura list.\n◉ Easily navigate between the sura.\n◉ The application allows reading the rulings of recitations.\n◉ The application features the addition of a complete Hisn Al Muslim and divided according to the adhkar so that the reader can easily navigate between sections.\n◉ Add any section to favorites.\n◉ The application provides the reader with night reading, which stains the background in black and white lines, to give the reader complete comfort when reading in low light environments.'**
+  /// **'◉ This application enables you to read the Quran as if you were reading in the Mus\'haf, and you can read in vertical and horizontal mode.\\n◉ You can also read in variable mode that enables you to zoom in and out as you like.\\n◉ The application has the feature of textual search in the verses of the Qur’an through real-time search and display of results with pages in addition to the possibility of going to the page as needed.\\n◉ Addition to bookmarks so that the reader can save the page and return to it whenever he wants.\\n◉ Addition to notes.\\n◉ Ability to listen to each verse in voice of different readers.\\n◉ The app allows interpretation for each verse, you can change between interpretations, and you can resize the interpretation line.\\n◉ Index of Surahs.\\n◉ Move between Surahs easily.\\n◉ The app lets you read the meaning of stop signs.\\n◉ The application enables you to read the Muslim fortress in full and divided by remembrance so that it is easy for the reader to navigate between sections, and you can add any mention to favorites.\\n◉ The application allows the reader to read to change color patterns, including the dark pattern, which changes the background color in black and white lines to give the reader complete comfort when reading in a low-light atmosphere.'**
   String get about_app3;
 
   /// No description provided for @email.
   ///
   /// In en, this message translates to:
-  /// **'Library communication account :\nalheekmahlib@gmail.com'**
+  /// **'Connect With US'**
   String get email;
 
   /// No description provided for @select_player.
@@ -312,19 +312,19 @@ abstract class AppLocalizations {
   /// No description provided for @green.
   ///
   /// In en, this message translates to:
-  /// **'Green'**
+  /// **'Green Mode'**
   String get green;
 
   /// No description provided for @brown.
   ///
   /// In en, this message translates to:
-  /// **'brown'**
+  /// **'Brown Mode'**
   String get brown;
 
   /// No description provided for @dark.
   ///
   /// In en, this message translates to:
-  /// **'Dark'**
+  /// **'Dark Mode'**
   String get dark;
 
   /// No description provided for @azkarfav.
@@ -336,7 +336,7 @@ abstract class AppLocalizations {
   /// No description provided for @themeTitle.
   ///
   /// In en, this message translates to:
-  /// **'Night reading'**
+  /// **'Choose Appearance'**
   String get themeTitle;
 
   /// No description provided for @sorah.
@@ -438,7 +438,7 @@ abstract class AppLocalizations {
   /// No description provided for @reader1.
   ///
   /// In en, this message translates to:
-  /// **'Mahmoud Khalil Al-Hussary'**
+  /// **'Abdul Basit'**
   String get reader1;
 
   /// No description provided for @reader2.
@@ -450,7 +450,7 @@ abstract class AppLocalizations {
   /// No description provided for @reader3.
   ///
   /// In en, this message translates to:
-  /// **'Mohamed Siddiq El-Minshawi'**
+  /// **'Mahmoud Khalil Al-Hussary'**
   String get reader3;
 
   /// No description provided for @reader4.
@@ -489,7 +489,7 @@ abstract class AppLocalizations {
   /// **'Al Quran (Pages)'**
   String get quranPages;
 
-  /// No description provided for @qurantext.
+  /// No description provided for @quranText.
   ///
   /// In en, this message translates to:
   /// **'Al Quran (Ayah)'**
@@ -504,31 +504,31 @@ abstract class AppLocalizations {
   /// No description provided for @allJuz.
   ///
   /// In en, this message translates to:
-  /// **'Parts of the Qur'an'**
+  /// **'Parts of the Qur\'an'**
   String get allJuz;
 
   /// No description provided for @copyAzkarText.
   ///
   /// In en, this message translates to:
-  /// **'The Azkar has been copied'**
+  /// **'The Azkar has been copied!'**
   String get copyAzkarText;
 
   /// No description provided for @addBookmark.
   ///
   /// In en, this message translates to:
-  /// **'Booknark added'**
+  /// **'Bookmark added!'**
   String get addBookmark;
 
   /// No description provided for @deletedBookmark.
   ///
   /// In en, this message translates to:
-  /// **'Booknark deleted'**
+  /// **'Bookmark deleted!'**
   String get deletedBookmark;
 
   /// No description provided for @fillAllFields.
   ///
   /// In en, this message translates to:
-  /// **'Please fill in the fields'**
+  /// **'Please fill in the fields!'**
   String get fillAllFields;
 
   /// No description provided for @version.
@@ -540,13 +540,13 @@ abstract class AppLocalizations {
   /// No description provided for @share.
   ///
   /// In en, this message translates to:
-  /// **'share'**
+  /// **'Share The App'**
   String get share;
 
   /// No description provided for @facebook.
   ///
   /// In en, this message translates to:
-  /// **'facebook'**
+  /// **'Follow us on Facebook'**
   String get facebook;
 
   /// No description provided for @addZekrBookmark.

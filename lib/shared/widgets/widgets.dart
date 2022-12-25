@@ -106,3 +106,19 @@ void customSnackBar(BuildContext context, String text) {
   );
   ScaffoldMessenger.of(context).showSnackBar(snackBar);
 }
+
+Widget customContainer(BuildContext context, Widget myWidget) {
+  return ClipPath(
+      clipper: const ShapeBorderClipper(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(4)))),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+        decoration: BoxDecoration(
+            color: Theme.of(context).bottomAppBarColor.withOpacity(.2),
+            border: Border.symmetric(
+                vertical: BorderSide(
+                    color: Theme.of(context).bottomAppBarColor, width: 2))),
+        child: myWidget,
+      ));
+}

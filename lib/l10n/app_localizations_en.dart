@@ -68,7 +68,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get about_app2 => 'Among the most important features of the application :';
 
   @override
-  String get about_app3 => '◉ This application enables you to read the Quran as if you were reading in the Mushaf, and you can read in vertical and horizontal mode.\n◉ You can also read in variable mode that enables you to zoom in and out as you like.\n◉ The application has the feature of textual search in the verses of the Qur’an through real-time search and display of results with pages in addition to the possibility of going to the page as needed.\n◉ Addition to bookmarks so that the reader can save the page and return to it whenever he wants.\n◉ Addition to notes.\n◉ Ability to listen to each verse in voice of different readers.\n◉ The app allows interpretation for each verse, you can change between interpretations, and you can resize the interpretation line.\n◉ Index of Surahs.\n◉ Move between Surahs easily.\n◉ The app lets you read the meaning of stop signs.\n◉ The application enables you to read the Muslim fortress in full and divided by remembrance so that it is easy for the reader to navigate between sections, and you can add any mention to favorites.\n◉ The application allows the reader to read to change color patterns, including the dark pattern, which changes the background color in black and white lines to give the reader complete comfort when reading in a low-light atmosphere.';
+  String get about_app3 => '◉ This application enables you to read the Quran as if you were reading in the Mus\'haf, and you can read in vertical and horizontal mode.\\n◉ You can also read in variable mode that enables you to zoom in and out as you like.\\n◉ The application has the feature of textual search in the verses of the Qur’an through real-time search and display of results with pages in addition to the possibility of going to the page as needed.\\n◉ Addition to bookmarks so that the reader can save the page and return to it whenever he wants.\\n◉ Addition to notes.\\n◉ Ability to listen to each verse in voice of different readers.\\n◉ The app allows interpretation for each verse, you can change between interpretations, and you can resize the interpretation line.\\n◉ Index of Surahs.\\n◉ Move between Surahs easily.\\n◉ The app lets you read the meaning of stop signs.\\n◉ The application enables you to read the Muslim fortress in full and divided by remembrance so that it is easy for the reader to navigate between sections, and you can add any mention to favorites.\\n◉ The application allows the reader to read to change color patterns, including the dark pattern, which changes the background color in black and white lines to give the reader complete comfort when reading in a low-light atmosphere.';
 
   @override
   String get email => 'Connect With US';
@@ -209,7 +209,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get tafseer => 'Al Tafseer';
 
   @override
-  String get allJuz => 'Parts of the Quran';
+  String get allJuz => 'Parts of the Qur\'an';
 
   @override
   String get copyAzkarText => 'The Azkar has been copied!';
@@ -227,7 +227,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get version => 'Version';
 
   @override
-  String get share => 'Share the app';
+  String get share => 'Share The App';
 
   @override
   String get facebook => 'Follow us on Facebook';
