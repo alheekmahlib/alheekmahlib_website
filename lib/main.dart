@@ -1,5 +1,6 @@
 import 'package:alheekmahlib_website/cubit/alheekmah_cubit.dart';
 import 'package:alheekmahlib_website/screens/alheekmah_screen.dart';
+import 'package:alheekmahlib_website/screens/home_screen.dart';
 import 'package:alheekmahlib_website/shared/widgets/theme_change.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:theme_provider/theme_provider.dart';
 
+import 'azkar/screens/azkar_item.dart';
 import 'l10n/app_localizations.dart';
 
 void main() {
@@ -174,6 +176,10 @@ class _MyAppState extends State<MyApp> {
                 ],
                 locale: initialLang,
                 theme: ThemeProvider.themeOf(themeContext).data,
+                routes: {
+                  HomeScreen.routeName: (BuildContext context) => HomeScreen(),
+                  AzkarItem.routeName: (BuildContext context) => AzkarItem(azkar: '',),
+                },
                 home: const MyHomePage(title: 'Flutter Demo Home Page'),
               ),
             );

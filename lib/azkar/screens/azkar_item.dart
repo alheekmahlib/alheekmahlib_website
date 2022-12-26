@@ -16,6 +16,7 @@ import '../models/azkar.dart';
 
 class AzkarItem extends StatefulWidget {
   const AzkarItem({Key? key, required this.azkar}) : super(key: key);
+  static const String routeName = '/azkar';
   final String azkar;
 
   static double fontSizeAzkar = 18;

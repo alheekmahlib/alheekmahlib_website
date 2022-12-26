@@ -5,6 +5,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:theme_provider/theme_provider.dart';
 import '../../l10n/app_localizations.dart';
+import '../../shared/widgets/settings_popUp.dart';
 import '../../shared/widgets/widgets.dart';
 import '../models/all_azkar.dart';
 import 'azkar_item.dart';
@@ -164,36 +165,45 @@ class _AzkarViewState extends State<AzkarView> {
                     flexibleSpace: FlexibleSpaceBar(
                       centerTitle: false,
                       titlePadding: const EdgeInsets.only(right: 8.0, left: 80.0),
-                      title: Container(
-                        height: 90,
-                        alignment: Alignment.center,
-                        // margin:
-                        // const EdgeInsets.only(right: 8.0, left: 64.0),
-                        padding:
-                        const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
-                        decoration: BoxDecoration(
-                            color: Theme.of(context)
-                                .bottomAppBarColor
-                                .withOpacity(.2),
-                            border: Border.symmetric(
-                                vertical: BorderSide(
-                                    color: Theme.of(context)
-                                        .bottomAppBarColor,
-                                    width: 2))),
-                        child: Text(
-                          element,
-                          style: TextStyle(
-                            color: ThemeProvider.themeOf(context).id ==
-                                'dark'
-                                ? Colors.white
-                                : Theme.of(context).primaryColor,
-                            fontSize: 10,
-                            height: 1.7,
-                            fontFamily: 'kufi',
-                            fontWeight: FontWeight.w100
+                      title: Row(
+                        children: [
+                          const SizedBox(
+                            width: 100,
+                            height: 100,
+                            child: settingsButton(),
                           ),
-                          textAlign: TextAlign.justify,
-                        ),
+                          Container(
+                            height: 90,
+                            alignment: Alignment.center,
+                            // margin:
+                            // const EdgeInsets.only(right: 8.0, left: 64.0),
+                            padding:
+                            const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
+                            decoration: BoxDecoration(
+                                color: Theme.of(context)
+                                    .bottomAppBarColor
+                                    .withOpacity(.2),
+                                border: Border.symmetric(
+                                    vertical: BorderSide(
+                                        color: Theme.of(context)
+                                            .bottomAppBarColor,
+                                        width: 2))),
+                            child: Text(
+                              element,
+                              style: TextStyle(
+                                color: ThemeProvider.themeOf(context).id ==
+                                    'dark'
+                                    ? Colors.white
+                                    : Theme.of(context).primaryColor,
+                                fontSize: 10,
+                                height: 1.7,
+                                fontFamily: 'kufi',
+                                fontWeight: FontWeight.w100
+                              ),
+                              textAlign: TextAlign.justify,
+                            ),
+                          ),
+                        ],
                       ),
                       background: Opacity(
                         opacity: .05,

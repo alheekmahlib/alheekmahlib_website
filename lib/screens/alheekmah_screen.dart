@@ -23,11 +23,17 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
   }
 
   final pages = [
+    // HomeScreen.routeName,
+    // HomeScreen.routeName,
+    // HomeScreen.routeName,
+    // HomeScreen.routeName,
     const HomeScreen(),
     const HomeScreen(),
     const AzkarView(),
     const AboutApp(),
   ];
+
+
 
   @override
   Widget build(BuildContext context) {
