@@ -26,23 +26,22 @@ class settingsButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(32.0),
+      padding: const EdgeInsets.all(8.0),
       child: GestureDetector(
         onTap: () {
           Navigator.of(context).push(HeroDialogRoute(builder: (context) {
-            return const _settingsPopupCard();
+            return const settingsPopupCard();
           }));
         },
-        child: Hero(
-          tag: _heroAddTodo,
-          createRectTween: (begin, end) {
-            return CustomRectTween(begin: begin!, end: end!);
-          },
-          child: Material(
-            color: Theme.of(context).backgroundColor,
-            elevation: 1,
-            shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
+        child: Container(
+          height: 100,
+          width: 100,
+          color: Theme.of(context).bottomAppBarColor,
+          child: Hero(
+            tag: heroAddTodo,
+            createRectTween: (begin, end) {
+              return CustomRectTween(begin: begin!, end: end!);
+            },
             child: const Icon(
               Icons.settings,
               size: 28,
@@ -55,7 +54,7 @@ class settingsButton extends StatelessWidget {
 }
 
 /// Tag-value used for the add todo popup button.
-const String _heroAddTodo = 'add-todo-hero';
+const String heroAddTodo = 'add-todo-hero';
 
 /// {@template add_todo_popup_card}
 /// Popup card to add a new [Todo]. Should be used in conjuction with
@@ -63,9 +62,9 @@ const String _heroAddTodo = 'add-todo-hero';
 ///
 /// Uses a [Hero] with tag [_heroAddTodo].
 /// {@endtemplate}
-class _settingsPopupCard extends StatelessWidget {
+class settingsPopupCard extends StatelessWidget {
   /// {@macro add_todo_popup_card}
-  const _settingsPopupCard({Key? key}) : super(key: key);
+  const settingsPopupCard({Key? key}) : super(key: key);
 
   _launchEmail() async {
     // ios specification
@@ -92,14 +91,15 @@ class _settingsPopupCard extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Align(
+      alignment: Alignment.topRight,
       child: SizedBox(
         height: MediaQuery.of(context).size.height * 3/4,
         width: 450,
         child: Padding(
-          padding: const EdgeInsets.all(32.0),
+          padding: const EdgeInsets.all(16.0),
           child: Hero(
-            tag: _heroAddTodo,
+            tag: heroAddTodo,
             createRectTween: (begin, end) {
               return CustomRectTween(begin: begin!, end: end!);
             },
@@ -170,6 +170,7 @@ class _settingsPopupCard extends StatelessWidget {
                                       width:
                                       MediaQuery.of(context).size.width,
                                       child: Row(
+                                        mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Container(
                                             height: 20,
@@ -320,6 +321,7 @@ class _settingsPopupCard extends StatelessWidget {
                             customContainer(
                               context,
                               Row(
+                                mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment:
                                 MainAxisAlignment.spaceBetween,
                                 children: [

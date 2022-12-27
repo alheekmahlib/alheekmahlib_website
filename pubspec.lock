@@ -182,6 +182,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.6.5"
+  infinite_carousel:
+    dependency: "direct main"
+    description:
+      name: infinite_carousel
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   intl:
     dependency: "direct main"
     description:

@@ -27,8 +27,8 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
     // HomeScreen.routeName,
     // HomeScreen.routeName,
     // HomeScreen.routeName,
-    const HomeScreen(),
-    const HomeScreen(),
+    HomeScreen(),
+    HomeScreen(),
     const AzkarView(),
     const AboutApp(),
   ];

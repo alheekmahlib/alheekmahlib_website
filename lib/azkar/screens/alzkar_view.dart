@@ -35,7 +35,6 @@ class _AzkarViewState extends State<AzkarView> {
   }
 
   Random rnd = Random();
-
   List<String> zikr = <String>[
     'اللّهُـمَّ بِكَ أَصْـبَحْنا وَبِكَ أَمْسَـينا ، وَبِكَ نَحْـيا وَبِكَ نَمُـوتُ وَإِلَـيْكَ النُّـشُور.',
     'أَصْبَـحْـنا وَأَصْبَـحْ المُـلكُ للهِ رَبِّ العـالَمـين ، اللّهُـمَّ إِنِّـي أسْـأَلُـكَ خَـيْرَ هـذا الـيَوْم ، فَـتْحَهُ ، وَنَصْـرَهُ ، وَنـورَهُ وَبَـرَكَتَـهُ ، وَهُـداهُ ، وَأَعـوذُ بِـكَ مِـنْ شَـرِّ ما فـيهِ وَشَـرِّ ما بَعْـدَه.',
@@ -164,46 +163,37 @@ class _AzkarViewState extends State<AzkarView> {
                     backgroundColor: Theme.of(context).backgroundColor,
                     flexibleSpace: FlexibleSpaceBar(
                       centerTitle: false,
-                      titlePadding: const EdgeInsets.only(right: 8.0, left: 80.0),
-                      title: Row(
-                        children: [
-                          const SizedBox(
-                            width: 100,
-                            height: 100,
-                            child: settingsButton(),
+                      titlePadding: const EdgeInsets.only(right: 80.0, left: 80.0),
+                      title: Container(
+                        height: 90,
+                        alignment: Alignment.center,
+                        // margin:
+                        // const EdgeInsets.only(right: 8.0, left: 64.0),
+                        padding:
+                        const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
+                        decoration: BoxDecoration(
+                            color: Theme.of(context)
+                                .bottomAppBarColor
+                                .withOpacity(.2),
+                            border: Border.symmetric(
+                                vertical: BorderSide(
+                                    color: Theme.of(context)
+                                        .bottomAppBarColor,
+                                    width: 2))),
+                        child: Text(
+                          element,
+                          style: TextStyle(
+                            color: ThemeProvider.themeOf(context).id ==
+                                'dark'
+                                ? Colors.white
+                                : Theme.of(context).primaryColor,
+                            fontSize: 12,
+                            height: 1.7,
+                            fontFamily: 'kufi',
+                            fontWeight: FontWeight.w100
                           ),
-                          Container(
-                            height: 90,
-                            alignment: Alignment.center,
-                            // margin:
-                            // const EdgeInsets.only(right: 8.0, left: 64.0),
-                            padding:
-                            const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
-                            decoration: BoxDecoration(
-                                color: Theme.of(context)
-                                    .bottomAppBarColor
-                                    .withOpacity(.2),
-                                border: Border.symmetric(
-                                    vertical: BorderSide(
-                                        color: Theme.of(context)
-                                            .bottomAppBarColor,
-                                        width: 2))),
-                            child: Text(
-                              element,
-                              style: TextStyle(
-                                color: ThemeProvider.themeOf(context).id ==
-                                    'dark'
-                                    ? Colors.white
-                                    : Theme.of(context).primaryColor,
-                                fontSize: 10,
-                                height: 1.7,
-                                fontFamily: 'kufi',
-                                fontWeight: FontWeight.w100
-                              ),
-                              textAlign: TextAlign.justify,
-                            ),
-                          ),
-                        ],
+                          textAlign: TextAlign.justify,
+                        ),
                       ),
                       background: Opacity(
                         opacity: .05,

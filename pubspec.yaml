@@ -53,6 +53,7 @@ dependencies:
   share_plus: ^6.3.0
   url_launcher: ^6.1.7
   animations: ^2.0.7
+  infinite_carousel: ^1.0.2
 
 
 dev_dependencies:
@@ -82,6 +83,9 @@ flutter:
   assets:
     - assets/svg/
     - assets/images/
+    - assets/lottie/
+    - assets/apps_images/
+    - assets/apps_banner/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

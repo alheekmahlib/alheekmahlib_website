@@ -1,9 +1,12 @@
 library animated_stack;
 
+import 'package:alheekmahlib_website/shared/widgets/settings_popUp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../cubit/alheekmah_cubit.dart';
+import '../custom_rect_tween.dart';
+import '../hero_dialog_route.dart';
 
 
 
@@ -68,24 +71,60 @@ class _AnimatedStackState extends State<AnimatedStack> {
         bottom: false,
         child: Scaffold(
           floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
-          floatingActionButton: Padding(
-            padding: const EdgeInsets.only(top: 16.0),
-            child: FloatingActionButton(
-              elevation: 0,
-              shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(8))),
-              backgroundColor: widget.fabBackgroundColor,
-              onPressed: () => setState(() => AlheekmahCubit.get(context).opened = !AlheekmahCubit.get(context).opened),
-              child: RotateAnimation(
-                opened: widget.animateButton ? AlheekmahCubit.get(context).opened : false,
-                duration: widget.buttonAnimationDuration,
-                child: Icon(
-                  widget.buttonIcon,
-                  color: widget.fabIconColor,
-                ),
-              ),
-            ),
-          ),
+          // floatingActionButton: Padding(
+          //   padding: const EdgeInsets.only(top: 8.0, right: 16.0),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [
+          //       Padding(
+          //         padding: const EdgeInsets.all(16.0),
+          //         child: GestureDetector(
+          //           onTap: () {
+          //             Navigator.of(context).push(HeroDialogRoute(builder: (context) {
+          //               return const settingsPopupCard();
+          //             }));
+          //           },
+          //           child: Container(
+          //             height: 55,
+          //             width: 55,
+          //             decoration: BoxDecoration(
+          //               color: Theme.of(context).bottomAppBarColor,
+          //               borderRadius: BorderRadius.all(
+          //                 Radius.circular(8)
+          //               )
+          //             ),
+          //
+          //             child: Hero(
+          //               tag: heroAddTodo,
+          //               createRectTween: (begin, end) {
+          //                 return CustomRectTween(begin: begin!, end: end!);
+          //               },
+          //               child: const Icon(
+          //                 Icons.settings,
+          //                 size: 28,
+          //               ),
+          //             ),
+          //           ),
+          //         ),
+          //       ),
+          //       FloatingActionButton(
+          //         elevation: 0,
+          //         shape: const RoundedRectangleBorder(
+          //             borderRadius: BorderRadius.all(Radius.circular(8))),
+          //         backgroundColor: widget.fabBackgroundColor,
+          //         onPressed: () => setState(() => AlheekmahCubit.get(context).opened = !AlheekmahCubit.get(context).opened),
+          //         child: RotateAnimation(
+          //           opened: widget.animateButton ? AlheekmahCubit.get(context).opened : false,
+          //           duration: widget.buttonAnimationDuration,
+          //           child: Icon(
+          //             widget.buttonIcon,
+          //             color: widget.fabIconColor,
+          //           ),
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
           body: Stack(
             children: <Widget>[
               Container(
@@ -121,6 +160,65 @@ class _AnimatedStackState extends State<AnimatedStack> {
                 yScale: _yScale,
                 duration: widget.slideAnimationDuration,
                 child: widget.foregroundWidget,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(HeroDialogRoute(builder: (context) {
+                          return const settingsPopupCard();
+                        }));
+                      },
+                      child: Hero(
+                        tag: heroAddTodo,
+                        createRectTween: (begin, end) {
+                          return CustomRectTween(begin: begin!, end: end!);
+                        },
+                        child: Container(
+                          height: 55,
+                          width: 55,
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).backgroundColor,
+                            borderRadius: const BorderRadius.all(
+                                Radius.circular(8)
+                            ),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 1.0,
+                                spreadRadius: 0.0,
+                                offset: Offset(0.0, 0.0), // shadow direction: bottom right
+                              )
+                            ],
+                          ),
+                          child: Icon(
+                            Icons.settings,
+                            size: 28,
+                            color: Theme.of(context).bottomAppBarColor,
+                          ),
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      elevation: 0,
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8))),
+                      backgroundColor: widget.fabBackgroundColor,
+                      onPressed: () => setState(() => AlheekmahCubit.get(context).opened = !AlheekmahCubit.get(context).opened),
+                      child: RotateAnimation(
+                        opened: widget.animateButton ? AlheekmahCubit.get(context).opened : false,
+                        duration: widget.buttonAnimationDuration,
+                        child: Icon(
+                          widget.buttonIcon,
+                          color: widget.fabIconColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
