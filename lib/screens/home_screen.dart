@@ -2,11 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:infinite_carousel/infinite_carousel.dart';
 import 'package:lottie/lottie.dart';
 import 'package:theme_provider/theme_provider.dart';
 
+import '../shared/widgets/quran_app.dart';
 import '../shared/widgets/settings_popUp.dart';
 import '../shared/widgets/widgets.dart';
 
@@ -21,6 +23,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   late InfiniteScrollController _controller;
   int _selectedIndex = 0;
+  double? _itemExtent;
+
+  // Get screen width of viewport.
+  double get screenWidth => MediaQuery.of(context).size.width;
 
 
 
@@ -36,13 +42,11 @@ class _HomeScreenState extends State<HomeScreen> {
     _controller.dispose();
   }
 
-  List<String> quranScreen = [
-    'assets/apps_images/screen 0.jpg',
-    'assets/apps_images/screen 1.jpg',
-    'assets/apps_images/screen 2.jpg',
-    'assets/apps_images/screen 3.jpg',
-    'assets/apps_images/screen 4.jpg',
-  ];
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _itemExtent = screenWidth - 200;
+  }
 
   List<String> banner = [
     'assets/apps_banner/feature_graphic.jpg',
@@ -58,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Center(
             child: Opacity(
-              opacity: .05,
+              opacity: .02,
               child: SvgPicture.asset(
                 'assets/svg/alheekmah_logo.svg',
                 width: MediaQuery.of(context).size.width,
@@ -66,7 +70,25 @@ class _HomeScreenState extends State<HomeScreen> {
                     'dark'
                     ? Colors.white.withOpacity(.2)
                     : Theme.of(context).bottomAppBarColor,
+
               ),
+            ),
+          ),
+          Positioned(
+            top: -190,
+            right: -205,
+            child: Opacity(
+              opacity: .1,
+              child: Lottie.asset('assets/lottie/loading.json',
+                  width: 500),
+              // child: SvgPicture.asset(
+              //   'assets/svg/zakhrafa.svg',
+              //   width: 500,
+              //   color: ThemeProvider.themeOf(context).id ==
+              //       'dark'
+              //       ? Colors.white.withOpacity(.2)
+              //       : Theme.of(context).bottomAppBarColor,
+              // ),
             ),
           ),
           ListView(
@@ -78,63 +100,56 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.only(right: 90.0, left: 90.0, top: 100.0),
                   child: customContainer(
                     context,
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Center(
-                          child: Lottie.asset('assets/lottie/loading.json',
-                              width: 200, height: 200),
-                        ),
-                        Flexible(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SvgPicture.asset(
-                                'assets/svg/alheekmah_logo.svg',
-                                width: 100,
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            'assets/svg/alheekmah_logo.svg',
+                            width: 100,
+                            color: ThemeProvider.themeOf(context).id ==
+                                'dark'
+                                ? Colors.white
+                                : Theme.of(context).bottomAppBarColor,
+
+                          ),
+                          const SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            "مكتبة غير ربحية تختص بعمل التطبيقات الإسلامية.",
+                            style: TextStyle(
                                 color: ThemeProvider.themeOf(context).id ==
                                     'dark'
                                     ? Colors.white
-                                    : Theme.of(context).bottomAppBarColor,
-
-                              ),
-                              const SizedBox(
-                                height: 16,
-                              ),
-                              Text(
-                                "مكتبة غير ربحية تختص بعمل التطبيقات الإسلامية.",
-                                style: TextStyle(
-                                    color: ThemeProvider.themeOf(context).id ==
-                                        'dark'
-                                        ? Colors.white
-                                        : Theme.of(context).primaryColorDark,
-                                    fontFamily: 'kufi',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                              const SizedBox(
-                                height: 16,
-                              ),
-                              Text(
-                                // "مكتبة غير ربحية تختص بعمل التطبيقات الإسلامية.",
-                                "هدفها الأرتقاء بالمسلمين لأعلى درجات الوعي الديني وازالة كل مفاهيم التشوية والتظليل على المسلمين التي تراكمت على مدى عقود.",
-                                style: TextStyle(
-                                    color: ThemeProvider.themeOf(context).id ==
-                                        'dark'
-                                        ? Colors.white
-                                        : Theme.of(context).primaryColorDark,
-                                    fontFamily: 'kufi',
-                                    fontSize: 18
-                                ),
-                                textAlign: TextAlign.justify,
-                              ),
-                            ],
+                                    : Theme.of(context).primaryColorDark,
+                                fontFamily: 'kufi',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              height: 1.5
+                            ),
+                            textAlign: TextAlign.justify,
                           ),
-                        ),
-                      ],
+                          const SizedBox(
+                            height: 16,
+                          ),
+                          Text(
+                            // "مكتبة غير ربحية تختص بعمل التطبيقات الإسلامية.",
+                            "هدفها الأرتقاء بالمسلمين لأعلى درجات الوعي الديني وازالة كل مفاهيم التشوية والتظليل على المسلمين التي تراكمت على مدى عقود.",
+                            style: TextStyle(
+                                color: ThemeProvider.themeOf(context).id ==
+                                    'dark'
+                                    ? Colors.white
+                                    : Theme.of(context).primaryColorDark,
+                                fontFamily: 'kufi',
+                                fontSize: 18,
+                                height: 1.5
+                            ),
+                            textAlign: TextAlign.justify,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -163,12 +178,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Container(
-                height: 450,
+                height: MediaQuery.of(context).size.height / 1/2,
                 color: Theme.of(context).bottomAppBarColor.withOpacity(.2),
                 padding: const EdgeInsets.symmetric(vertical: 8),
                 child: InfiniteCarousel.builder(
                   itemCount: banner.length,
-                  itemExtent: 900,
+                  itemExtent: _itemExtent ?? 40,
                   center: true,
                   anchor: 0.0,
                   velocityFactor: 0.2,
@@ -215,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           topLeft: Radius.circular(12.0)),
                                       color: Theme.of(context).backgroundColor,
                                     ),
-                                    child: quranApp(),
+                                    child: QuranApp(),
                                   ),
                                 ),
                               ),
@@ -225,10 +240,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
-                            boxShadow: kElevationToShadow[2],
+                            // boxShadow: kElevationToShadow[2],
                             image: DecorationImage(
                               image: AssetImage(banner[itemIndex]),
-                              fit: BoxFit.fill,
+                              fit: BoxFit.contain,
+
                             ),
                           ),
                         ),
@@ -243,68 +259,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           )
 
-        ],
-      ),
-    );
-  }
-
-  Widget quranApp() {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      child: ListView(
-        children: [
-          Container(
-            height: 450,
-            color: Theme.of(context).bottomAppBarColor.withOpacity(.2),
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            child: InfiniteCarousel.builder(
-              itemCount: quranScreen.length,
-              itemExtent: 270,
-              center: true,
-              anchor: 0.0,
-              velocityFactor: 0.2,
-              onIndexChanged: (index) {
-                if (_selectedIndex != index) {
-                  setState(() {
-                    _selectedIndex = index;
-                  });
-                }
-              },
-              controller: _controller,
-              axisDirection: Axis.horizontal,
-              scrollBehavior: kIsWeb
-                  ? ScrollConfiguration.of(context).copyWith(
-                dragDevices: {
-                  // Allows to swipe in web browsers
-                  PointerDeviceKind.touch,
-                  PointerDeviceKind.mouse
-                },
-              )
-                  : null,
-              loop: false,
-              itemBuilder: (context, itemIndex, realIndex) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  child: GestureDetector(
-                    onTap: () {
-                      _controller.animateToItem(realIndex);
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        boxShadow: kElevationToShadow[2],
-                        image: DecorationImage(
-                          image: AssetImage(quranScreen[itemIndex]),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
         ],
       ),
     );

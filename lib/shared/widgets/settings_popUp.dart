@@ -92,7 +92,7 @@ class settingsPopupCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.topRight,
+      alignment: Alignment.topLeft,
       child: SizedBox(
         height: MediaQuery.of(context).size.height * 3/4,
         width: 450,

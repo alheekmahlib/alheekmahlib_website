@@ -166,6 +166,21 @@ class _AnimatedStackState extends State<AnimatedStack> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    FloatingActionButton(
+                      elevation: 0,
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8))),
+                      backgroundColor: widget.fabBackgroundColor,
+                      onPressed: () => setState(() => AlheekmahCubit.get(context).opened = !AlheekmahCubit.get(context).opened),
+                      child: RotateAnimation(
+                        opened: widget.animateButton ? AlheekmahCubit.get(context).opened : false,
+                        duration: widget.buttonAnimationDuration,
+                        child: Icon(
+                          widget.buttonIcon,
+                          color: widget.fabIconColor,
+                        ),
+                      ),
+                    ),
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(HeroDialogRoute(builder: (context) {
@@ -199,21 +214,6 @@ class _AnimatedStackState extends State<AnimatedStack> {
                             size: 28,
                             color: Theme.of(context).bottomAppBarColor,
                           ),
-                        ),
-                      ),
-                    ),
-                    FloatingActionButton(
-                      elevation: 0,
-                      shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(8))),
-                      backgroundColor: widget.fabBackgroundColor,
-                      onPressed: () => setState(() => AlheekmahCubit.get(context).opened = !AlheekmahCubit.get(context).opened),
-                      child: RotateAnimation(
-                        opened: widget.animateButton ? AlheekmahCubit.get(context).opened : false,
-                        duration: widget.buttonAnimationDuration,
-                        child: Icon(
-                          widget.buttonIcon,
-                          color: widget.fabIconColor,
                         ),
                       ),
                     ),
