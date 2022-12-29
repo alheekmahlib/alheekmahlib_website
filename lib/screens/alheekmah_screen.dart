@@ -4,6 +4,7 @@ import '../../shared/widgets/theme_change.dart';
 import '../../shared/widgets/animated_stack.dart';
 import '../azkar/screens/alzkar_view.dart';
 import '../cubit/alheekmah_cubit.dart';
+import '../quran_text/sorah_text_screen.dart';
 import 'about_app.dart';
 import 'home_screen.dart';
 
@@ -23,12 +24,9 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
   }
 
   final pages = [
-    // HomeScreen.routeName,
-    // HomeScreen.routeName,
-    // HomeScreen.routeName,
-    // HomeScreen.routeName,
     HomeScreen(),
     HomeScreen(),
+    SorahTextScreen(),
     const AzkarView(),
     const AboutApp(),
   ];
@@ -51,9 +49,35 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
             columnWidget: Column(
               children: [
                 const Padding(
-                  padding: EdgeInsets.only(bottom: 100.0),
+                  padding: EdgeInsets.only(bottom: 20.0),
                   child:
                       SizedBox(height: 150, width: 50, child: MThemeChange()),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: GestureDetector(
+                    child: Container(
+                      height: 50,
+                      width: 50,
+                      padding: const EdgeInsets.all(3),
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).bottomAppBarColor,
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(8))),
+                      child: SvgPicture.asset(
+                        'assets/svg/quran_ic.svg',
+                        color: pageIndex == 0
+                            ? null
+                            : Theme.of(context).backgroundColor,
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        pageIndex = 0;
+                        cubit.opened = !cubit.opened;
+                      });
+                    },
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),

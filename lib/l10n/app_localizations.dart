@@ -572,6 +572,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Last Read'**
   String get lastRead;
+
+  /// No description provided for @appStoreI.
+  ///
+  /// In en, this message translates to:
+  /// **'Download from |App Store| for Iphone'**
+  String get appStoreI;
+
+  /// No description provided for @appStoreD.
+  ///
+  /// In en, this message translates to:
+  /// **'Download from |App Store| for Desktop'**
+  String get appStoreD;
+
+  /// No description provided for @playStore.
+  ///
+  /// In en, this message translates to:
+  /// **'Download from |Google Store|'**
+  String get playStore;
+
+  /// No description provided for @appGallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Download from |App Gallery|'**
+  String get appGallery;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

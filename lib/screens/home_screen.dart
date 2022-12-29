@@ -70,7 +70,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     'dark'
                     ? Colors.white.withOpacity(.2)
                     : Theme.of(context).bottomAppBarColor,
-
               ),
             ),
           ),

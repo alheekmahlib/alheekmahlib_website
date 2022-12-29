@@ -1,5 +1,7 @@
+import 'package:arabic_numbers/arabic_numbers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hijri/hijri_calendar.dart';
 
 import '../../l10n/app_localizations.dart';
 
@@ -121,4 +123,97 @@ Widget customContainer(BuildContext context, Widget myWidget) {
                     color: Theme.of(context).bottomAppBarColor, width: 2))),
         child: myWidget,
       ));
+}
+
+Widget hijriDateLand(BuildContext context) {
+  var _today = HijriCalendar.now();
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      SvgPicture.asset(
+        'assets/svg/hijri_date.svg',
+        height: 32,
+      ),
+      const VerticalDivider(
+        width: 2,
+        thickness: 1,
+        endIndent: 40,
+        indent: 40,
+      ),
+      SvgPicture.asset(
+        'assets/svg/hijri/${_today.hMonth}.svg',
+        color: Theme.of(context).bottomAppBarColor,
+      ),
+      const VerticalDivider(
+        width: 2,
+        thickness: 1,
+        endIndent: 40,
+        indent: 40,
+      ),
+      Text(
+        '${_today.hDay} / ${_today.hYear}',
+        style: TextStyle(
+          fontSize: 14,
+          fontFamily: 'kufi',
+          color: Theme.of(context).bottomAppBarColor,
+        ),
+        textAlign: TextAlign.center,
+      ),
+      const VerticalDivider(
+        width: 2,
+        thickness: 1,
+        endIndent: 40,
+        indent: 40,
+      ),
+    ],
+  );
+}
+
+Widget sorahName(String num, context, Color color) {
+  return SizedBox(
+    width: 140,
+    child: Stack(
+      alignment: Alignment.center,
+      children: [
+        SvgPicture.asset(
+          'assets/svg/Sorah_na_bg.svg',
+          height: 100,
+          width: 100,
+        ),
+        Text(
+          num,
+          style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'naskh',
+              color: color),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget pageNumber(String num, context, Color color) {
+  ArabicNumbers arabicNumber = ArabicNumbers();
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 5),
+    child: Stack(
+      alignment: Alignment.center,
+      children: [
+        SvgPicture.asset(
+          'assets/svg/page_no_bg.svg',
+          height: 50,
+          width: 50,
+        ),
+        Text(
+          arabicNumber.convert(num),
+          style: TextStyle(
+              fontSize: 16,
+              fontFamily: 'kufi',
+              fontWeight: FontWeight.bold,
+              color: color),
+        ),
+      ],
+    ),
+  );
 }

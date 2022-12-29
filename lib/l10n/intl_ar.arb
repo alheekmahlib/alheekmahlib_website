@@ -413,5 +413,25 @@
   "@lastRead": {
     "type": "text",
     "placeholders": {}
+  },
+  "appStoreI": "للتحميل من متجر |App Store| للايفون",
+  "@appStoreI": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreD": "للتحميل من متجر |App Store| لسطح المكتب",
+  "@appStoreD": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "playStore": "للتحميل من متجر |Google Store|",
+  "@playStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appGallery": "للتحميل من متجر |App Gallery|",
+  "@appGallery": {
+    "type": "text",
+    "placeholders": {}
   }
 }

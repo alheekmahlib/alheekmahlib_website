@@ -8,7 +8,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:theme_provider/theme_provider.dart';
-
 import 'azkar/screens/azkar_item.dart';
 import 'l10n/app_localizations.dart';
 

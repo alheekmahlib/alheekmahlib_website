@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:infinite_carousel/infinite_carousel.dart';
 import 'package:theme_provider/theme_provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../l10n/app_localizations.dart';
 
@@ -43,6 +44,41 @@ class _QuranAppState extends State<QuranApp> {
     'assets/apps_images/screen 3.jpg',
     'assets/apps_images/screen 4.jpg',
   ];
+
+  _appStoreI() async {
+    // ios specification
+    String uri = 'https://apps.apple.com/us/app/%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86-%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%D9%85%D9%83%D8%AA%D8%A8%D8%A9-%D8%A7%D9%84%D8%AD%D9%83%D9%85%D8%A9/id1500153222';
+    if (await canLaunchUrl(Uri.parse(uri))) {
+      await launchUrl(Uri.parse(uri));
+    } else {
+      print("No url client found");
+    }
+  }
+  _playStore() async {
+    // ios specification
+    String uri = 'https://play.google.com/store/apps/details?id=com.alheekmah.alquranalkareem.alquranalkareem';
+    if (await canLaunchUrl(Uri.parse(uri))) {
+      await launchUrl(Uri.parse(uri));
+    } else {
+      print("No url client found");
+    }
+  }_appGallery() async {
+    // ios specification
+    String uri = 'https://appgallery.cloud.huawei.com/marketshare/app/C102051725?locale=en_US&source=appshare&subsource=C102051725';
+    if (await canLaunchUrl(Uri.parse(uri))) {
+      await launchUrl(Uri.parse(uri));
+    } else {
+      print("No url client found");
+    }
+  }_appStoreD() async {
+    // ios specification
+    String uri = 'https://apps.apple.com/us/app/%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86-%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85-%D9%85%D9%83%D8%AA%D8%A8%D8%A9-%D8%A7%D9%84%D8%AD%D9%83%D9%85%D8%A9/id1660688066';
+    if (await canLaunchUrl(Uri.parse(uri))) {
+      await launchUrl(Uri.parse(uri));
+    } else {
+      print("No url client found");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -257,6 +293,179 @@ class _QuranAppState extends State<QuranApp> {
                           ),
                         );
                       },
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 16.0,
+                  ),
+                  Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Container(
+                      color: Theme.of(context)
+                          .bottomAppBarColor
+                          .withOpacity(.2),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Container(
+                              decoration: const BoxDecoration(
+                                color: Color(0Xff10c0fa),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(8)
+                                )
+                          ),
+                              child: InkWell(
+                                child: Row(
+                                  children: [
+                                    const Image(
+                                        image: AssetImage(
+                                      'assets/images/app_store.png',
+                                    ),
+                                      height: 30,
+                                    ),
+                                    Container(
+                                      width: 2,
+                                      height: 20,
+                                      margin: const EdgeInsets.symmetric(
+                                          horizontal: 8),
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      AppLocalizations.of(context).appStoreI,
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'kufi',
+                                          fontStyle: FontStyle.italic,
+                                          fontSize: 14),
+                                    ),
+                                  ],
+                                ),
+                                onTap: () {
+                                  _appStoreI();
+                                },
+                              ),
+                            ),
+                            const Divider(),
+                            Container(
+                              decoration: const BoxDecoration(
+                                  color: Color(0Xff5ab963),
+                                  borderRadius: BorderRadius.all(
+                                      Radius.circular(8)
+                                  )
+                              ),
+                              child: InkWell(
+                                child: Row(
+                                  children: [
+                                    const Image(
+                                      image: AssetImage(
+                                        'assets/images/play_store.png',
+                                      ),
+                                      height: 30,
+                                    ),
+                                    Container(
+                                      width: 2,
+                                      height: 20,
+                                      margin: const EdgeInsets.symmetric(
+                                          horizontal: 8),
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      AppLocalizations.of(context).playStore,
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'kufi',
+                                          fontStyle: FontStyle.italic,
+                                          fontSize: 14),
+                                    ),
+                                  ],
+                                ),
+                                onTap: () {
+                                  _playStore();
+                                },
+                              ),
+                            ),
+                            const Divider(),
+                            Container(
+                              decoration: const BoxDecoration(
+                                  color: Color(0Xffeb5d5c),
+                                  borderRadius: BorderRadius.all(
+                                      Radius.circular(8)
+                                  )
+                              ),
+                              child: InkWell(
+                                child: Row(
+                                  children: [
+                                    const Image(
+                                      image: AssetImage(
+                                        'assets/images/app_gallery.png',
+                                      ),
+                                      height: 30,
+                                    ),
+                                    Container(
+                                      width: 2,
+                                      height: 20,
+                                      margin: const EdgeInsets.symmetric(
+                                          horizontal: 8),
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      AppLocalizations.of(context).appGallery,
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'kufi',
+                                          fontStyle: FontStyle.italic,
+                                          fontSize: 14),
+                                    ),
+                                  ],
+                                ),
+                                onTap: () {
+                                  _appGallery();
+                                },
+                              ),
+                            ),
+                            const Divider(),
+                            Container(
+                              decoration: const BoxDecoration(
+                                  color: Color(0Xff10c0fa),
+                                  borderRadius: BorderRadius.all(
+                                      Radius.circular(8)
+                                  )
+                              ),
+                              child: InkWell(
+                                child: Row(
+                                  children: [
+                                    const Image(
+                                      image: AssetImage(
+                                        'assets/images/app_store.png',
+                                      ),
+                                      height: 30,
+                                    ),
+                                    Container(
+                                      width: 2,
+                                      height: 20,
+                                      margin: const EdgeInsets.symmetric(
+                                          horizontal: 8),
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      AppLocalizations.of(context).appStoreD,
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'kufi',
+                                          fontStyle: FontStyle.italic,
+                                          fontSize: 14),
+                                    ),
+                                  ],
+                                ),
+                                onTap: () {
+                                  _appStoreD();
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ],

@@ -243,4 +243,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get lastRead => 'آخر قراءة';
+
+  @override
+  String get appStoreI => 'للتحميل من متجر |App Store| للايفون';
+
+  @override
+  String get appStoreD => 'للتحميل من متجر |App Store| لسطح المكتب';
+
+  @override
+  String get playStore => 'للتحميل من |Google Store|';
+
+  @override
+  String get appGallery => 'للتحميل من |App Gallery|';
 }

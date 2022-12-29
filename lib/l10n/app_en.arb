@@ -413,5 +413,25 @@
   "@lastRead": {
     "type": "text",
     "placeholders": {}
+  },
+  "appStoreI": "Download from |App Store| for Iphone",
+  "@appStoreI": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreD": "Download from |App Store| for Desktop",
+  "@appStoreD": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "playStore": "Download from |Google Store|",
+  "@playStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appGallery": "Download from |App Gallery|",
+  "@appGallery": {
+    "type": "text",
+    "placeholders": {}
   }
 }

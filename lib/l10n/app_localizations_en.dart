@@ -243,4 +243,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get lastRead => 'Last Read';
+
+  @override
+  String get appStoreI => 'Download from |App Store| for Iphone';
+
+  @override
+  String get appStoreD => 'Download from |App Store| for Desktop';
+
+  @override
+  String get playStore => 'Download from |Google Store|';
+
+  @override
+  String get appGallery => 'Download from |App Gallery|';
 }
