@@ -106,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           SvgPicture.asset(
                             'assets/svg/alheekmah_logo.svg',
-                            width: 100,
+                            width: 150,
                             color: ThemeProvider.themeOf(context).id ==
                                 'dark'
                                 ? Colors.white

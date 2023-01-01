@@ -9,6 +9,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:theme_provider/theme_provider.dart';
 import 'azkar/screens/azkar_item.dart';
+import 'books/details.dart';
+import 'books/routing/screenarguments.dart';
 import 'l10n/app_localizations.dart';
 
 void main() {
@@ -178,6 +180,31 @@ class _MyAppState extends State<MyApp> {
                 routes: {
                   HomeScreen.routeName: (BuildContext context) => HomeScreen(),
                   AzkarItem.routeName: (BuildContext context) => AzkarItem(azkar: '',),
+                  DetailsScreen.routeName: (BuildContext context) => DetailsScreen(),
+                },
+                onGenerateRoute: (settings) {
+                  // If you push the PassArguments route
+                  if (settings.name == PassArgumentsScreen.routeName) {
+                    // Cast the arguments to the correct
+                    // type: ScreenArguments.
+                    final args = settings.arguments as ScreenArgument;
+
+                    // Then, extract the required data from
+                    // the arguments and pass the data to the
+                    // correct screen.
+                    return MaterialPageRoute(
+                      builder: (context) {
+                        return PassArgumentsScreen(
+                          title: args.title!,
+                          bookQuoted: args.bookQuoted!,
+                          aboutBook: args.aboutBook!,
+                          bookD: args.bookD!,
+                        );
+                      },
+                    );
+                  }
+                  assert(false, 'Need to implement ${settings.name}');
+                  return null;
                 },
                 home: const MyHomePage(title: 'Flutter Demo Home Page'),
               ),
@@ -207,5 +234,40 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return AlheekmahScreen();
+  }
+}
+
+class PassArgumentsScreen extends StatelessWidget {
+  static const routeName = '/passArguments';
+
+  final String title;
+  final String bookQuoted;
+  final String aboutBook;
+  final String bookD;
+
+  // This Widget accepts the arguments as constructor
+  // parameters. It does not extract the arguments from
+  // the ModalRoute.
+  //
+  // The arguments are extracted by the onGenerateRoute
+  // function provided to the MaterialApp widget.
+  const PassArgumentsScreen({
+    super.key,
+    required this.title,
+    required this.bookQuoted,
+    required this.aboutBook,
+    required this.bookD,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Center(
+        child: Text('message'),
+      ),
+    );
   }
 }

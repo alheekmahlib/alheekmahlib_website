@@ -56,6 +56,9 @@ dependencies:
   infinite_carousel: ^1.0.2
   hijri: ^3.0.0
   arabic_numbers: ^1.0.0
+  sliding_up_panel: ^2.0.0+1
+  auto_size_text: ^3.0.0
+
 
 
 dev_dependencies:
@@ -89,6 +92,7 @@ flutter:
     - assets/images/
     - assets/lottie/
     - assets/json/
+    - assets/json/books/
     - assets/apps_images/
     - assets/apps_banner/
   #   - images/a_dot_ham.jpeg

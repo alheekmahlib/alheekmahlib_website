@@ -1,0 +1,3 @@
+class FontSizeEvent {
+  double? arabicFontSize;
+}

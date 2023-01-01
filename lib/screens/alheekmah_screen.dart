@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../shared/widgets/theme_change.dart';
 import '../../shared/widgets/animated_stack.dart';
 import '../azkar/screens/alzkar_view.dart';
+import '../books/books_page.dart';
 import '../cubit/alheekmah_cubit.dart';
 import '../quran_text/sorah_text_screen.dart';
 import 'about_app.dart';
@@ -25,10 +26,9 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
 
   final pages = [
     HomeScreen(),
-    HomeScreen(),
     SorahTextScreen(),
+    BooksPage(),
     const AzkarView(),
-    const AboutApp(),
   ];
 
 
@@ -92,32 +92,6 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
                               const BorderRadius.all(Radius.circular(8))),
                       child: SvgPicture.asset(
                         'assets/svg/quran_ic.svg',
-                        color: pageIndex == 0
-                            ? null
-                            : Theme.of(context).backgroundColor,
-                      ),
-                    ),
-                    onTap: () {
-                      setState(() {
-                        pageIndex = 0;
-                        cubit.opened = !cubit.opened;
-                      });
-                    },
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: GestureDetector(
-                    child: Container(
-                      height: 50,
-                      width: 50,
-                      padding: const EdgeInsets.all(4),
-                      decoration: BoxDecoration(
-                          color: Theme.of(context).bottomAppBarColor,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(8))),
-                      child: SvgPicture.asset(
-                        'assets/svg/quran_te_ic.svg',
                         color: pageIndex == 1
                             ? null
                             : Theme.of(context).backgroundColor,
@@ -132,18 +106,18 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  padding: const EdgeInsets.symmetric(vertical: 9.0),
                   child: GestureDetector(
                     child: Container(
                       height: 50,
                       width: 50,
-                      padding: const EdgeInsets.all(7),
+                      padding: const EdgeInsets.all(4),
                       decoration: BoxDecoration(
                           color: Theme.of(context).bottomAppBarColor,
                           borderRadius:
                               const BorderRadius.all(Radius.circular(8))),
                       child: SvgPicture.asset(
-                        'assets/svg/azkar.svg',
+                        'assets/svg/thegarlanded.svg',
                         color: pageIndex == 2
                             ? null
                             : Theme.of(context).backgroundColor,
@@ -163,13 +137,13 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
                     child: Container(
                       height: 50,
                       width: 50,
-                      padding: const EdgeInsets.all(4),
+                      padding: const EdgeInsets.all(7),
                       decoration: BoxDecoration(
                           color: Theme.of(context).bottomAppBarColor,
                           borderRadius:
                               const BorderRadius.all(Radius.circular(8))),
                       child: SvgPicture.asset(
-                        'assets/svg/menu_ic.svg',
+                        'assets/svg/azkar.svg',
                         color: pageIndex == 3
                             ? null
                             : Theme.of(context).backgroundColor,
@@ -185,24 +159,34 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
                 ),
               ],
             ),
-            bottomWidget: Padding(
-              padding: const EdgeInsets.only(bottom: 14.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SvgPicture.asset(
-                    'assets/svg/alheekmah_logo.svg',
-                    color: Theme.of(context).canvasColor,
-                    width: 100,
+            bottomWidget: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SvgPicture.asset(
+                  'assets/svg/alheekmah_logo.svg',
+                  color: Theme.of(context).canvasColor,
+                  width: 100,
+                ),
+                // Divider(
+                //   thickness: 2,
+                //   endIndent: 500,
+                //   color: Theme.of(context).canvasColor,
+                // ),
+                Container(
+                  height: 2,
+                  margin: EdgeInsets.only(right: 16, left: MediaQuery.of(context).size.width / 3/4, top: 20),
+                  width: MediaQuery.of(context).size.width,
+                  color: Theme.of(context).canvasColor,
+                ),
+                Text(
+                  'جميع الحقوق محفوظة لمكتبة الحكمة 1444 هـ',
+                  style: TextStyle(
+                      color: Theme.of(context).canvasColor,
+                      fontSize: 12,
+                      fontFamily: 'kufi'
                   ),
-                  Container(
-                    height: 2,
-                    margin: const EdgeInsets.only(right: 16, left: 16, top: 20),
-                    width: MediaQuery.of(context).size.width,
-                    color: Theme.of(context).canvasColor,
-                  )
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],
