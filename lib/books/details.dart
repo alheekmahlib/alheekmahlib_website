@@ -422,6 +422,8 @@ class _DetailsScreenState extends State<DetailsScreen>
     );
   }
 
+  /// تجربة
+
   Widget _floatingCollapsed() {
     return GestureDetector(
       onTap: () {
@@ -507,7 +509,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                                           bottom: 32.0,
                                         ),
                                         child: Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
                                           child: ListView(
                                             children: [
                                               SelectableText(
