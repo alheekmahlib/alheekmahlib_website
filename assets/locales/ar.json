@@ -1,0 +1,185 @@
+{
+  "appName": "مكتبة الحكمة",
+  "@appName": {
+    "description": "The App Name"
+  },
+  "lastRead": "آخر قراءة",
+  "@lastRead": {
+    "description": "The Last Read"
+  },
+  "appLang": "لغة التطبيق",
+  "@appLang": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "البحث",
+  "@search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeTheme": "تغيير النمط",
+  "@changeTheme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "brown": "النمط البني",
+  "@brown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dark": "النمط الغامق",
+  "@dark": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "books": "القلائد",
+  "@books": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home": "الرئيسية",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quran": "القرآن الكريم",
+  "@quran": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readMore": "أقرأ المزيد",
+  "@readMore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readLess": "أقرأ أقل",
+  "@readLess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutBook": "عن الكتاب",
+  "@aboutBook": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "athkar": "الأذكار",
+  "@athkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAzkarText": "تم نسخ الذكر",
+  "@copyAzkarText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_us": "عن التطبيق",
+  "@about_us": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app": "عن التطبيق",
+  "@about_app": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app2": "من اهم مميزات البرنامج :",
+  "@about_app2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutQuranApp3": "◉ يُمَكِنُكَ هذا التطبيق من قراءة القرآن كما لو كنت تقرأ في المصحف، ويمكنك القراءة بالوضع العامودي والأفقي.\n◉ كما يُمْكِنُكَ القراءة بالوضع المتغير الذي يمكنك من تكبير وتصغير كما تريد.\n◉ يحتوي التطبيق على خاصية البحث النصي في آيات القرآن من خلال البحث اللحظي وعرض النتائج مع الصفحات بالإضافة إلى إمكانية الذهاب للصفحة\n◉ إضافة فواصل للقراءة بحيث يتمكن القارئ من حفظ الصفحة والعودة لها متى شاء.\n◉ إضافة ملاحظات.\n◉ الاستماع لكل آية بصوت عدد من القراء.\n◉ يتيح التطبيق التفسير لكل آية، كما يُمْكِنُكَ التغيير بين التفاسير كما يُمْكِنُكَ تغيير حجم خط التفسير.\n◉ فهرس للسور.\n◉ التنقل بين السّور بسهولة.\n◉ يتيح التطبيق قراءة علامات الوقف.\n◉ يُمْكِنُكَ التطبيق من قراءة حصن المسلم كاملًا ومقسم بحسب الأذكار بحيث يسهل على القارئ التنقل بين الأقسام، كما يُمْكِنُكَ إضافة أي ذكر إلى المفضلة.\n◉ يتيح التطبيق للقارئ القراءة تغيير أنماط الألوان ومنها النمط الداكن والذي يغير لون الخلفية باللون الأسود والخطوط البيضاء لتعطي القارئ الراحة التامة عند القراءة في أجواء منخفضة الإضاءة.",
+  "@about_app3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutAzkaryApp3": "◉ يتيح لك هذا التطبيق القابلية لحفظ الأذكار المفضلة لديك في قائمة خاصة، مما يجعلها سهلة الوصول والاستعراض في أي وقت.\n◉ بإمكانك التحكم بحجم الخط وتكبيره أو تصغيره حسب رغبتك للقراءة الأكثر راحة.\n◉ كما يقدم التطبيق ثلاثة أنماط لواجهة المستخدم - الأخضر، الأزرق، والداكن - مما يعطيك القدرة لتخصيص شكل التطبيق وفقا لتفضيلاتك.\n◉ ما يميز \"أذكاري من الكتاب والسنة\" أيضا، هو إمكانية مشاركة الأذكار بسهولة مع الأصدقاء والعائلة.\n◉ يمكنك المشاركة بالنص مباشرة أو بإرسال صورة تحتوي على الذكر، مما يجعل تجربة التواصل والتفاعل مع الآخرين أكثر غنى وعمقا.\n◉ يمكنك تحديد الأوقات التي تفضل فيها قراءة الأذكار، وسوف يقوم التطبيق بتذكيرك في تلك الأوقات بدقة.",
+  "@aboutAzkaryApp3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreI": "للتحميل من متجر |App Store|",
+  "@appStoreI": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "playStore": "للتحميل من متجر |Google Store|",
+  "@playStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appGallery": "للتحميل من متجر |App Gallery|",
+  "@appGallery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreD": "للتحميل من متجر |App Store| لسطح المكتب",
+  "@appStoreD": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete": "حذف",
+  "@delete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dwaaDaily": "دعاء اليوم",
+  "@dwaaDaily": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ourApps": "تطبيقاتنا",
+  "@ourApps": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aya_count": "عدد الايآت",
+  "@aya_count": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAyah": "تم نسخ الآية",
+  "@copyAyah": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "translation": "الترجمة",
+  "@translation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader1": "عبد الباسط عبد الصمد",
+  "@reader1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader2": "محمد صديق المنشاوي",
+  "@reader2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader3": "محمود خليل الحصري",
+  "@reader3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader5": "ماهر المعيقلي",
+  "@reader5": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader6": "سعد الغامدي",
+  "@reader6": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "select_player": "إختر القارئ",
+  "@select_player": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "azkar": "الأذكار",
+  "@azkar": {
+    "type": "text",
+    "placeholders": {}
+  }
+}
