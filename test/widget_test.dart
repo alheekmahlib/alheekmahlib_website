@@ -5,15 +5,17 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+import 'package:alheekmahlib_website/core/utils/helpers/languages/dependency_inj.dart'
+    as dep;
+import 'package:alheekmahlib_website/my_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:alheekmahlib_website/main.dart';
-
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    Map<String, Map<String, String>> languages = await dep.init();
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp(theme: ThemeData.light()));
+    await tester.pumpWidget(MyApp(languages: languages));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

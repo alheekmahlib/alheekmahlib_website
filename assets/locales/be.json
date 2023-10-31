@@ -1,0 +1,166 @@
+{
+  "appName": "আল হেকমাহ লাইব্রেরী",
+  "@appName": {
+    "description": "The App Name"
+  },
+  "lastRead": "শেষ পড়া",
+  "@lastRead": {
+    "description": "The Last Read"
+  },
+  "appLang": "অ্যাপের ভাষা",
+  "@appLang": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "অনুসন্ধান",
+  "@search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeTheme": "থিম পরিবর্তন করুন",
+  "@changeTheme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "brown": "বাদামী মোড",
+  "@brown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dark": "অন্ধকার মোড",
+  "@dark": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "books": "বই",
+  "@books": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home": "হোম",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quran": "কুরআন",
+  "@quran": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readMore": "আরও পড়ুন",
+  "@readMore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readLess": "কম পড়ুন",
+  "@readLess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutBook": "বই কাটুন",
+  "@aboutBook": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dwaaDaily": "দৈনিক প্রার্থনা",
+  "@dwaaDaily": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ourApps": "আমাদের অ্যাপ্লিকেশন",
+  "@ourApps": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aya_count": "আয়াত সংখ্যা",
+  "@aya_count": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAyah": "আয়াতটি অনুলিপি করা হয়েছে",
+  "@copyAyah": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "translation": "অনুবাদ",
+  "@translation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader1": "আব্দুল বাসিত",
+  "@reader1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader2": "মোহাম্মদ সিদ্দিক এল-মিনশাওয়ি",
+  "@reader2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader3": "মাহমুদ খলিল আল হুসারি",
+  "@reader3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader5": "মাহের আল মুয়াইকলি",
+  "@reader5": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader6": "সাদ আল গামদি",
+  "@reader6": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "select_player": "পাঠক নির্বাচিত",
+  "@select_player": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "azkar": "আল আজকার",
+  "@azkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app": "The application of the Qur’an Al Kareem is characterized by its approval of the edition of the King Fahd Complex for Printing the Noble Qur’an in Madinah because of its reliability and mastery.\nThe Quran Al Kareem application is sponsored by the \"Al-Heekmah Library\".\nIt is a well-designed application that allows you to read interactively with the text of the electronic Quran, listen to recitations, study the  Quran Al Kareem and memorize it with ease.",
+  "@about_app": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app2": "অ্যাপ্লিকেশনের সবচেয়ে গুরুত্বপূর্ণ বৈশিষ্ট্যগুলির মধ্যে:",
+  "@about_app2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutQuranApp3": "◉ এই অ্যাপ্লিকেশনটি আপনাকে কোরআন পড়তে সক্ষম করে যেন আপনি মুস'হফে পড়ছেন, এবং আপনি উলম্ব এবং অনুভূমিক মোডে পড়তে পারেন।\n◉ আপনি চাহিলে যেমনটি করে জুম ইন এবং জুম আউট করার জন্য পরিবর্তনশীল মোডে পড়তে পারেন।\n◉ অ্যাপ্লিকেশনটিতে কোরআনের আয়াতগুলির মধ্যে টেক্সট ভিত্তিক অনুসন্ধানের বৈশিষ্ট্য রয়েছে যা প্রকৃত সময়ে অনুসন্ধান এবং ফলাফল প্রদর্শনের সুযোগ সরবরাহ করে পৃষ্ঠাগুলির সাথে সাথে প্রয়োজন অনুযায়ী পৃষ্ঠায় যেতে পারে।\n◉ বুকমার্কের যোগ তাও করা হয়েছে যাতে পাঠক পৃষ্ঠা সংরক্ষণ করতে এবং যখনই চান তখন এটি ফেরত আসতে পারে।\n◉ নোটে যোগ।\n◉ ভিন্ন পাঠকের ভোকে প্রতিটি আয়াত শুনতে সাক্ষী হওয়া।\n◉ অ্যাপটি প্রতিটি আয়াতের জন্য ব্যাখ্যা প্রদান করে, আপনি ব্যাখ্যাগুলির মধ্যে পরিবর্তন করতে পারেন, এবং আপনি ব্যাখ্যা লাইন পুনরায় আকার দিতে পারেন।\n◉ সূরা সূচি।\n◉ সূরা সহজে চলাচল করা।\n◉ অ্যাপটি আপনাকে থামার চিহ্নের অর্থ পড়তে সক্ষম করে।\n◉ অ্যাপ্লিকেশনটি আপনাকে পুরো মুসলিম দুর্গে পড়তে সক্ষম করে এবং স্মরণ দ্বারা বিভক্ত করে যাতে পাঠকের বিভাগের মধ্যে সহজে চলাচল করতে পারে, এবং আপনি পছন্দের জন্য কোনও উল্লেখ যোগ করতে পারেন।\n◉ অ্যাপ্লিকেশনটি পাঠককে রঙ প্যাটার্ন পরিবর্তন করতে পড়তে সক্ষম করে, যার মধ্যে অন্ধকার প্যাটার্ন রয়েছে, যা কম আলোয় পড়া পাঠকের জন্য সম্পূর্ণ সুবিধা প্রদান করার জন্য পটভূমির রঙ কালো এবং সাদা লাইনে পরিবর্তন করে।",
+  "@aboutQuranApp3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutAzkaryApp3": "◉ এই অ্যাপ্লিকেশনটি আপনার প্রিয় অড়িয়াজ সংরক্ষণ করার যোগ্যতা প্রদান করে একটি বিশেষ তালিকায়, যা এটি যেকোন সময় প্রবেশ করতে এবং পর্যালোচনা করতে সহজ করে তোলে।\n◉ আপনি ফন্ট সাইজ নিয়ন্ত্রণ করতে এবং আপনার প্রেফারেন্স অনুযায়ী এটি বাড়ানো বা কমাতে পারেন।\n◉ অ্যাপ্লিকেশনটি ব্যবহারকারী ইন্টারফেসের তিন ধরণের মোড প্রদান করে - সবুজ, নীল এবং অন্ধকার - যা আপনাকে অ্যাপ্লিকেশনের অবরূপ অনুযায়ী সংশোধন করার ক্ষমতা প্রদান করে।\n◉ \"আয়াতের এবং সুন্নাহ থেকে আমার অড়িয়াজ\" একটি অদ্বিতীয় বৈশিষ্ট্য হল, আপনি সহজে বন্ধু এবং পরিবারের সাথে অড়িয়াজ ভাগ করতে পারেন।\n◉ আপনি প্রত্যক্ষ টেক্সট বা অড়িয়াজ সহ একটি চিত্র প্রেরণ করে অন্যের সাথে যোগাযোগ এবং ইন্টারঅ্যাকশনের অভিজ্ঞতা আরও সমৃদ্ধ এবং গভীর করতে পারেন।\n◉ আপনি যে সময় অড়িয়াজ পড়তে চান তা নির্ধারণ করতে পারেন এবং অ্যাপ্লিকেশনটি ঠিক সেই সময়ে আপনাকে স্মরণ করাবে।",
+  "@aboutAzkaryApp3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreI": "আইফোনের জন্য |App Store| থেকে ডাউনলোড করুন",
+  "@appStoreI": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "playStore": "|Google Store| থেকে ডাউনলোড করুন",
+  "@playStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appGallery": "|App Gallery| থেকে ডাউনলোড করুন",
+  "@appGallery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreD": "ডেস্কটপের জন্য |App Store| থেকে ডাউনলোড করুন",
+  "@appStoreD": {
+    "type": "text",
+    "placeholders": {}
+  }
+}
+

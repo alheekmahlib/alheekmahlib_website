@@ -1,0 +1,185 @@
+{
+  "appName": "Al Heekmah Library",
+  "@appName": {
+    "description": "The App Name"
+  },
+  "lastRead": "Last Read",
+  "@lastRead": {
+    "description": "The Last Read"
+  },
+  "appLang": "App Language",
+  "@appLang": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "Search",
+  "@search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeTheme": "Change Theme",
+  "@changeTheme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "brown": "Brown Mode",
+  "@brown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dark": "Dark Mode",
+  "@dark": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "books": "the Garlanded",
+  "@books": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home": "Home",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quran": "Quran",
+  "@quran": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readMore": "Read More",
+  "@readMore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readLess": "Read Less",
+  "@readLess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutBook": "About Book",
+  "@aboutBook": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "athkar": "Athkar",
+  "@athkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAzkarText": "The Azkar has been copied!",
+  "@copyAzkarText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_us": "About App",
+  "@about_us": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app": "The application of the Qur’an Al Kareem is characterized by its approval of the edition of the King Fahd Complex for Printing the Noble Qur’an in Madinah because of its reliability and mastery.\nThe Quran Al Kareem application is sponsored by the \"Al-Heekmah Library\".\nIt is a well-designed application that allows you to read interactively with the text of the electronic Quran, listen to recitations, study the  Quran Al Kareem and memorize it with ease.",
+  "@about_app": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app2": "Among the most important features of the application :",
+  "@about_app2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutQuranApp3": "◉ This application enables you to read the Quran as if you were reading in the Mus'haf, and you can read in vertical and horizontal mode.\n◉ You can also read in variable mode that enables you to zoom in and out as you like.\n◉ The application has the feature of textual search in the verses of the Qur’an through real-time search and display of results with pages in addition to the possibility of going to the page as needed.\n◉ Addition to bookmarks so that the reader can save the page and return to it whenever he wants.\n◉ Addition to notes.\n◉ Ability to listen to each verse in voice of different readers.\n◉ The app allows interpretation for each verse, you can change between interpretations, and you can resize the interpretation line.\n◉ Index of Surahs.\n◉ Move between Surahs easily.\n◉ The app lets you read the meaning of stop signs.\n◉ The application enables you to read the Muslim fortress in full and divided by remembrance so that it is easy for the reader to navigate between sections, and you can add any mention to favorites.\n◉ The application allows the reader to read to change color patterns, including the dark pattern, which changes the background color in black and white lines to give the reader complete comfort when reading in a low-light atmosphere.",
+  "@about_app3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutAzkaryApp3": "◉ This application allows you to save your favorite dhikrs (remembrances) in a special list, making them easily accessible and reviewable at any time.\n◉ You can control the font size and enlarge or reduce it according to your preference for more comfortable reading.\n◉ The application also offers three user interface modes - green, blue, and dark - giving you the ability to customize the app's appearance according to your preferences.\n◉ What distinguishes \"My Dhikr from the Book and Sunnah\" is also the ability to easily share dhikrs with friends and family.\n◉ You can share directly in text or by sending an image containing the dhikr, enriching and deepening the experience of communication and interaction with others.\n◉ You can specify the times you prefer to read the dhikrs, and the application will remind you accurately at those times.",
+  "@aboutAzkaryApp3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreI": "Download from |App Store| for Iphone",
+  "@appStoreI": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "playStore": "Download from |Google Store|",
+  "@playStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appGallery": "Download from |App Gallery|",
+  "@appGallery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreD": "Download from |App Store| for Desktop",
+  "@appStoreD": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete": "Delete",
+  "@delete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dwaaDaily": "Daily Dwaa",
+  "@dwaaDaily": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ourApps": "Our Apps",
+  "@ourApps": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aya_count": "Number of verses",
+  "@aya_count": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAyah": "The verse has been copied",
+  "@copyAyah": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "translation": "The Translation",
+  "@translation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader1": "Abdul Basit",
+  "@reader1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader2": "Mohamed Siddiq El-Minshawi",
+  "@reader2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader3": "Mahmoud Khalil Al-Hussary",
+  "@reader3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader5": "Maher Al Muaiqly",
+  "@reader5": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader6": "Saad Al Ghamdi",
+  "@reader6": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "select_player": "Reader selected",
+  "@select_player": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "azkar": "Al Athkar",
+  "@azkar": {
+    "type": "text",
+    "placeholders": {}
+  }
+}
