@@ -4,13 +4,13 @@ import 'package:get/get.dart';
 import 'package:seo_renderer/helpers/renderer_state.dart';
 import 'package:seo_renderer/helpers/robot_detector_vm.dart';
 
-import 'core/services/controllers/theme_controller.dart';
+import 'core/services/services_locator.dart';
 import 'core/utils/app_themes.dart';
 import 'core/utils/helpers/app_router.dart';
 import 'core/utils/helpers/languages/app_constants.dart';
 import 'core/utils/helpers/languages/language_controller.dart';
 import 'core/utils/helpers/languages/messages.dart';
-import 'services_locator.dart';
+import 'presentation/controllers/theme_controller.dart';
 
 class MyApp extends StatelessWidget {
   final Map<String, Map<String, String>> languages;

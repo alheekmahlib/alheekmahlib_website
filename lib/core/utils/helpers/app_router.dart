@@ -1,26 +1,26 @@
 import 'dart:developer';
 
-import 'package:alheekmahlib_website/core/services/controllers/general_controller.dart';
-import 'package:alheekmahlib_website/features/athkar_screen/controllers/athkar_controller.dart';
+import 'package:alheekmahlib_website/presentation/athkar_screen/controllers/athkar_controller.dart';
+import 'package:alheekmahlib_website/presentation/controllers/general_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../features/athkar_screen/models/all_azkar.dart';
-import '../../../features/athkar_screen/screens/alzkar_view.dart';
-import '../../../features/athkar_screen/screens/azkar_item.dart';
-import '../../../features/books_screen/models/book_model.dart';
-import '../../../features/books_screen/screens/books_page.dart';
-import '../../../features/books_screen/screens/details.dart';
-import '../../../features/download_redirect/screens/download_redirect_screen.dart';
-import '../../../features/home_screen/alheekmah_screen.dart';
-import '../../../features/home_screen/contact_us_page.dart';
-import '../../../features/home_screen/home_screen.dart';
-import '../../../features/quran_text/screens/surah_text_screen.dart';
-import '../../../features/quran_text/screens/text_page_view.dart';
-import '../../../services_locator.dart';
-import '../../services/controllers/books_controller.dart';
-import '../../services/controllers/quranText_controller.dart';
-import '../../services/controllers/surahTextController.dart';
+import '../../../presentation/athkar_screen/models/all_azkar.dart';
+import '../../../presentation/athkar_screen/screens/alzkar_view.dart';
+import '../../../presentation/athkar_screen/screens/azkar_item.dart';
+import '../../../presentation/books_screen/controllers/books_controller.dart';
+import '../../../presentation/books_screen/models/book_model.dart';
+import '../../../presentation/books_screen/screens/books_page.dart';
+import '../../../presentation/books_screen/screens/details.dart';
+import '../../../presentation/contact_us/screens/contact_us_page.dart';
+import '../../../presentation/download_redirect/screens/download_redirect_screen.dart';
+import '../../../presentation/home_screen/alheekmah_screen.dart';
+import '../../../presentation/home_screen/home_screen.dart';
+import '../../../presentation/quran_text/controllers/quranText_controller.dart';
+import '../../../presentation/quran_text/controllers/surahTextController.dart';
+import '../../../presentation/quran_text/screens/surah_text_screen.dart';
+import '../../../presentation/quran_text/screens/text_page_view.dart';
+import '../../services/services_locator.dart';
 
 final GlobalKey<NavigatorState> rootNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'root');
