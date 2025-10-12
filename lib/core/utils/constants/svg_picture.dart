@@ -39,6 +39,6 @@ besmAllah(BuildContext context) {
     'assets/svg/besmAllah.svg',
     width: 200,
     colorFilter: ColorFilter.mode(
-        context.textDarkColor.withOpacity(.8), BlendMode.srcIn),
+        context.textDarkColor.withValues(alpha: .8), BlendMode.srcIn),
   );
 }

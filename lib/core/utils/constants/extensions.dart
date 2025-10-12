@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:theme_provider/theme_provider.dart';
 
 extension Dimensions on BuildContext {
-  Color get textDarkColor => ThemeProvider.themeOf(this).id == 'dark'
+  bool get isDark => Theme.of(this).brightness == Brightness.dark;
+
+  Color get textDarkColor => isDark
+      ? Theme.of(this).colorScheme.secondary
+      : Theme.of(this).primaryColorDark;
+
+  Color get beigeDarkColor => isDark
+      ? Theme.of(this).colorScheme.primary
+      : Theme.of(this).colorScheme.primary.withValues(alpha: 0.25);
+
+  Color get surfaceDarkColor => isDark
       ? Theme.of(this).colorScheme.surface
       : Theme.of(this).primaryColorDark;
 
-  Color get beigeDarkColor => ThemeProvider.themeOf(this).id == 'dark'
-      ? Theme.of(this).primaryColor
-      : Theme.of(this).colorScheme.surface;
+  Color get iconsDarkColor => Theme.of(this).colorScheme.surface;
 
-  Color get surfaceDarkColor => ThemeProvider.themeOf(this).id == 'dark'
-      ? Theme.of(this).colorScheme.surface
-      : Theme.of(this).primaryColorDark;
-
-  Color get iconsDarkColor => ThemeProvider.themeOf(this).id == 'dark'
-      ? Theme.of(this).colorScheme.surface
-      : Theme.of(this).colorScheme.surface;
-
-  Color get iconsLightColor => ThemeProvider.themeOf(this).id == 'dark'
+  Color get iconsLightColor => isDark
       ? Theme.of(this).primaryColorDark
       : Theme.of(this).colorScheme.surface;
 }
