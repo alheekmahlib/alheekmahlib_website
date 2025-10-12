@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
-import 'package:theme_provider/theme_provider.dart';
 
 import '/core/utils/constants/extensions.dart';
 import '/features/quran_text/Widgets/widgets.dart';
@@ -30,7 +29,7 @@ class SingleAyah extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     sl<QuranTextController>().backColor =
-        Theme.of(context).colorScheme.surface.withOpacity(0.4);
+        Theme.of(context).colorScheme.surface.withValues(alpha: 0.4);
     return Stack(
       children: [
         GestureDetector(
@@ -51,7 +50,7 @@ class SingleAyah extends StatelessWidget {
                 left: screenSize(context, 0.0, 32.0)),
             width: MediaQuery.sizeOf(context).width,
             decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.background,
+                color: Theme.of(context).colorScheme.surface,
                 borderRadius: const BorderRadius.all(Radius.circular(4))),
             child: Column(
               children: [
@@ -126,7 +125,7 @@ class SingleAyah extends StatelessWidget {
                       child: juzNumEn(
                         'Part\n${surah!.ayahs![index].juz}',
                         context,
-                        ThemeProvider.themeOf(context).id == 'dark'
+                        Theme.of(context).brightness == Brightness.dark
                             ? Colors.white
                             : Colors.black,
                       ),
@@ -156,23 +155,26 @@ class SingleAyah extends StatelessWidget {
                                     10,
                             fontFamily:
                                 sl<SettingsController>().languageFont.value,
-                            color: ThemeProvider.themeOf(context).id == 'dark'
-                                ? Colors.white
-                                : Colors.black,
+                            color:
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
                           ),
                           textAlign: TextAlign.center,
                           readMoreText: 'readMore',
                           readLessText: 'readLess',
                           buttonTextStyle: TextStyle(
                             fontSize: 12,
-                            fontFamily: 'kufi',
-                            color: ThemeProvider.themeOf(context).id == 'dark'
-                                ? Colors.white
-                                : Theme.of(context).primaryColorLight,
+                            fontFamily: 'cairo',
+                            color:
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.white
+                                    : Theme.of(context).primaryColorLight,
                           ),
-                          iconColor: ThemeProvider.themeOf(context).id == 'dark'
-                              ? Colors.white
-                              : Theme.of(context).primaryColorLight,
+                          iconColor:
+                              Theme.of(context).brightness == Brightness.dark
+                                  ? Colors.white
+                                  : Theme.of(context).primaryColorLight,
                         ),
                       );
                     },
@@ -189,7 +191,7 @@ class SingleAyah extends StatelessWidget {
                 const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
             child: Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.background,
+                color: Theme.of(context).colorScheme.surface,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Row(
@@ -198,7 +200,7 @@ class SingleAyah extends StatelessWidget {
                   juzNum(
                       '${surah!.ayahs![index].juz}',
                       context,
-                      ThemeProvider.themeOf(context).id == 'dark'
+                      Theme.of(context).brightness == Brightness.dark
                           ? Colors.white
                           : Colors.black,
                       25),

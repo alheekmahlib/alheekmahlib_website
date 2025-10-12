@@ -15,7 +15,7 @@ class PageAyah extends StatelessWidget {
   final List<InlineSpan> text;
   final int index;
   final int nomPageF;
-  PageAyah(
+  const PageAyah(
       {super.key,
       required this.surah,
       required this.text,
@@ -25,7 +25,7 @@ class PageAyah extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     sl<QuranTextController>().backColor =
-        Theme.of(context).colorScheme.surface.withOpacity(0.4);
+        Theme.of(context).colorScheme.surface.withValues(alpha: 0.4);
     return Stack(
       children: [
         GestureDetector(
@@ -41,7 +41,7 @@ class PageAyah extends StatelessWidget {
                 horizontal: screenSize(context, 0.0, 16.0), vertical: 4),
             width: MediaQuery.sizeOf(context).width,
             decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.background,
+                color: Theme.of(context).colorScheme.surface,
                 borderRadius: const BorderRadius.all(Radius.circular(8))),
             child: Column(
               children: [

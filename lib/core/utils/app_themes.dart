@@ -1,91 +1,125 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:theme_provider/theme_provider.dart';
 
 class AppThemes {
-  static final AppTheme brown = AppTheme(
-      id: 'brown',
-      description: "My green Theme",
-      data: ThemeData(
-        colorScheme: const ColorScheme(
-          brightness: Brightness.light,
-          primary: Color(0xffE6DAC8),
-          onPrimary: Color(0xff3C2A21),
-          secondary: Color(0xffFFFFFE),
-          onSecondary: Color(0xffFFFFFE),
-          error: Color(0xffE6DAC8),
-          onError: Color(0xffE6DAC8),
-          background: Color(0xffF7F1EC),
-          onBackground: Color(0xffF7F1EC),
-          surface: Color(0xffE6DAC8),
-          onSurface: Color(0xffE6DAC8),
-        ),
-        primaryColor: const Color(0xffE6DAC8),
-        primaryColorLight: const Color(0xffFFFFFE),
-        primaryColorDark: const Color(0xff3C2A21),
-        dialogBackgroundColor: const Color(0xfff2f1da),
-        dividerColor: const Color(0xffcdba72),
-        highlightColor: const Color(0xffE6DAC8).withOpacity(0.8),
-        indicatorColor: const Color(0xffcdba72),
-        scaffoldBackgroundColor: const Color(0xffE6DAC8),
-        canvasColor: const Color(0xffF7F1EC),
-        hoverColor: const Color(0xfff2f1da).withOpacity(0.3),
-        disabledColor: const Color(0Xffffffff),
-        hintColor: const Color(0xffE6DAC8),
-        focusColor: const Color(0xffE6DAC8),
-        secondaryHeaderColor: const Color(0xffFFFFFE),
-        cardColor: const Color(0xffE6DAC8),
-        dividerTheme: const DividerThemeData(
-          color: Color(0xff3C2A21),
-        ),
-        textSelectionTheme: TextSelectionThemeData(
-            selectionColor: const Color(0xff3C2A21).withOpacity(0.3),
-            selectionHandleColor: const Color(0xff3C2A21)),
-        cupertinoOverrideTheme: const CupertinoThemeData(
-          primaryColor: Color(0xff3C2A21),
-        ),
-      ).copyWith());
+  static final ThemeData brown = _buildLightTheme();
+  static final ThemeData dark = _buildDarkTheme();
 
-  static final AppTheme dark = AppTheme(
-    id: 'dark',
-    description: "My dark Theme",
-    data: ThemeData(
-      colorScheme: const ColorScheme(
-        brightness: Brightness.light,
-        primary: Color(0xff3F3F3F),
-        onPrimary: Color(0xff252526),
-        secondary: Color(0xff4d4d4d),
-        onSecondary: Color(0xff4d4d4d),
-        error: Color(0xffE6DAC8),
-        onError: Color(0xffE6DAC8),
-        background: Color(0xff19191a),
-        onBackground: Color(0xff3F3F3F),
-        surface: Color(0xffE6DAC8),
-        onSurface: Color(0xffE6DAC8),
+  static ThemeData _buildLightTheme() {
+    const seed = Color(0xff344C36); // deep brown accent
+    final scheme = ColorScheme.fromSeed(
+      seedColor: seed,
+      brightness: Brightness.light,
+      surface: const Color(0xffFFFFFF),
+    );
+    return ThemeData(
+      useMaterial3: false,
+      colorScheme: scheme.copyWith(
+        primary: const Color(0xffFAAD1A),
+        onPrimary: const Color(0xff344C36),
+        secondary: const Color(0xffFFFFFE),
+        surface: const Color(0xffFFFFFF),
+      ),
+      primaryColor: const Color(0xffE6DAC8),
+      primaryColorLight: const Color(0xffFFFFFE),
+      primaryColorDark: const Color(0xff344C36),
+      scaffoldBackgroundColor: const Color(0xffF7F1EC),
+      dividerColor: const Color(0xffFAAD1A),
+      appBarTheme: const AppBarTheme(
+        elevation: 0,
+        centerTitle: false,
+        backgroundColor: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
+      ),
+      cardTheme: const CardThemeData(
+        elevation: 1,
+        color: Color(0xffFFFFFF),
+        margin: EdgeInsets.all(8),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12))),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        ),
+      ),
+      chipTheme: ChipThemeData(
+        labelStyle: const TextStyle(fontFamily: 'cairo'),
+        selectedColor: seed.withValues(alpha: .16),
+        side: BorderSide(color: seed.withValues(alpha: 0.2)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+      ),
+      textSelectionTheme: TextSelectionThemeData(
+        selectionColor: seed.withValues(alpha: 0.2),
+        selectionHandleColor: seed,
+      ),
+      cupertinoOverrideTheme: const CupertinoThemeData(primaryColor: seed),
+    );
+  }
+
+  static ThemeData _buildDarkTheme() {
+    const seed = Color(0xffE6DAC8); // light tan accent on dark
+    final scheme = ColorScheme.fromSeed(
+      seedColor: seed,
+      brightness: Brightness.dark,
+      surface: const Color(0xff232324),
+    );
+    return ThemeData(
+      useMaterial3: false,
+      colorScheme: scheme.copyWith(
+        primary: const Color(0xffFAAD1A),
+        surface: const Color(0xff232324),
+        onPrimary: const Color(0xff344C36),
+        secondary: const Color(0xffFFFFFE),
+        // surface: const Color(0xffFFFFFF),
       ),
       primaryColor: const Color(0xff3F3F3F),
       primaryColorLight: const Color(0xff4d4d4d),
       primaryColorDark: const Color(0xff010101),
-      dialogBackgroundColor: const Color(0xff3F3F3F),
-      dividerColor: const Color(0xffE6DAC8),
-      highlightColor: const Color(0xffE6DAC8).withOpacity(0.3),
-      indicatorColor: const Color(0xffE6DAC8),
       scaffoldBackgroundColor: const Color(0xff252526),
-      canvasColor: const Color(0xffF7F1EC),
-      hoverColor: const Color(0xfff2f1da).withOpacity(0.3),
-      disabledColor: const Color(0Xffffffff),
-      hintColor: const Color(0xff252526),
-      focusColor: const Color(0xffE6DAC8),
-      secondaryHeaderColor: const Color(0xffE6DAC8),
-      cardColor: const Color(0xffF7F1EC),
-      textSelectionTheme: TextSelectionThemeData(
-          selectionColor: const Color(0xffE6DAC8).withOpacity(0.3),
-          selectionHandleColor: const Color(0xffE6DAC8)),
-      cupertinoOverrideTheme: const CupertinoThemeData(
-        primaryColor: Color(0xff3C2A21),
+      dividerColor: const Color(0xffE6DAC8),
+      appBarTheme: const AppBarTheme(
+        elevation: 0,
+        centerTitle: false,
+        backgroundColor: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
       ),
-    ).copyWith(),
-  );
-
-  static List<AppTheme> get list => [AppThemes.brown, AppThemes.dark];
+      cardTheme: const CardThemeData(
+        elevation: 1,
+        color: Color(0xff232324),
+        margin: EdgeInsets.all(8),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12))),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        ),
+      ),
+      chipTheme: ChipThemeData(
+        labelStyle: const TextStyle(fontFamily: 'cairo'),
+        selectedColor: const Color(0xffE6DAC8).withValues(alpha: 0.12),
+        side: BorderSide(color: const Color(0xffE6DAC8).withValues(alpha: 0.2)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+      ),
+      textSelectionTheme: TextSelectionThemeData(
+        selectionColor: const Color(0xffE6DAC8).withValues(alpha: 0.2),
+        selectionHandleColor: const Color(0xffE6DAC8),
+      ),
+      cupertinoOverrideTheme:
+          const CupertinoThemeData(primaryColor: Color(0xff3C2A21)),
+    );
+  }
 }

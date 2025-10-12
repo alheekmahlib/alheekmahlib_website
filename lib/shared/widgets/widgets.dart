@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:hijri/hijri_calendar.dart';
-import 'package:theme_provider/theme_provider.dart';
 
 import '/core/services/controllers/general_controller.dart';
 import '/core/utils/constants/extensions.dart';
@@ -50,7 +49,7 @@ Widget delete(BuildContext context) {
             Text(
               'delete'.tr,
               style: const TextStyle(
-                  color: Colors.white, fontSize: 14, fontFamily: 'kufi'),
+                  color: Colors.white, fontSize: 14, fontFamily: 'cairo'),
             )
           ],
         ),
@@ -65,7 +64,7 @@ Widget delete(BuildContext context) {
             Text(
               'delete'.tr,
               style: const TextStyle(
-                  color: Colors.white, fontSize: 14, fontFamily: 'kufi'),
+                  color: Colors.white, fontSize: 14, fontFamily: 'cairo'),
             )
           ],
         ),
@@ -96,7 +95,7 @@ void customSnackBar(BuildContext context, String text) {
               text,
               style: TextStyle(
                   color: Theme.of(context).primaryColorDark,
-                  fontFamily: 'kufi',
+                  fontFamily: 'cairo',
                   fontStyle: FontStyle.italic,
                   fontSize: 18),
               textAlign: TextAlign.center,
@@ -123,7 +122,7 @@ Widget customContainer(BuildContext context, Widget myWidget) {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.surface.withOpacity(.2),
+            color: Theme.of(context).colorScheme.surface.withValues(alpha: .2),
             border: Border.symmetric(
                 vertical: BorderSide(
                     color: Theme.of(context).colorScheme.surface, width: 2))),
@@ -132,7 +131,7 @@ Widget customContainer(BuildContext context, Widget myWidget) {
 }
 
 Widget hijriDateLand(BuildContext context) {
-  var _today = HijriCalendar.now();
+  var today = HijriCalendar.now();
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
@@ -147,7 +146,7 @@ Widget hijriDateLand(BuildContext context) {
         indent: 40,
       ),
       SvgPicture.asset(
-        'assets/svg/hijri/${_today.hMonth}.svg',
+        'assets/svg/hijri/${today.hMonth}.svg',
         color: Theme.of(context).colorScheme.surface,
       ),
       const VerticalDivider(
@@ -157,10 +156,10 @@ Widget hijriDateLand(BuildContext context) {
         indent: 40,
       ),
       Text(
-        '${_today.hDay} / ${_today.hYear}',
+        '${today.hDay} / ${today.hYear}',
         style: TextStyle(
           fontSize: 14,
-          fontFamily: 'kufi',
+          fontFamily: 'cairo',
           color: Theme.of(context).colorScheme.surface,
         ),
         textAlign: TextAlign.center,
@@ -211,7 +210,7 @@ Widget pageNumber(String num, context, Color color) {
           arabicNumber.convert(num),
           style: TextStyle(
               fontSize: 16,
-              fontFamily: 'kufi',
+              fontFamily: 'cairo',
               fontWeight: FontWeight.bold,
               color: color),
         ),
@@ -233,7 +232,7 @@ Widget fontSizeDropDown(BuildContext context) {
         color: context.textDarkColor,
       ),
     ),
-    color: context.textDarkColor.withOpacity(.8),
+    color: context.textDarkColor.withValues(alpha: .8),
     itemBuilder: (context) => [
       PopupMenuItem(
         height: 30,
@@ -254,7 +253,7 @@ Widget fontSizeDropDown(BuildContext context) {
               ),
               activeTrackBar: BoxDecoration(
                   borderRadius: BorderRadius.circular(4),
-                  color: Theme.of(context).colorScheme.background),
+                  color: Theme.of(context).colorScheme.surface),
             ),
             handlerAnimation: const FlutterSliderHandlerAnimation(
                 curve: Curves.elasticOut,
@@ -287,12 +286,15 @@ Widget beigeContainer(BuildContext context, Widget myWidget,
   return Container(
     height: height,
     width: width,
-    padding: const EdgeInsets.symmetric(horizontal: 2.0, vertical: 2.0),
+    padding: const EdgeInsets.all(8.0),
     decoration: BoxDecoration(
-        color: context.beigeDarkColor,
-        borderRadius: const BorderRadius.all(
-          Radius.circular(8.0),
-        )),
+      color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.25),
+      borderRadius: const BorderRadius.all(Radius.circular(12.0)),
+      border: Border.all(
+        color: Theme.of(context).dividerColor.withValues(alpha: 0.15),
+        width: 1,
+      ),
+    ),
     child: myWidget,
   );
 }
@@ -302,13 +304,24 @@ Widget whiteContainer(BuildContext context, Widget myWidget,
   return Container(
     height: height,
     width: width,
-    margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+    margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 6.0),
+    padding: const EdgeInsets.all(12.0),
     decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.background,
-        borderRadius: const BorderRadius.all(
-          Radius.circular(4.0),
-        )),
+      color: Theme.of(context).colorScheme.surface,
+      borderRadius: const BorderRadius.all(Radius.circular(12.0)),
+      border: Border.all(
+        color: Theme.of(context).dividerColor.withValues(alpha: 0.15),
+        width: 1,
+      ),
+      boxShadow: [
+        BoxShadow(
+          color:
+              Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.04),
+          blurRadius: 16,
+          offset: const Offset(0, 6),
+        ),
+      ],
+    ),
     child: myWidget,
   );
 }
@@ -341,7 +354,7 @@ screenModalBottomSheet(BuildContext context, Widget child) {
           topRight: Radius.circular(8.0),
         ),
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       isScrollControlled: true,
       builder: (BuildContext context) {
         return child;
@@ -378,10 +391,11 @@ Widget customClose2(BuildContext context, {var close}) {
         children: [
           Icon(Icons.close_outlined,
               size: 40,
-              color: Theme.of(context).colorScheme.surface.withOpacity(.5)),
+              color:
+                  Theme.of(context).colorScheme.surface.withValues(alpha: .5)),
           Icon(Icons.close_outlined,
               size: 24,
-              color: ThemeProvider.themeOf(context).id == 'dark'
+              color: Theme.of(context).brightness == Brightness.dark
                   ? Theme.of(context).canvasColor
                   : Theme.of(context).primaryColorDark),
         ],
@@ -403,7 +417,7 @@ dropDownModalBottomSheet(
           topRight: Radius.circular(8.0),
         ),
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       isScrollControlled: true,
       builder: (BuildContext context) {
         return child;
@@ -461,8 +475,8 @@ Widget juzNumEn(String num, context, Color color) {
         num,
         style: TextStyle(
           fontSize: 12,
-          fontFamily: 'kufi',
-          color: ThemeProvider.themeOf(context).id == 'dark'
+          fontFamily: 'cairo',
+          color: Theme.of(context).brightness == Brightness.dark
               ? Colors.white
               : Colors.black,
         ),

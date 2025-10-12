@@ -1,14 +1,16 @@
+import 'package:alheekmahlib_website/core/services/controllers/theme_controller.dart';
+import 'package:alheekmahlib_website/services_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:theme_provider/theme_provider.dart';
 
 import '/core/utils/constants/extensions.dart';
 
 class ThemeChange extends StatelessWidget {
-  const ThemeChange({Key? key}) : super(key: key);
+  const ThemeChange({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final theme = sl<ThemeController>();
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Column(
@@ -27,13 +29,13 @@ class ThemeChange extends StatelessWidget {
                       borderRadius:
                           const BorderRadius.all(Radius.circular(20.0)),
                       border: Border.all(
-                          color: ThemeProvider.themeOf(context).id == 'brown'
+                          color: theme.themeId.value == 'brown'
                               ? Theme.of(context).dividerColor
-                              : Theme.of(context).colorScheme.background,
+                              : Theme.of(context).colorScheme.surface,
                           width: 3),
                       color: const Color(0xff3C2A21),
                     ),
-                    child: ThemeProvider.themeOf(context).id == 'brown'
+                    child: theme.themeId.value == 'brown'
                         ? Icon(Icons.done,
                             size: 14, color: Theme.of(context).dividerColor)
                         : null,
@@ -44,9 +46,9 @@ class ThemeChange extends StatelessWidget {
                   Text(
                     'brown'.tr,
                     style: TextStyle(
-                      color: ThemeProvider.themeOf(context).id == 'brown'
+                      color: theme.themeId.value == 'brown'
                           ? context.textDarkColor
-                          : context.textDarkColor.withOpacity(.5),
+                          : context.textDarkColor.withValues(alpha: .5),
                       fontSize: 18,
                       fontFamily: 'noto',
                     ),
@@ -55,7 +57,7 @@ class ThemeChange extends StatelessWidget {
               ),
             ),
             onTap: () {
-              ThemeProvider.controllerOf(context).setTheme('brown');
+              theme.setTheme('brown');
             },
           ),
           InkWell(
@@ -72,13 +74,13 @@ class ThemeChange extends StatelessWidget {
                       borderRadius:
                           const BorderRadius.all(Radius.circular(20.0)),
                       border: Border.all(
-                          color: ThemeProvider.themeOf(context).id == 'dark'
+                          color: theme.themeId.value == 'dark'
                               ? Theme.of(context).dividerColor
-                              : Theme.of(context).colorScheme.background,
+                              : Theme.of(context).colorScheme.surface,
                           width: 3),
                       color: const Color(0xff2d2d2d),
                     ),
-                    child: ThemeProvider.themeOf(context).id == 'dark'
+                    child: theme.themeId.value == 'dark'
                         ? Icon(Icons.done,
                             size: 14, color: Theme.of(context).dividerColor)
                         : null,
@@ -89,9 +91,9 @@ class ThemeChange extends StatelessWidget {
                   Text(
                     'dark'.tr,
                     style: TextStyle(
-                      color: ThemeProvider.themeOf(context).id == 'dark'
+                      color: theme.themeId.value == 'dark'
                           ? context.textDarkColor
-                          : context.textDarkColor.withOpacity(.5),
+                          : context.textDarkColor.withValues(alpha: .5),
                       fontSize: 18,
                       fontFamily: 'noto',
                     ),
@@ -100,7 +102,7 @@ class ThemeChange extends StatelessWidget {
               ),
             ),
             onTap: () {
-              ThemeProvider.controllerOf(context).setTheme('dark');
+              theme.setTheme('dark');
             },
           ),
         ],

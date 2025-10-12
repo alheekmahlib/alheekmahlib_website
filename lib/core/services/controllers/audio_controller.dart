@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -89,7 +90,7 @@ class AudioController extends GetxController {
     if (isPlay.value) {
       await textAudioPlayer.pause();
       isPlay.value = false;
-      print('audioPlayer: pause');
+      log('audioPlayer: pause');
     } else {
       await textAudioPlayer.setAudioSource(AudioSource.uri(Uri.parse(url)));
       textAudioPlayer.playerStateStream.listen((playerState) async {
@@ -108,7 +109,7 @@ class AudioController extends GetxController {
   }
 
   void textPlayNextAyah(BuildContext context) async {
-    print('playNextAyah ' * 6);
+    log('playNextAyah ' * 6);
     ayahSelected.value;
     ayahSelected.value = ayahSelected.value + 1;
 
@@ -121,9 +122,9 @@ class AudioController extends GetxController {
     String fileName =
         "$reader/${sl<AyatController>().surahTextNumber.value}${sl<AyatController>().ayahTextNumber.value}.mp3";
     String url = "https://www.everyayah.com/data/$fileName";
-    print('nextURL $url');
+    log('nextURL $url');
 
-    print('currentAyah $currentAyah');
+    log('currentAyah $currentAyah');
 
     sl<QuranTextController>().itemScrollController.scrollTo(
         index: (currentAyah! - 1),
@@ -132,7 +133,7 @@ class AudioController extends GetxController {
     // await textPlayFile(context, url, fileName);
     // if (currentAyah == lastAyahInPage.value) {
     //   audioController.ayahSelected.value = currentAyah!;
-    //   print('ayahSelected.value: ${audioController.ayahSelected.value}');
+    //   log('ayahSelected.value: ${audioController.ayahSelected.value}');
     //   sl<QuranTextController>().itemScrollController.scrollTo(
     //       index: pageNumber.value + 1,
     //       duration: const Duration(seconds: 1),
@@ -140,7 +141,7 @@ class AudioController extends GetxController {
     //   await textPlayFile(context, url, fileName);
     // } else {
     //   audioController.ayahSelected.value = currentAyah!;
-    //   print('ayahSelected.value: ${audioController.ayahSelected.value}');
+    //   log('ayahSelected.value: ${audioController.ayahSelected.value}');
     //   await textPlayFile(context, url, fileName);
     // }
 

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:alheekmahlib_website/core/utils/constants/extensions.dart';
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:arabic_numbers/arabic_numbers.dart';
@@ -221,8 +223,7 @@ singleAyahMenu(BuildContext context, int b, index, translateData, widget,
           ),
           onTap: () {
             sl<AyatController>().ayahTextNumber.value = (index + 1).toString();
-            print(
-                'sl<AyatController>().ayahTextNumber.value ${sl<AyatController>().ayahTextNumber.value}');
+            log('sl<AyatController>().ayahTextNumber.value ${sl<AyatController>().ayahTextNumber.value}');
             sl<AyatController>().surahTextNumber.value =
                 widget.number!.toString();
             sl<GeneralController>().textWidgetPosition.value = 0.0;
@@ -297,7 +298,7 @@ translateDropDown(BuildContext outerContext) {
                   width: 30,
                   margin: const EdgeInsets.all(16.0),
                   decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.background,
+                      color: Theme.of(context).colorScheme.surface,
                       borderRadius: const BorderRadius.all(
                         Radius.circular(8),
                       ),
@@ -328,7 +329,7 @@ translateDropDown(BuildContext outerContext) {
                     style: TextStyle(
                         color: context.textDarkColor,
                         fontSize: 18,
-                        fontFamily: "kufi"),
+                        fontFamily: "cairo"),
                   ),
                 ),
               ),
@@ -361,7 +362,7 @@ translateDropDown(BuildContext outerContext) {
                                       ? context.textDarkColor
                                       : const Color(0xffcdba72),
                                   fontSize: 14,
-                                  fontFamily: "kufi"),
+                                  fontFamily: "cairo"),
                             ),
                             trailing: Container(
                               height: 20,
@@ -440,7 +441,7 @@ Widget greeting(BuildContext context) {
       '| ${sl<GeneralController>().greeting.value} |',
       style: TextStyle(
         fontSize: 16.0,
-        fontFamily: 'kufi',
+        fontFamily: 'cairo',
         color: context.textDarkColor,
       ),
       textAlign: TextAlign.center,
@@ -449,8 +450,7 @@ Widget greeting(BuildContext context) {
 }
 
 Widget hijriDate2(BuildContext context) {
-  ArabicNumbers arabicNumber = ArabicNumbers();
-  var _today = HijriCalendar.now();
+  var today = HijriCalendar.now();
   'appLang'.tr == "لغة التطبيق"
       ? HijriCalendar.setLocal('ar')
       : HijriCalendar.setLocal('en');
@@ -458,7 +458,7 @@ Widget hijriDate2(BuildContext context) {
     mainAxisSize: MainAxisSize.min,
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      SvgPicture.asset('assets/svg/hijri/${_today.hMonth}.svg',
+      SvgPicture.asset('assets/svg/hijri/${today.hMonth}.svg',
           height: 70.0,
           colorFilter: ColorFilter.mode(
               Theme.of(context).primaryColorDark, BlendMode.srcIn)),
@@ -466,10 +466,10 @@ Widget hijriDate2(BuildContext context) {
         height: 8.0,
       ),
       Text(
-        '${_today.hDay} / ${_today.hMonth} / ${_today.hYear} هـ \n ${_today.dayWeName}',
+        '${today.hDay} / ${today.hMonth} / ${today.hYear} هـ \n ${today.dayWeName}',
         style: TextStyle(
           fontSize: 20.0,
-          fontFamily: 'kufi',
+          fontFamily: 'cairo',
           color: context.textDarkColor,
         ),
         textAlign: TextAlign.center,
@@ -502,7 +502,7 @@ Widget audioContainer(BuildContext context, Widget myWidget,
         child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 8.0),
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.background,
+            color: Theme.of(context).colorScheme.surface,
             borderRadius: const BorderRadius.all(Radius.circular(8)),
           ),
           child: myWidget,

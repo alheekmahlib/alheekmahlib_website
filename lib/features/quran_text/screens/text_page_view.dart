@@ -44,7 +44,7 @@ class TextPageView extends StatelessWidget {
     sl<TranslateDataController>().fetchSura(context);
     sl<TranslateDataController>().loadTranslateValue();
 
-    backColor = const Color(0xff91a57d).withOpacity(0.4);
+    backColor = const Color(0xff91a57d).withValues(alpha: 0.4);
 
     WidgetsBinding.instance.addPostFrameCallback(
         (_) => sl<QuranTextController>().jumbToPage(pageNum));
@@ -52,9 +52,9 @@ class TextPageView extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
           resizeToAvoidBottomInset: false,
-          backgroundColor: Theme.of(context).colorScheme.background,
+          backgroundColor: Theme.of(context).colorScheme.surface,
           appBar: AppBar(
-            backgroundColor: Theme.of(context).colorScheme.background,
+            backgroundColor: Theme.of(context).colorScheme.surface,
             title: sorahName(
               sl<QuranTextController>().currentSurahIndex.toString(),
               context,

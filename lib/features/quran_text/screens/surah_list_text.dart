@@ -24,7 +24,7 @@ class SorahListText extends StatelessWidget {
     ArabicNumbers arabicNumber = ArabicNumbers();
     return Container(
       decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.background,
+          color: Theme.of(context).colorScheme.surface,
           borderRadius: const BorderRadius.all(Radius.circular(8))),
       padding: const EdgeInsets.only(bottom: 24.0),
       child: Padding(
@@ -67,11 +67,11 @@ class SorahListText extends StatelessWidget {
                                         color: (index % 2 == 0
                                             ? Theme.of(context)
                                                 .colorScheme
-                                                .background
+                                                .surface
                                             : Theme.of(context)
                                                 .colorScheme
                                                 .surface
-                                                .withOpacity(.3)),
+                                                .withValues(alpha: .3)),
                                         child: Padding(
                                           padding: const EdgeInsets.symmetric(
                                               horizontal: 8),
@@ -97,7 +97,7 @@ class SorahListText extends StatelessWidget {
                                                     style: TextStyle(
                                                         color: context
                                                             .textDarkColor,
-                                                        fontFamily: "kufi",
+                                                        fontFamily: "cairo",
                                                         fontSize: 14,
                                                         fontWeight:
                                                             FontWeight.bold,
@@ -128,7 +128,7 @@ class SorahListText extends StatelessWidget {
                                                             .surahs[index]
                                                             .englishName!,
                                                         style: TextStyle(
-                                                          fontFamily: "kufi",
+                                                          fontFamily: "cairo",
                                                           fontWeight:
                                                               FontWeight.w600,
                                                           fontSize: 10,
@@ -156,7 +156,7 @@ class SorahListText extends StatelessWidget {
                                                   Text(
                                                     "| ${arabicNumber.convert(sl<SurahTextController>().surahs[index].ayahs!.last.numberInSurah)} |",
                                                     style: TextStyle(
-                                                      fontFamily: "kufi",
+                                                      fontFamily: "cairo",
                                                       fontSize: 14,
                                                       fontWeight:
                                                           FontWeight.bold,

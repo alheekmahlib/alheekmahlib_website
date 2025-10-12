@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -48,12 +50,6 @@ class QuranTextController extends GetxController {
     return surahPagesList[currentSurahIndex][pageNumber];
   }
 
-  @override
-  void onInit() {
-    super.onInit();
-    // setSurahsPages();
-  }
-
   /// Shared Preferences
   // Save & Load Last Page For Quran Text
   // Future<void> saveTextLastPlace(
@@ -72,7 +68,7 @@ class QuranTextController extends GetxController {
   //   TextPageView.textCurrentPage = prefs.getInt('last_page') ?? 1;
   //   TextPageView.lastTime = prefs.getString('last_time') ?? '';
   //   TextPageView.sorahTextName = prefs.getString('last_sorah_name') ?? '';
-  //   print('get ${prefs.getInt('last_page')}');
+  //   log('get ${prefs.getInt('last_page')}');
   // }
   //
   // textPageChanged(int textCurrentPage, String lastTime, sorahTextName) {
@@ -92,7 +88,7 @@ class QuranTextController extends GetxController {
 
   Future<void> loadScrollSpeedValue() async {
     scrollSpeed = sl<SharedPreferences>().getDouble('scroll_speed') ?? .05;
-    print('scroll_speed $scrollSpeed');
+    log('scroll_speed $scrollSpeed');
   }
 
   /// Time

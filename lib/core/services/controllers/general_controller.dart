@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
@@ -11,14 +10,16 @@ import '/features/athkar_screen/screens/alzkar_view.dart';
 import '/features/books_screen/screens/books_page.dart';
 import '/features/home_screen/home_screen.dart';
 import '/features/quran_text/screens/surah_text_screen.dart';
+import '../../../features/home_screen/contact_us_page.dart';
 import '../../../our_app_info_model.dart';
 
 class GeneralController extends GetxController {
+  static GeneralController get instance =>
+      GetInstance().putOrFind(() => GeneralController());
+
   late double screenHeight;
-  late double screenWidth;
   late double topPadding;
   late double bottomPadding;
-  late double sidePadding;
   RxInt tapIndex = 0.obs;
 
   RxBool isExpanded = false.obs;
@@ -26,9 +27,25 @@ class GeneralController extends GetxController {
   RxDouble fontSizeArabic = 18.0.obs;
   RxDouble textWidgetPosition = (-240.0).obs;
   late ItemScrollController itemScrollController;
-  GlobalKey<SliderDrawerState> key = GlobalKey<SliderDrawerState>();
   SlidingUpPanelController panelTextController = SlidingUpPanelController();
   final selectedBook = ''.obs;
+  // Anchor to OurApps section
+  final ourAppsKey = GlobalKey(debugLabel: 'our_apps_section');
+  void scrollToOurApps() {
+    final ctx = ourAppsKey.currentContext;
+    if (ctx != null) {
+      Scrollable.ensureVisible(
+        ctx,
+        alignment: 0.1,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeOutCubic,
+      );
+    }
+  }
+
+  RxInt? hoveredIndex;
+
+  // bool get screenWidth => Get.width <= 770;
 
   // urlRoute(String name) {
   //   final uri = Uri.parse(Get.currentRoute);
@@ -66,6 +83,7 @@ class GeneralController extends GetxController {
     const SurahTextScreen(),
     const BooksPage(),
     const AzkarView(),
+    const ContactUsPage(),
   ];
 
   Future<List<OurAppInfo>> fetchApps() async {

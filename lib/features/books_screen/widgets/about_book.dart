@@ -22,7 +22,7 @@ class AboutBook extends StatelessWidget {
     return Container(
         width: MediaQuery.sizeOf(context).width,
         decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.background,
+            color: Theme.of(context).colorScheme.surface,
             borderRadius: const BorderRadius.all(Radius.circular(20))),
         alignment: Alignment.center,
         child: Stack(
@@ -47,7 +47,7 @@ class AboutBook extends StatelessWidget {
                                       color: context.textDarkColor,
                                       fontSize: 26,
                                       fontWeight: FontWeight.bold,
-                                      fontFamily: 'kufi'),
+                                      fontFamily: 'cairo'),
                                 ),
                               ),
                             ),
@@ -74,7 +74,7 @@ class AboutBook extends StatelessWidget {
                                     style: TextStyle(
                                         color: context.iconsLightColor,
                                         fontSize: 20,
-                                        fontFamily: 'kufi'),
+                                        fontFamily: 'cairo'),
                                   ),
                                 ),
                               ),
@@ -91,7 +91,7 @@ class AboutBook extends StatelessWidget {
                                 color: context.textDarkColor,
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
-                                fontFamily: 'kufi'),
+                                fontFamily: 'cairo'),
                           ),
                         ),
                       ],
@@ -108,14 +108,16 @@ class AboutBook extends StatelessWidget {
                           color: context.textDarkColor,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'kufi'),
+                          fontFamily: 'cairo'),
                       textAlign: TextAlign.start,
                     ),
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      color:
-                          Theme.of(context).colorScheme.surface.withOpacity(.3),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .surface
+                          .withValues(alpha: .3),
                       borderRadius: const BorderRadius.all(
                         Radius.circular(8.0),
                       ),

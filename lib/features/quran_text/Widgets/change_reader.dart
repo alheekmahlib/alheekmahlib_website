@@ -47,7 +47,10 @@ class ChangeReader extends StatelessWidget {
             borderRadius: const BorderRadius.all(Radius.circular(8)),
             border: Border.all(
                 width: 1,
-                color: Theme.of(context).colorScheme.surface.withOpacity(.5))),
+                color: Theme.of(context)
+                    .colorScheme
+                    .surface
+                    .withValues(alpha: .5))),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -62,7 +65,7 @@ class ChangeReader extends StatelessWidget {
                     style: TextStyle(
                         color: context.textDarkColor,
                         fontSize: 14,
-                        fontFamily: "kufi"),
+                        fontFamily: "cairo"),
                   ),
                 ),
               ),
@@ -99,7 +102,7 @@ class ChangeReader extends StatelessWidget {
                     width: 30,
                     margin: const EdgeInsets.all(16.0),
                     decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.background,
+                        color: Theme.of(context).colorScheme.surface,
                         borderRadius: const BorderRadius.all(
                           Radius.circular(8),
                         ),
@@ -126,7 +129,7 @@ class ChangeReader extends StatelessWidget {
                     style: TextStyle(
                         color: Theme.of(context).dividerColor,
                         fontSize: 18,
-                        fontFamily: "kufi"),
+                        fontFamily: "cairo"),
                   ),
                 ),
               ),
@@ -155,7 +158,7 @@ class ChangeReader extends StatelessWidget {
                                       ? context.textDarkColor
                                       : const Color(0xffcdba72),
                                   fontSize: 14,
-                                  fontFamily: "kufi"),
+                                  fontFamily: "cairo"),
                             ),
                             trailing: Container(
                               height: 20,

@@ -1,4 +1,5 @@
-import 'package:easy_image_viewer/easy_image_viewer.dart';
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:infinite_carousel/infinite_carousel.dart';
@@ -26,7 +27,7 @@ class AppsInfoController extends GetxController {
     if (await canLaunchUrl(Uri.parse(uri))) {
       await launchUrl(Uri.parse(uri));
     } else {
-      print("No url client found");
+      log("No url client found");
     }
   }
 
@@ -36,7 +37,7 @@ class AppsInfoController extends GetxController {
     if (await canLaunchUrl(Uri.parse(uri))) {
       await launchUrl(Uri.parse(uri));
     } else {
-      print("No url client found");
+      log("No url client found");
     }
   }
 
@@ -46,7 +47,7 @@ class AppsInfoController extends GetxController {
     if (await canLaunchUrl(Uri.parse(uri))) {
       await launchUrl(Uri.parse(uri));
     } else {
-      print("No url client found");
+      log("No url client found");
     }
   }
 
@@ -56,24 +57,20 @@ class AppsInfoController extends GetxController {
     if (await canLaunchUrl(Uri.parse(uri))) {
       await launchUrl(Uri.parse(uri));
     } else {
-      print("No url client found");
+      log("No url client found");
     }
   }
 
   void bannerList(String banner1, String banner2, String banner3,
       String banner4, int initialIndex) {
-    MultiImageProvider multiImageProvider =
-        MultiImageProvider(initialIndex: initialIndex, [
+    // Prepare image providers (kept for future use)
+    // ignore: unused_local_variable
+    final providers = [
       Image.network(banner1).image,
       Image.network(banner2).image,
       Image.network(banner3).image,
-      Image.network(banner4).image
-    ]);
-    List<String> quranScreen = [
-      banner1,
-      banner2,
-      banner3,
-      banner4,
+      Image.network(banner4).image,
     ];
+    // If needed later, use EasyImageViewer with MultiImageProvider.
   }
 }

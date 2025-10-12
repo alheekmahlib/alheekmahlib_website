@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:theme_provider/theme_provider.dart';
 
 import '../../core/services/controllers/general_controller.dart';
 import '../../core/utils/constants/extensions.dart';
@@ -22,14 +21,14 @@ class SettingsList extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 32.0),
       child: Column(
         children: [
-          general.screenWidth >= 770
+          MediaQuery.of(context).size.width <= 770
               ? const SizedBox.shrink()
-              : const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 16.0),
+              : Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
                   child: TabBarUI(),
                 ),
           Container(
-            width: 381.0,
+            constraints: const BoxConstraints(maxWidth: 420),
             margin: const EdgeInsets.symmetric(horizontal: 16.0),
             padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
             decoration: BoxDecoration(
@@ -42,9 +41,9 @@ class SettingsList extends StatelessWidget {
                 Text(
                   'appLang'.tr,
                   style: TextStyle(
-                    fontFamily: 'kufi',
+                    fontFamily: 'cairo',
                     fontSize: 14,
-                    color: ThemeProvider.themeOf(context).id == 'dark'
+                    color: context.isDark
                         ? Colors.white
                         : Theme.of(context).primaryColorDark,
                   ),
@@ -54,7 +53,7 @@ class SettingsList extends StatelessWidget {
             ),
           ),
           Container(
-            width: 381.0,
+            constraints: const BoxConstraints(maxWidth: 420),
             margin:
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
             padding: const EdgeInsets.symmetric(vertical: 8.0),
@@ -68,9 +67,9 @@ class SettingsList extends StatelessWidget {
                 Text(
                   'changeTheme'.tr,
                   style: TextStyle(
-                    fontFamily: 'kufi',
+                    fontFamily: 'cairo',
                     fontSize: 14,
-                    color: ThemeProvider.themeOf(context).id == 'dark'
+                    color: context.isDark
                         ? Colors.white
                         : Theme.of(context).primaryColorDark,
                   ),

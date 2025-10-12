@@ -11,7 +11,7 @@ class TopDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.sizeOf(context).width,
-      color: Theme.of(context).colorScheme.background,
+      color: Theme.of(context).colorScheme.surface,
       child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
           child: Stack(
@@ -43,7 +43,7 @@ class TopDetails extends StatelessWidget {
                       style: TextStyle(
                           color: Theme.of(context).canvasColor,
                           fontSize: 24,
-                          fontFamily: 'kufi'),
+                          fontFamily: 'cairo'),
                       textAlign: TextAlign.center,
                     ),
                   ),

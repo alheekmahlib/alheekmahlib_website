@@ -19,7 +19,7 @@ class BooksPage extends StatelessWidget {
     books.loadBooksName();
     return Container(
       decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.background,
+          color: Theme.of(context).colorScheme.surface,
           borderRadius: const BorderRadius.all(Radius.circular(8)),
           border: Border.all(
             width: 2,
@@ -43,7 +43,7 @@ class BooksPage extends StatelessWidget {
                     ),
                   ),
                   Obx(() {
-                    if (books.types != null && books.types.isNotEmpty) {
+                    if (books.types.isNotEmpty) {
                       return Padding(
                         padding:
                             const EdgeInsets.only(top: 90, right: 16, left: 16),
@@ -60,7 +60,7 @@ class BooksPage extends StatelessWidget {
                                     style: TextStyle(
                                         color: context.textDarkColor,
                                         fontSize: 20,
-                                        fontFamily: 'kufi'),
+                                        fontFamily: 'cairo'),
                                     textAlign: TextAlign.center,
                                   ),
                                   Container(
@@ -127,7 +127,7 @@ class BooksPage extends StatelessWidget {
                                                                   .canvasColor,
                                                               fontSize: 20,
                                                               fontFamily:
-                                                                  'kufi'),
+                                                                  'cairo'),
                                                           textAlign:
                                                               TextAlign.center,
                                                         ),

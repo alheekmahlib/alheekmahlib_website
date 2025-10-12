@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class SeekBar extends StatelessWidget {
+class SeekBar extends StatefulWidget {
   final Duration duration;
   final Duration position;
   final Duration bufferedPosition;
@@ -13,11 +13,10 @@ class SeekBar extends StatelessWidget {
   final Color? valueIndicatorColor;
   final Color? textColor;
   final bool? timeShow;
-  double? dragValue;
   final ValueChanged<double>? onDragValueChanged;
 
-  SeekBar({
-    Key? key,
+  const SeekBar({
+    super.key,
     required this.duration,
     required this.position,
     required this.bufferedPosition,
@@ -28,19 +27,23 @@ class SeekBar extends StatelessWidget {
     this.valueIndicatorColor,
     this.textColor,
     this.timeShow,
-    this.dragValue,
     this.onDragValueChanged,
-  }) : super(key: key);
+  });
 
-  late SliderThemeData _sliderThemeData;
+  @override
+  State<SeekBar> createState() => _SeekBarState();
+}
+
+class _SeekBarState extends State<SeekBar> {
+  double? dragValue;
 
   @override
   Widget build(BuildContext context) {
-    // sl<SurahAudioController>().lastPosition.value = remaining.inSeconds.toDouble();
-    final SliderThemeData _sliderThemeData = SliderTheme.of(context).copyWith(
-        trackHeight: 2.0,
-        thumbColor: Theme.of(context).primaryColorDark,
-        activeTrackColor: Theme.of(context).primaryColorDark);
+    final sliderThemeData = SliderTheme.of(context).copyWith(
+      trackHeight: 2.0,
+      thumbColor: Theme.of(context).primaryColorDark,
+      activeTrackColor: Theme.of(context).primaryColorDark,
+    );
     return SizedBox(
       width: 250,
       child: Stack(
@@ -50,7 +53,7 @@ class SeekBar extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                timeShow == true
+                widget.timeShow == true
                     ? Padding(
                         padding: const EdgeInsets.only(top: 36.0),
                         child: Text(
@@ -59,11 +62,11 @@ class SeekBar extends StatelessWidget {
                                     ?.group(1) ??
                                 '$remaining',
                             style: TextStyle(
-                                color: textColor ??
+                                color: widget.textColor ??
                                     Theme.of(context).canvasColor)),
                       )
                     : const SizedBox.shrink(),
-                timeShow == true
+                widget.timeShow == true
                     ? Padding(
                         padding: const EdgeInsets.only(top: 36.0),
                         child: Text(
@@ -72,7 +75,7 @@ class SeekBar extends StatelessWidget {
                                     ?.group(1) ??
                                 '$total',
                             style: TextStyle(
-                                color: textColor ??
+                                color: widget.textColor ??
                                     Theme.of(context).canvasColor)),
                       )
                     : const SizedBox.shrink(),
@@ -82,55 +85,62 @@ class SeekBar extends StatelessWidget {
           Stack(
             children: [
               SliderTheme(
-                data: _sliderThemeData.copyWith(
+                data: sliderThemeData.copyWith(
                   thumbShape: HiddenThumbComponentShape(),
-                  activeTrackColor:
-                      activeTrackColor ?? Theme.of(context).primaryColorDark,
-                  inactiveTrackColor:
-                      inactiveTrackColor ?? Theme.of(context).dividerColor,
-                  valueIndicatorColor: Theme.of(context).primaryColorDark,
+                  activeTrackColor: widget.activeTrackColor ??
+                      Theme.of(context).primaryColorDark,
+                  inactiveTrackColor: widget.inactiveTrackColor ??
+                      Theme.of(context).dividerColor,
+                  valueIndicatorColor: widget.valueIndicatorColor ??
+                      Theme.of(context).primaryColorDark,
                 ),
                 child: ExcludeSemantics(
                   child: Slider(
                     min: 0.0,
-                    max: duration.inMilliseconds.toDouble(),
-                    value: min(bufferedPosition.inMilliseconds.toDouble(),
-                        duration.inMilliseconds.toDouble()),
+                    max: widget.duration.inMilliseconds.toDouble(),
+                    value: min(
+                        widget.bufferedPosition.inMilliseconds.toDouble(),
+                        widget.duration.inMilliseconds.toDouble()),
                     onChanged: (value) {
-                      onDragValueChanged?.call(value);
-                      if (onChanged != null) {
-                        onChanged!(Duration(milliseconds: value.round()));
+                      widget.onDragValueChanged?.call(value);
+                      if (widget.onChanged != null) {
+                        widget
+                            .onChanged!(Duration(milliseconds: value.round()));
                       }
                     },
                     onChangeEnd: (value) {
-                      if (onChangeEnd != null) {
-                        onChangeEnd!(Duration(milliseconds: value.round()));
+                      if (widget.onChangeEnd != null) {
+                        widget.onChangeEnd!(
+                            Duration(milliseconds: value.round()));
                       }
-                      dragValue = null;
+                      setState(() => dragValue = null);
                     },
                   ),
                 ),
               ),
               SliderTheme(
-                data: _sliderThemeData.copyWith(
+                data: sliderThemeData.copyWith(
                   inactiveTrackColor: Colors.transparent,
                 ),
                 child: Slider(
                   min: 0.0,
-                  max: duration.inMilliseconds.toDouble(),
-                  value: min(dragValue ?? position.inMilliseconds.toDouble(),
-                      duration.inMilliseconds.toDouble()),
+                  max: widget.duration.inMilliseconds.toDouble(),
+                  value: min(
+                      dragValue ?? widget.position.inMilliseconds.toDouble(),
+                      widget.duration.inMilliseconds.toDouble()),
                   onChanged: (value) {
-                    onDragValueChanged?.call(value);
-                    if (onChanged != null) {
-                      onChanged!(Duration(milliseconds: value.round()));
+                    setState(() => dragValue = value);
+                    widget.onDragValueChanged?.call(value);
+                    if (widget.onChanged != null) {
+                      widget.onChanged!(Duration(milliseconds: value.round()));
                     }
                   },
                   onChangeEnd: (value) {
-                    if (onChangeEnd != null) {
-                      onChangeEnd!(Duration(milliseconds: value.round()));
+                    if (widget.onChangeEnd != null) {
+                      widget
+                          .onChangeEnd!(Duration(milliseconds: value.round()));
                     }
-                    dragValue = null;
+                    setState(() => dragValue = null);
                   },
                 ),
               ),
@@ -141,8 +151,8 @@ class SeekBar extends StatelessWidget {
     );
   }
 
-  Duration get remaining => position;
-  Duration get total => duration;
+  Duration get remaining => widget.position;
+  Duration get total => widget.duration;
 }
 
 class HiddenThumbComponentShape extends SliderComponentShape {

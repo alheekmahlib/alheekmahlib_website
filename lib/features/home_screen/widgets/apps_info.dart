@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:ui';
 
 import 'package:easy_image_viewer/easy_image_viewer.dart';
@@ -25,7 +26,7 @@ class AppsInfo extends StatelessWidget {
   final String banner4;
   final String aboutApp3;
   const AppsInfo({
-    Key? key,
+    super.key,
     required this.appLogo,
     required this.appName,
     required this.appStoreIUrl,
@@ -37,7 +38,7 @@ class AppsInfo extends StatelessWidget {
     required this.banner3,
     required this.banner4,
     required this.aboutApp3,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +81,7 @@ class AppsInfo extends StatelessWidget {
                         style: TextStyle(
                           color: context.textDarkColor,
                           fontSize: 18,
-                          fontFamily: 'kufi',
+                          fontFamily: 'cairo',
                         ),
                       ),
                     ),
@@ -89,8 +90,10 @@ class AppsInfo extends StatelessWidget {
                     ),
                     Container(
                       height: 450,
-                      color:
-                          Theme.of(context).colorScheme.surface.withOpacity(.2),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .surface
+                          .withValues(alpha: .2),
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: InfiniteCarousel.builder(
                         itemCount: appScreen.length,
@@ -134,9 +137,9 @@ class AppsInfo extends StatelessWidget {
                                 showImageViewerPager(
                                     context, multiImageProvider,
                                     onPageChanged: (page) {
-                                  print("page changed to $page");
+                                  log("page changed to $page");
                                 }, onViewerDismissed: (page) {
-                                  print("dismissed while on page $page");
+                                  log("dismissed while on page $page");
                                 });
                               },
                               child: Image.network(
@@ -162,7 +165,7 @@ class AppsInfo extends StatelessWidget {
                             style: TextStyle(
                               color: context.textDarkColor,
                               fontSize: 18,
-                              fontFamily: 'kufi',
+                              fontFamily: 'cairo',
                             ),
                           ),
                         ),
@@ -183,7 +186,7 @@ class AppsInfo extends StatelessWidget {
                                 color: context.textDarkColor,
                                 height: 1.5,
                                 fontSize: 14,
-                                fontFamily: 'kufi',
+                                fontFamily: 'cairo',
                               ),
                             ),
                           ),
@@ -222,7 +225,7 @@ class AppsInfo extends StatelessWidget {
                                       'appStoreI'.tr,
                                       style: const TextStyle(
                                           color: Colors.white,
-                                          fontFamily: 'kufi',
+                                          fontFamily: 'cairo',
                                           fontStyle: FontStyle.italic,
                                           fontSize: 14),
                                     ),
@@ -259,7 +262,7 @@ class AppsInfo extends StatelessWidget {
                                       'playStore'.tr,
                                       style: const TextStyle(
                                           color: Colors.white,
-                                          fontFamily: 'kufi',
+                                          fontFamily: 'cairo',
                                           fontStyle: FontStyle.italic,
                                           fontSize: 14),
                                     ),
@@ -296,7 +299,7 @@ class AppsInfo extends StatelessWidget {
                                       'appGallery'.tr,
                                       style: const TextStyle(
                                           color: Colors.white,
-                                          fontFamily: 'kufi',
+                                          fontFamily: 'cairo',
                                           fontStyle: FontStyle.italic,
                                           fontSize: 14),
                                     ),
@@ -333,7 +336,7 @@ class AppsInfo extends StatelessWidget {
                                       'appStoreD'.tr,
                                       style: const TextStyle(
                                           color: Colors.white,
-                                          fontFamily: 'kufi',
+                                          fontFamily: 'cairo',
                                           fontStyle: FontStyle.italic,
                                           fontSize: 14),
                                     ),

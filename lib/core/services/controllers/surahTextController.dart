@@ -14,12 +14,12 @@ class SurahTextController extends GetxController {
   SurahText get currentSurah => surahs[currentSurahIndex];
 
   // void setCurrentSurahIndexByPageNumber(int pageNumber) {
-  //   print('before changing currentSurah number => ${currentSurahIndex + 1}');
+  //   log('before changing currentSurah number => ${currentSurahIndex + 1}');
   //   currentSurahIndex = surahs
   //           .firstWhere((s) => s.ayahs!.any((a) => a.page! == pageNumber))
   //           .number! -
   //       1;
-  //   print('After changing currentSurah number => ${currentSurahIndex + 1}');
+  //   log('After changing currentSurah number => ${currentSurahIndex + 1}');
   //   // sl<GeneralController>().currentPage.value = pageNumber;
   // }
 

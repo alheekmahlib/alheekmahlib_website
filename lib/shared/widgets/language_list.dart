@@ -1,7 +1,6 @@
 import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:theme_provider/theme_provider.dart';
 
 import '../../core/services/controllers/settings_controller.dart';
 import '../../core/services/shared_pref_services.dart';
@@ -31,25 +30,24 @@ class LanguageList extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: sl<SettingsController>().languageFont.value,
                   fontSize: 18,
-                  color: ThemeProvider.themeOf(context).id == 'dark'
+                  color: context.isDark
                       ? Colors.white
                       : Theme.of(context).primaryColorDark,
                 ),
               ),
             ),
-            baseColor: Theme.of(context).colorScheme.background,
-            expandedColor: Theme.of(context).colorScheme.background,
+            baseColor: Theme.of(context).colorScheme.surface,
+            expandedColor: Theme.of(context).colorScheme.surface,
             children: <Widget>[
               const Divider(
                 thickness: 1.0,
                 height: 1.0,
               ),
-              ButtonBar(
-                  alignment: MainAxisAlignment.spaceAround,
-                  buttonHeight: 42.0,
-                  buttonMinWidth: 90.0,
-                  children: List.generate(
-                      sl<SettingsController>().languageList.length, (index) {
+              OverflowBar(
+                alignment: MainAxisAlignment.spaceAround,
+                children: List.generate(
+                  sl<SettingsController>().languageList.length,
+                  (index) {
                     final lang = sl<SettingsController>().languageList[index];
                     return InkWell(
                       child: Container(
@@ -68,9 +66,7 @@ class LanguageList extends StatelessWidget {
                                 border: Border.all(
                                     color: 'appLang'.tr == lang['appLang']
                                         ? Theme.of(context).dividerColor
-                                        : Theme.of(context)
-                                            .colorScheme
-                                            .background,
+                                        : Theme.of(context).colorScheme.surface,
                                     width: 3),
                                 color: const Color(0xff3C2A21),
                               ),
@@ -85,7 +81,8 @@ class LanguageList extends StatelessWidget {
                               style: TextStyle(
                                 color: 'appLang'.tr == lang['appLang']
                                     ? context.textDarkColor
-                                    : context.textDarkColor.withOpacity(.5),
+                                    : context.textDarkColor
+                                        .withValues(alpha: .5),
                                 fontSize: 18,
                                 fontFamily: 'noto',
                               ),
@@ -94,8 +91,6 @@ class LanguageList extends StatelessWidget {
                         ),
                       ),
                       onTap: () async {
-                        // sl<SettingsController>().setLocale(
-                        //     Locale.fromSubtags(languageCode: lang['lang']));
                         localizationController
                             .setLanguage(Locale(lang['lang'], ''));
                         await sl<SharedPrefServices>()
@@ -110,7 +105,9 @@ class LanguageList extends StatelessWidget {
                             lang['font'];
                       },
                     );
-                  })),
+                  },
+                ),
+              ),
             ],
           ),
         ),

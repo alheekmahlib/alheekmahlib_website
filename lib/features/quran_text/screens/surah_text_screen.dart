@@ -9,7 +9,7 @@ import '../Widgets/widgets.dart';
 import 'surah_list_text.dart';
 
 class SurahTextScreen extends StatelessWidget {
-  const SurahTextScreen({Key? key}) : super(key: key);
+  const SurahTextScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +17,10 @@ class SurahTextScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: Container(
           decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.background,
+              color: Theme.of(context).colorScheme.surface,
               borderRadius: const BorderRadius.all(Radius.circular(8)),
               border: Border.all(
                   width: 2, color: Theme.of(context).colorScheme.surface)),
@@ -58,14 +58,14 @@ class SurahTextScreen extends StatelessWidget {
   }
 
   Widget topBar(BuildContext context) {
-    var _today = HijriCalendar.now();
+    var today = HijriCalendar.now();
     return Stack(
       alignment: Alignment.center,
       children: [
         Opacity(
           opacity: .1,
           child: SvgPicture.asset(
-            'assets/svg/hijri/${_today.hMonth}.svg',
+            'assets/svg/hijri/${today.hMonth}.svg',
             width: MediaQuery.sizeOf(context).width,
             colorFilter: ColorFilter.mode(
                 Theme.of(context).colorScheme.surface, BlendMode.srcIn),

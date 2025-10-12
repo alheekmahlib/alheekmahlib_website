@@ -11,7 +11,7 @@ import 'seek_bar.dart';
 import 'widgets.dart';
 
 class AudioTextWidget extends StatelessWidget {
-  const AudioTextWidget({Key? key}) : super(key: key);
+  const AudioTextWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +90,7 @@ class AudioTextWidget extends StatelessWidget {
                               color: Theme.of(context)
                                   .colorScheme
                                   .surface
-                                  .withOpacity(.4),
+                                  .withValues(alpha: .4),
                               borderRadius:
                                   const BorderRadius.all(Radius.circular(8))),
                         ),

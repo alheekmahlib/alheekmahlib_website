@@ -9,7 +9,7 @@ class SettingsController extends GetxController {
   Locale? initialLang;
   RxString languageName = 'العربية'.obs;
   RxString languageFont = 'naskh'.obs;
-  // RxString languageFont2 = 'kufi'.obs;
+  // RxString languageFont2 = 'cairo'.obs;
   RxBool settingsSelected = false.obs;
 
   @override
@@ -28,24 +28,18 @@ class SettingsController extends GetxController {
     String? langName = await sl<SharedPrefServices>()
         .getString("langName", defaultValue: 'العربية');
     String? langFont = await sl<SharedPrefServices>().getString("languageFont");
-    String? langFont2 =
-        await sl<SharedPrefServices>().getString("languageFont2");
-
-    print(
-        'Lang code: $langCode'); // Add this line to debug the value of langCode
+    // String? langFont2 = await sl<SharedPrefServices>().getString("languageFont2");
 
     if (langCode.isEmpty) {
       initialLang = const Locale('ar', 'AE');
     } else {
-      initialLang = Locale(
-          langCode, ''); // Make sure langCode is not null or invalid here
+      initialLang = Locale(langCode, '');
     }
 
     languageName.value = langName;
     languageFont.value = langFont;
     // languageFont2.value = langFont2;
-
-    print('get lang $initialLang');
+    // log('get lang $initialLang');
   }
 
   List languageList = [
@@ -54,7 +48,7 @@ class SettingsController extends GetxController {
       'appLang': 'لغة التطبيق',
       'name': 'العربية',
       'font': 'naskh',
-      'font2': 'kufi'
+      'font2': 'cairo'
     },
     {
       'lang': 'en',

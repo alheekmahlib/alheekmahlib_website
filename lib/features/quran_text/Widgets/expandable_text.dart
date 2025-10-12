@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:theme_provider/theme_provider.dart';
 
 import '../../../core/services/controllers/general_controller.dart';
 import '../../../services_locator.dart';
@@ -8,7 +7,7 @@ import '../../../services_locator.dart';
 class ExpandableText extends StatelessWidget {
   const ExpandableText({
     required this.text,
-    Key? key,
+    super.key,
     this.readLessText,
     this.readMoreText,
     this.animationDuration = const Duration(milliseconds: 200),
@@ -19,7 +18,7 @@ class ExpandableText extends StatelessWidget {
     this.textAlign = TextAlign.center,
     this.iconColor = Colors.black,
     this.buttonTextStyle,
-  }) : super(key: key);
+  });
 
   final String text;
   final String? readLessText;
@@ -35,28 +34,32 @@ class ExpandableText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => Column(
+    final textColor = Theme.of(context).brightness == Brightness.dark
+        ? Colors.white
+        : Colors.black;
+
+    final baseStyle = (textStyle ?? const TextStyle()).copyWith(
+      fontSize: (textStyle?.fontSize ??
+          (sl<GeneralController>().fontSizeArabic.value - 8)),
+      fontFamily: textStyle?.fontFamily ?? 'cairo',
+      color: textStyle?.color ?? textColor,
+    );
+
+    return Obx(() {
+      final expanded = sl<GeneralController>().isExpanded.value;
+      return Column(
         children: <Widget>[
           AnimatedSize(
             duration: animationDuration,
             child: ConstrainedBox(
-              constraints: sl<GeneralController>().isExpanded.value
+              constraints: expanded
                   ? const BoxConstraints()
                   : BoxConstraints(maxHeight: maxHeight),
-              child: sl<GeneralController>().isExpanded.value
+              child: expanded
                   ? SelectableText(
                       text,
                       textAlign: textAlign,
-                      style: TextStyle(
-                        fontSize:
-                            sl<GeneralController>().fontSizeArabic.value - 8,
-                        fontFamily: 'kufi',
-                        color: ThemeProvider.themeOf(context).id == 'dark'
-                            ? Colors.white
-                            : Colors.black,
-                        // overflow: TextOverflow.fade,
-                      ),
+                      style: baseStyle,
                       textDirection: TextDirection.ltr,
                     )
                   : Text(
@@ -64,19 +67,12 @@ class ExpandableText extends StatelessWidget {
                       softWrap: true,
                       overflow: TextOverflow.fade,
                       textAlign: textAlign,
-                      style: TextStyle(
-                        fontSize:
-                            sl<GeneralController>().fontSizeArabic.value - 8,
-                        fontFamily: 'kufi',
-                        color: ThemeProvider.themeOf(context).id == 'dark'
-                            ? Colors.white
-                            : Colors.black,
-                      ),
+                      style: baseStyle,
                       textDirection: TextDirection.ltr,
                     ),
             ),
           ),
-          sl<GeneralController>().isExpanded.value
+          expanded
               ? ConstrainedBox(
                   constraints: const BoxConstraints(),
                   child: TextButton.icon(
@@ -107,9 +103,9 @@ class ExpandableText extends StatelessWidget {
                       ),
                   onPressed: () =>
                       sl<GeneralController>().isExpanded.value = true,
-                )
+                ),
         ],
-      ),
-    );
+      );
+    });
   }
 }
