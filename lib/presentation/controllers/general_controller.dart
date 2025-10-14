@@ -3,11 +3,13 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_sliding_up_panel/sliding_up_panel_widget.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
+import '../../core/utils/constants/shared_preferences_constants.dart';
 import '../athkar_screen/screens/alzkar_view.dart';
-import '../books_screen/screens/books_page.dart';
+import '../books/books.dart';
 import '../contact_us/screens/contact_us_page.dart';
 import '../home_screen/home_screen.dart';
 import '../our_apps/data/model/our_app_info_model.dart';
@@ -16,6 +18,7 @@ import '../quran_text/screens/surah_text_screen.dart';
 class GeneralController extends GetxController {
   static GeneralController get instance =>
       GetInstance().putOrFind(() => GeneralController());
+  final _box = GetStorage();
 
   late double screenHeight;
   late double topPadding;
@@ -24,7 +27,7 @@ class GeneralController extends GetxController {
 
   RxBool isExpanded = false.obs;
   RxString greeting = ''.obs;
-  RxDouble fontSizeArabic = 18.0.obs;
+  RxDouble fontSizeArabic = 24.0.obs;
   RxDouble textWidgetPosition = (-240.0).obs;
   late ItemScrollController itemScrollController;
   SlidingUpPanelController panelTextController = SlidingUpPanelController();
@@ -44,6 +47,25 @@ class GeneralController extends GetxController {
   }
 
   RxInt? hoveredIndex;
+
+  @override
+  void onInit() {
+    super.onInit();
+    // تحميل حجم الخط من التخزين وتقييده بين 20 و50
+    try {
+      final dynamic stored = _box.read(FONT_SIZE);
+      double fs;
+      if (stored is int) {
+        fs = stored.toDouble();
+      } else if (stored is double) {
+        fs = stored;
+      } else {
+        fs = fontSizeArabic.value;
+      }
+      fs = fs.clamp(20.0, 50.0);
+      fontSizeArabic.value = fs;
+    } catch (_) {}
+  }
 
   // bool get screenWidth => Get.width <= 770;
 
@@ -81,7 +103,7 @@ class GeneralController extends GetxController {
   List screensViews = [
     const HomeScreen(),
     const SurahTextScreen(),
-    const BooksPage(),
+    BooksScreen(),
     const AzkarView(),
     const ContactUsPage(),
   ];

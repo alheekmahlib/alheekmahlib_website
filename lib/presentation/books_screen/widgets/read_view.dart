@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
 
-import '/core/utils/constants/extensions.dart';
 import '../../../core/services/services_locator.dart';
+import '../../../core/utils/constants/extensions/dimensions.dart';
 import '../../controllers/general_controller.dart';
 import '../controllers/books_controller.dart';
 import 'edit_bar.dart';

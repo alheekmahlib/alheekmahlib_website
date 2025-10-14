@@ -9,6 +9,8 @@ environment:
   sdk: ^3.6.1
 
 dependencies:
+  animated_custom_dropdown: ^3.1.1
+  animated_search_bar: ^2.8.0
   animated_toggle_switch: ^0.8.5
   animations: ^2.1.0
   another_xlider: ^3.0.2
@@ -17,13 +19,17 @@ dependencies:
   bot_toast: ^4.1.3
   clipboard: ^2.0.2
   cupertino_icons: ^1.0.8
+  dio: ^5.9.0
   easy_image_viewer: ^1.5.1
   expansion_tile_card: ^3.0.0
+  flex_color_picker: ^3.7.1
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
   flutter_native_splash: ^2.4.6
+  flutter_rounded_progress_bar: ^0.3.2
+  flutter_screenutil: ^5.9.3
   flutter_sliding_up_panel: ^2.1.1
   flutter_staggered_animations: ^1.1.1
   flutter_staggered_grid_view: ^0.7.0
@@ -33,7 +39,12 @@ dependencies:
   gap: ^3.0.1
   get: ^4.7.2
   get_it: ^8.2.0
+  get_storage: ^2.1.1
   go_router: ^16.2.4
+  google_huawei_availability:
+    git:
+      ref: dev
+      url: https://github.com/alheekmahlib/google_huawei_availability.git
   hijri: ^3.0.0
   http: ^1.5.0
   infinite_carousel: ^1.1.1
@@ -45,16 +56,14 @@ dependencies:
   seo_renderer: ^0.6.0
   share_plus: ^12.0.0
   shared_preferences: ^2.5.3
+  shimmer: ^3.0.0
   sidebarx: 0.17.2
   sliding_up_panel: ^2.0.0+1
   url_launcher: ^6.3.2
-  google_huawei_availability:
-    git:
-      ref: dev
-      url: https://github.com/alheekmahlib/google_huawei_availability.git
+  path_provider: ^2.1.4
+  dropdown_button2: ^2.3.9
 
 dev_dependencies:
-
   flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter
@@ -66,6 +75,7 @@ flutter:
 
   assets:
     - assets/svg/
+    - assets/svg/books_icon/
     - assets/svg/hijri/
     - assets/svg/surah_name/
     - assets/images/
@@ -77,6 +87,15 @@ flutter:
     - assets/svg/juz/
     - assets/json/translate/
   #   - images/a_dot_ham.jpeg
+flutter_assets:
+  # assets_path: assets/lottie/
+  assets_path: assets/svg/
+  output_path: lib/core/utils/constants/
+  # filename: lottie_constants.dart
+  filename: svg_constants.dart
+  field_prefix: null
+  class_name: SvgPath
+
   fonts:
     - family: uthmanic
       fonts:

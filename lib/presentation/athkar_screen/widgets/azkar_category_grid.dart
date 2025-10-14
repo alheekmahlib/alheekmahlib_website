@@ -1,5 +1,6 @@
-import 'package:alheekmahlib_website/core/utils/constants/extensions.dart';
+import 'package:alheekmahlib_website/core/utils/constants/extensions/dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
 
@@ -63,7 +64,7 @@ class AzkarCategoryGrid extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 8),
+                    const Gap(8),
                     Icon(
                       Icons.chevron_left,
                       color: context.textDarkColor.withValues(alpha: .8),

@@ -8,10 +8,7 @@ import 'package:go_router/go_router.dart';
 import '../../../presentation/athkar_screen/models/all_azkar.dart';
 import '../../../presentation/athkar_screen/screens/alzkar_view.dart';
 import '../../../presentation/athkar_screen/screens/azkar_item.dart';
-import '../../../presentation/books_screen/controllers/books_controller.dart';
-import '../../../presentation/books_screen/models/book_model.dart';
-import '../../../presentation/books_screen/screens/books_page.dart';
-import '../../../presentation/books_screen/screens/details.dart';
+import '../../../presentation/books/books.dart';
 import '../../../presentation/contact_us/screens/contact_us_page.dart';
 import '../../../presentation/download_redirect/screens/download_redirect_screen.dart';
 import '../../../presentation/home_screen/alheekmah_screen.dart';
@@ -127,54 +124,80 @@ class AppRouter {
           GoRoute(
             path: routeBooks,
             builder: (BuildContext context, GoRouterState state) {
-              return const BooksPage();
+              return const BooksScreen();
             },
             routes: <RouteBase>[
-              // The details screen to display stacked on the inner Navigator.
-              // This will cover screen A but not the application shell.
               GoRoute(
-                path: 'details/:bookId',
+                path: 'details/:id',
+                parentNavigatorKey: rootNavigatorKey,
+                pageBuilder: (BuildContext context, GoRouterState state) {
+                  final raw = state.pathParameters['id'] ?? '';
+                  // استخرج أرقام فقط مثل 001 -> 1
+                  final digits = raw.replaceAll(RegExp(r'[^0-9]'), '');
+                  final number = int.tryParse(digits) ?? 0;
+
+                  // عندما يكون المعرّف غير صالح، أعِد صفحة شاشة الكتب كصفحة انتقال مخصّص
+                  if (number <= 0) {
+                    return CustomTransitionPage<void>(
+                      key: state.pageKey,
+                      child: const BooksScreen(),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) =>
+                              FadeTransition(opacity: animation, child: child),
+                    );
+                  }
+
+                  // افتح صفحة الفصول/الأجزاء أولًا
+                  final ctrl = BooksController.instance;
+
+                  // نُرجع صفحة تحتوي FutureBuilder ضمن child
+                  return CustomTransitionPage<void>(
+                    key: state.pageKey,
+                    transitionsBuilder:
+                        (context, animation, secondaryAnimation, child) =>
+                            FadeTransition(opacity: animation, child: child),
+                    child: FutureBuilder<void>(
+                      future: ctrl.state.booksList.isEmpty
+                          ? ctrl.fetchBooks()
+                          : Future.value(),
+                      builder: (context, snapshot) {
+                        if (snapshot.connectionState ==
+                            ConnectionState.waiting) {
+                          return const SizedBox.shrink();
+                        }
+                        final book = ctrl.state.booksList.firstWhere(
+                          (b) => b.bookNumber == number,
+                          orElse: () => Book.empty(),
+                        );
+                        if (book.bookNumber == 0) {
+                          return const BooksScreen();
+                        }
+                        return ChaptersPage(book: book);
+                      },
+                    ),
+                  );
+                },
+              ),
+              GoRoute(
+                path: 'read/:id',
                 parentNavigatorKey: rootNavigatorKey,
                 builder: (BuildContext context, GoRouterState state) {
-                  final books = sl<BooksController>();
-                  final bookId = state.pathParameters['bookId'];
-
-                  return FutureBuilder<void>(
-                    future: books.loadBooksView(bookId!),
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.waiting) {
-                        return const SizedBox.shrink();
-                      } else if (snapshot.hasError) {
-                        return Text('Error: ${snapshot.error}');
-                      } else {
-                        Book? foundBook;
-
-                        for (var type in books.types) {
-                          for (var book in type.books) {
-                            if (book.id == bookId) {
-                              foundBook = book;
-                              break;
-                            }
-                          }
-                          if (foundBook != null) {
-                            break;
-                          }
-                        }
-
-                        if (foundBook == null) {
-                          return const Text("Book not found");
-                        }
-
-                        return DetailsScreen(
-                          id: bookId,
-                          title: foundBook.title,
-                          bookQuoted: foundBook.bookQuoted,
-                          aboutBook: foundBook.aboutBook,
-                          bookD: foundBook.bookD,
-                        );
-                      }
-                    },
-                  );
+                  final raw = state.pathParameters['id'] ?? '';
+                  final digits = raw.replaceAll(RegExp(r'[^0-9]'), '');
+                  final number = int.tryParse(digits) ?? 0;
+                  if (number <= 0) {
+                    return const BooksScreen();
+                  }
+                  // Optional page number from query (?page=566)
+                  // Treat as 1-based page number and convert to 0-based index for the controller
+                  final pageParam = state.uri.queryParameters['page'];
+                  final pageNumber = int.tryParse(pageParam ?? '');
+                  if (pageNumber != null && pageNumber > 0) {
+                    // Store as index; actual clamping to pages length happens on load
+                    BooksController.instance.state.currentPageNumber.value =
+                        (pageNumber - 1).clamp(0, 1 << 20);
+                  }
+                  return ReadViewScreen(bookNumber: number);
                 },
               ),
             ],

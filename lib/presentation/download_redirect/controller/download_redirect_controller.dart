@@ -9,7 +9,7 @@ import '../../../core/services/services_locator.dart';
 import '../../controllers/general_controller.dart';
 import '../../our_apps/data/model/our_app_info_model.dart';
 import '../screens/platform_user_agent_stub.dart'
-    if (dart.library.html) '../../../features/download_redirect/screens/platform_user_agent_web.dart';
+    if (dart.library.html) '../screens/platform_user_agent_web.dart';
 
 class DownloadRedirectController extends GetxController {
   DownloadRedirectController({required this.slug});

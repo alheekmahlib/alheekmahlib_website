@@ -8,8 +8,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:infinite_carousel/infinite_carousel.dart';
 
-import '/core/utils/constants/extensions.dart';
 import '../../../core/services/services_locator.dart';
+import '../../../core/utils/constants/extensions/dimensions.dart';
 import '../../../core/widgets/widgets.dart';
 import '../../our_apps/controllers/apps_info_controller.dart';
 

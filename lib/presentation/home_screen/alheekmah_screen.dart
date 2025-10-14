@@ -1,13 +1,13 @@
 import 'package:alheekmahlib_website/core/utils/helpers/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import '/core/utils/constants/extensions.dart';
 import '../../core/services/services_locator.dart';
 import '../../core/utils/constants/svg_picture.dart';
 // import '../../shared/widgets/settings_list.dart';
 import '../../core/widgets/tab_bar.dart';
+import '../books/books.dart';
 import '../controllers/general_controller.dart';
-import '../controllers/theme_controller.dart';
 import 'widgets/bottom_bar.dart';
 
 class AlheekmahScreen extends StatefulWidget {
@@ -66,18 +66,14 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
                   MediaQuery.of(context).size.width <= 770
                       ? const SizedBox.shrink()
                       : TabBarUI(),
-                  IconButton(
-                    tooltip: 'Theme',
-                    icon: Icon(
-                      context.isDark ? Icons.dark_mode : Icons.light_mode,
-                      color: context.textDarkColor,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: ChangeThemeWidget(
+                      svgColor: context.theme.colorScheme.primary,
+                      borderColor: context.theme.colorScheme.primary
+                          .withValues(alpha: .2),
                     ),
-                    onPressed: () {
-                      final theme = sl<ThemeController>();
-                      theme.setTheme(
-                          theme.themeId.value == 'dark' ? 'brown' : 'dark');
-                    },
-                  ),
+                  )
                 ],
               ),
               Expanded(

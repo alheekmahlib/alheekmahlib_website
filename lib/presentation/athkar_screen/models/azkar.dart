@@ -6,12 +6,7 @@ class Azkar {
   String? reference;
   String? zekr;
 
-  Azkar(
-      this.id,
-      this.category,
-      this.count,
-      this.description,
-      this.reference,
+  Azkar(this.id, this.category, this.count, this.description, this.reference,
       this.zekr);
 
   Map<String, dynamic> toMap() {
@@ -26,12 +21,12 @@ class Azkar {
   }
 
   Azkar.fromJson(Map<String, dynamic> map) {
-      id = map['id'];
-      category = map['category'];
-      count = map['count'];
-      description = map['description'];
-      reference = map['reference'];
-      zekr = map['zekr'];
+    id = map['id'];
+    category = map['category'];
+    count = map['count'];
+    description = map['description'];
+    reference = map['reference'];
+    zekr = map['zekr'];
   }
 
   Map<String, dynamic> toJson() {

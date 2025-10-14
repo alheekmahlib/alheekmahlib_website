@@ -2,12 +2,14 @@ import 'package:alheekmahlib_website/presentation/athkar_screen/models/azkar.dar
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '/core/utils/constants/extensions.dart';
 import '../../../core/services/services_locator.dart';
+import '../../../core/utils/constants/extensions/dimensions.dart';
+import '../../../core/widgets/font_size_drop_down.dart';
 import '../../../core/widgets/widgets.dart';
 import '../../controllers/general_controller.dart';
 import '../../quran_text/controllers/quranText_controller.dart';
@@ -57,7 +59,7 @@ class AzkarItem extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 10),
+                  const Gap(10),
                   Container(
                     padding:
                         const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -96,8 +98,8 @@ class AzkarItem extends StatelessWidget {
               color: context.textDarkColor,
             ),
           ),
-          actions: [
-            fontSizeDropDown(context),
+          actions: const [
+            FontSizeDropDown(position: PopupMenuPosition.under),
           ],
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(1),
@@ -179,7 +181,7 @@ class ItemBuild extends StatelessWidget {
                       fontFamily: 'cairo',
                     ),
                   ),
-                  const SizedBox(width: 6),
+                  const Gap(6),
                   Icon(
                     Icons.repeat,
                     size: 18,
@@ -232,7 +234,7 @@ class ItemBuild extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 8),
+        const Gap(8),
         Obx(() {
           return TextRenderer(
             child: SelectableText(
@@ -254,7 +256,7 @@ class ItemBuild extends StatelessWidget {
           );
         }),
         if ((item.description ?? '').isNotEmpty) ...[
-          const SizedBox(height: 10),
+          const Gap(10),
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(10),
@@ -277,7 +279,7 @@ class ItemBuild extends StatelessWidget {
             ),
           ),
         ],
-        const SizedBox(height: 8),
+        const Gap(8),
         TextRenderer(
           child: Text(
             item.reference ?? '',

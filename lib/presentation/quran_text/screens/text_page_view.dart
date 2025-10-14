@@ -1,9 +1,10 @@
-import 'package:alheekmahlib_website/core/utils/constants/extensions.dart';
+import 'package:alheekmahlib_website/core/utils/constants/extensions/dimensions.dart';
 import 'package:arabic_numbers/arabic_numbers.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../core/services/services_locator.dart';
+import '../../../core/widgets/font_size_drop_down.dart';
 import '../../../core/widgets/widgets.dart';
 import '../../controllers/general_controller.dart';
 import '../../controllers/translate_controller.dart';
@@ -77,7 +78,7 @@ class TextPageView extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 16.0),
                 child: Row(
                   children: [
-                    fontSizeDropDown(context),
+                    const FontSizeDropDown(position: PopupMenuPosition.under),
                     SizedBox(
                       width: 70,
                       child: animatedToggleSwitch(context),

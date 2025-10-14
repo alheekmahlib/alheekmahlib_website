@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
 
-import '/core/utils/constants/extensions.dart';
+import '../../../core/utils/constants/extensions/dimensions.dart';
 import '../../../core/widgets/widgets.dart';
 import 'read_view.dart';
 

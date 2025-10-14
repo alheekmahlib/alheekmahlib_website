@@ -1,4 +1,4 @@
-import 'package:alheekmahlib_website/core/utils/constants/extensions.dart';
+import 'package:alheekmahlib_website/core/utils/constants/extensions/dimensions.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

@@ -3,7 +3,7 @@ import 'package:alheekmahlib_website/presentation/controllers/theme_controller.d
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '/core/utils/constants/extensions.dart';
+import '../utils/constants/extensions/dimensions.dart';
 
 class ThemeChange extends StatelessWidget {
   const ThemeChange({super.key});

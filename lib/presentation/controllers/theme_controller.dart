@@ -10,6 +10,9 @@ import '../../core/services/shared_pref_services.dart';
 /// - Persists the selected theme id ('brown' for light, 'dark' for dark).
 /// - Defaults to system brightness on first run.
 class ThemeController extends GetxController {
+  static ThemeController get instance =>
+      GetInstance().putOrFind(() => ThemeController());
+
   static const _prefKey = 'app_theme_id';
 
   final RxString themeId = 'brown'.obs; // 'brown' or 'dark'
@@ -42,4 +45,6 @@ class ThemeController extends GetxController {
     await sl<SharedPrefServices>().saveString(_prefKey, id);
     update();
   }
+
+  bool get isDarkMode => themeId.value == 'dark';
 }

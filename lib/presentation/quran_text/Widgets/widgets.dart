@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:alheekmahlib_website/core/utils/constants/extensions.dart';
+import 'package:alheekmahlib_website/core/utils/constants/extensions/dimensions.dart';
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:arabic_numbers/arabic_numbers.dart';
 import 'package:bot_toast/bot_toast.dart';
