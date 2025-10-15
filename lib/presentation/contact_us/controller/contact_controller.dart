@@ -83,6 +83,7 @@ class ContactController extends GetxController {
         'subject': subjectController.text.trim(),
         'message': messageController.text.trim(),
         '_captcha': 'false',
+        '_cc': 'solteam.contact@gmail.com',
       });
 
       final response = await http
