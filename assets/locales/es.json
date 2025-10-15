@@ -1,0 +1,275 @@
+{
+  "appName": "Biblioteca Al Heekmah",
+  "@appName": {
+    "description": "The App Name"
+  },
+  "lastRead": "Última lectura",
+  "@lastRead": {
+    "description": "The Last Read"
+  },
+  "appLang": "Idioma de la aplicación",
+  "@appLang": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "Buscar",
+  "@search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeTheme": "Cambiar tema",
+  "@changeTheme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "brown": "Modo marrón",
+  "@brown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dark": "Modo oscuro",
+  "@dark": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "books": "Los libros",
+  "@books": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home": "Inicio",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quran": "El Sagrado Corán",
+  "@quran": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readMore": "Leer más",
+  "@readMore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readLess": "Leer menos",
+  "@readLess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutBook": "Acerca del libro",
+  "@aboutBook": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "athkar": "Azkar",
+  "@athkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAzkarText": "Zikr copiado",
+  "@copyAzkarText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_us": "Acerca de la aplicación",
+  "@about_us": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app": "Acerca de la aplicación",
+  "@about_app": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app2": "Entre las características más importantes del programa:",
+  "@about_app2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutQuranApp3": "◉ Esta aplicación te permite leer el Corán como si estuvieras leyendo en el Mushaf, y puedes leer en modo vertical y horizontal.\n◉ También puedes leer en modo variable que te permite hacer zoom y alejar como desees.\n◉ La aplicación contiene la función de búsqueda de texto en los versículos del Corán a través de búsqueda instantánea y mostrar resultados con páginas además de la posibilidad de ir a la página.\n◉ Agregar marcadores para la lectura para que el lector pueda guardar la página y volver a ella cuando quiera.\n◉ Agregar notas.\n◉ Escuchar cada versículo con la voz de varios recitadores.\n◉ La aplicación permite la interpretación de cada versículo, también puedes cambiar entre interpretaciones y puedes cambiar el tamaño de la fuente de interpretación.\n◉ Índice de suras.\n◉ Navegar entre suras fácilmente.\n◉ La aplicación te permite leer las marcas de parada.\n◉ La aplicación te permite leer Hisnul Muslim completo y dividido según los azkar para que sea fácil para el lector navegar entre secciones, y puedes agregar cualquier zikr a favoritos.\n◉ La aplicación permite al lector cambiar patrones de colores, incluyendo el patrón oscuro que cambia el color de fondo a negro y líneas blancas para dar al lector completa comodidad al leer en ambientes de poca luz.",
+  "@about_app3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutAzkaryApp3": "◉ Esta aplicación te permite guardar tus azkar favoritos en una lista especial, haciéndolos fácilmente accesibles y revisables en cualquier momento.\n◉ Puedes controlar el tamaño de la fuente y aumentarla o disminuirla según tu preferencia para una lectura más cómoda.\n◉ La aplicación también ofrece tres modos para la interfaz de usuario - verde, azul y oscuro - dándote la capacidad de personalizar la apariencia de la aplicación según tus preferencias.\n◉ Lo que distingue a \"Mis Azkar del Libro y la Sunnah\" también es la capacidad de compartir azkar fácilmente con amigos y familia.\n◉ Puedes compartir directamente en texto o enviando una imagen que contenga el zikr, haciendo la experiencia de comunicación e interacción con otros más rica y profunda.\n◉ Puedes especificar los tiempos que prefieras para leer los azkar, y la aplicación te recordará en esos momentos con precisión.",
+  "@aboutAzkaryApp3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreI": "Descargar desde |App Store|",
+  "@appStoreI": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "playStore": "Descargar desde |Google Store|",
+  "@playStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appGallery": "Descargar desde |App Gallery|",
+  "@appGallery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreD": "Descargar desde |App Store| para escritorio",
+  "@appStoreD": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete": "Eliminar",
+  "@delete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dwaaDaily": "Dua del día",
+  "@dwaaDaily": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ourApps": "Nuestras aplicaciones",
+  "@ourApps": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aya_count": "Número de versículos",
+  "@aya_count": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAyah": "Versículo copiado",
+  "@copyAyah": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "translation": "La traducción",
+  "@translation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader1": "Abdul Basit Abdul Samad",
+  "@reader1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader2": "Muhammad Siddiq Al-Minshawi",
+  "@reader2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader3": "Mahmoud Khalil Al-Hussary",
+  "@reader3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader5": "Maher Al-Muaiqly",
+  "@reader5": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader6": "Saad Al-Ghamdi",
+  "@reader6": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "select_player": "Seleccionar recitador",
+  "@select_player": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "azkar": "Azkar",
+  "@azkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "hero_title": "Creamos aplicaciones móviles profesionales multiplataforma",
+  "hero_subtitle": "Convertimos tu idea en una experiencia digital refinada que funciona en iOS, Android y la web, con alta calidad y rendimiento.",
+  "cta_start_project": "Comienza tu proyecto",
+  "cta_our_apps": "Nuestras aplicaciones",
+  "cta_quran": "El Sagrado Corán",
+  "cta_books": "Los libros",
+  "cta_athkar": "Azkar",
+  "services_title": "Servicios",
+  "services_head": "¿Qué ofrecemos?",
+  "svc_quran": "Texto del Mushaf",
+  "svc_quran_desc": "Lectura y navegación avanzada con búsqueda y navegación rápida.",
+  "svc_books": "Libros",
+  "svc_books_desc": "Una colección de libros y referencias útiles.",
+  "svc_azkar": "Azkar",
+  "svc_azkar_desc": "Azkar diarios con hermosa organización y notificaciones suaves.",
+  "svc_apps": "Desarrollo de aplicaciones",
+  "svc_apps_desc": "Desarrollamos aplicaciones móviles modernas con alto rendimiento y experiencia de usuario cómoda.",
+  "svc_pro": "Profesionalismo en el trabajo",
+  "svc_pro_desc": "Calidad en la ejecución, cumplimiento de plazos y atención a los detalles desde el inicio hasta la publicación.",
+  "svc_multi": "Soporte multiplataforma",
+  "svc_multi_desc": "Apuntamos a iOS, Android y la web desde una base de código única con optimizaciones para cada plataforma.",
+  "faq_title": "Preguntas frecuentes",
+  "faq_q1": "¿Cómo cambio entre tema claro y oscuro?",
+  "faq_a1": "Desde el icono de tema en la barra superior.",
+  "faq_q2": "¿Funciona sin internet?",
+  "faq_a2": "Algunas secciones funcionan sin internet después de la carga inicial.",
+  "faq_q3": "¿Cómo busco dentro del Corán?",
+  "faq_a3": "Desde la barra de búsqueda o desde la pestaña del Corán.",
+  "faq_q4": "¿Hay modo para teléfono y computadora?",
+  "faq_a4": "Sí, la interfaz es responsive para todos los tamaños.",
+  "faq_q5": "¿Cómo inicio un proyecto de aplicación contigo?",
+  "faq_a5": "Envíanos un resumen a través del botón \"Comienza tu proyecto\" y te responderemos en 24-48 horas con pasos claros.",
+  "faq_q6": "¿Qué plataformas soportan?",
+  "faq_a6": "Apuntamos a iOS, Android y la web desde una base de código única con optimizaciones para cada plataforma.",
+  "faq_q7": "¿Cuánto tiempo toma el desarrollo de la aplicación?",
+  "faq_a7": "Depende del tamaño y alcance del proyecto; generalmente de 2 a 8 semanas para proyectos pequeños y medianos.",
+  "faq_q8": "¿Cómo se determina el precio?",
+  "faq_a8": "Según el alcance y características requeridas. Enviamos una cotización detallada después de entender los requisitos.",
+  "faq_q9": "¿Proporcionan mantenimiento y actualizaciones?",
+  "faq_a9": "Sí, ofrecemos planes de mantenimiento mensual o bajo demanda para actualizaciones, mejoras y corrección de errores.",
+  "faq_q10": "¿Qué hay sobre la privacidad de datos?",
+  "faq_a10": "Mantenemos la privacidad de tus datos y no los compartimos con terceros, y usamos infraestructura confiable.",
+  "faq_q11": "¿Qué métodos de pago están disponibles?",
+  "faq_a11": "Transferencia bancaria y pasarelas de pago electrónico comunes según el país.",
+  "faq_q12": "¿Cómo me comunico con ustedes directamente?",
+  "faq_a12": "Desde la pestaña \"Contacto\" dentro del sitio web, tu mensaje llega directamente a nuestro equipo sin abrir una aplicación de correo.",
+  "about_title": "Quiénes somos",
+  "about_head": "Biblioteca Al Heekmah",
+  "about_body": "Somos una biblioteca sin fines de lucro especializada en crear aplicaciones móviles de carácter islámico y educativo. Buscamos ofrecer soluciones digitales confiables y fáciles de usar que ayuden a los musulmanes a leer, aprender y mantenerse comprometidos con el recuerdo de Allah a través de experiencias hermosas y refinadas. Nos enfocamos en el rendimiento, accesibilidad y soporte multiplataforma para asegurar que el beneficio llegue al mayor número de usuarios posible.",
+  "about_contact_cta": "Nos complace tu contacto con nosotros — escríbenos abajo:",
+  "contact_title": "Contacto",
+  "contact_head": "Comencemos tu próximo proyecto",
+  "contact_name": "Nombre completo",
+  "contact_email": "Correo electrónico",
+  "contact_subject": "Asunto",
+  "contact_message": "Tu mensaje",
+  "send": "Enviar",
+  "sending": "Enviando...",
+  "contact_success": "Tu mensaje ha sido enviado exitosamente.",
+  "contact_error": "No se pudo enviar el mensaje. Inténtalo más tarde.",
+  "required_field": "Este campo es requerido",
+  "invalid_email": "Correo electrónico inválido",
+  "download_page_title": "Descargar aplicación",
+  "redirecting_store": "Serás redirigido a la tienda apropiada en momentos...",
+  "open_store_button": "Abrir tienda ahora",
+  "app_not_found": "No se pudo encontrar la aplicación solicitada.",
+  "detecting_platform": "Detectando tu plataforma para redirección automática...",
+  "allBooks": "Todos los libros",
+  "myLibrary": "Mi biblioteca",
+  "hadiths": "Hadiz",
+  "tafsir": "Tafsir",
+  "aboutBooks": "Acerca del libro",
+  "bookJuz": "Partes del libro",
+  "chapterBook": "Capítulos del libro",
+  "errorLoadingData": "Error al cargar datos",
+  "pages": "páginas",
+  "page": "página",
+  "chapter": "Capítulo",
+  "goToStartOfJuz": "Ir al inicio de la parte",
+  "noChaptersInThisJuz": "No hay capítulos en esta parte",
+  "Error": "Error",
+  "noPagesFound": "No se encontraron páginas para este libro.",
+  "noBooksFoundForSearch": "No se encontraron libros para esta búsqueda.",
+  "sixthBooks": "Sextos libros",
+  "ninthBooks": "Novenos libros",
+  "bookRemovedFromLastRead": "Libro eliminado de la última lectura",
+  "noBooksReadedYet": "Aún no se han leído libros",
+  "searchInBooks": "Buscar en libros",
+  "downloading...": "Descargando...",
+  "noBooksDownloaded": "Aún no se han descargado libros"
+}

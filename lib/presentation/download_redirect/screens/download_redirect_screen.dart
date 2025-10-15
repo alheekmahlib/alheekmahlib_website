@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 import '../controller/download_redirect_controller.dart';
@@ -44,18 +45,18 @@ class DownloadRedirectScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16),
+                      const Gap(16),
                     ],
                     Text(
                       'download_page_title'.tr,
                       style:
                           Theme.of(context).textTheme.headlineSmall?.copyWith(
-                                fontFamily: 'kufi',
+                                fontFamily: 'cairo',
                                 fontWeight: FontWeight.w700,
                               ),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 10),
+                    const Gap(10),
                     Text(
                       c.error ??
                           (c.loading
@@ -69,16 +70,16 @@ class DownloadRedirectScreen extends StatelessWidget {
                                 : scheme.onSurfaceVariant,
                           ),
                     ),
-                    const SizedBox(height: 16),
+                    const Gap(16),
                     if (a != null)
                       FilledButton.icon(
                         onPressed: c.openStoreNow,
                         icon: const Icon(Icons.open_in_new),
                         label: Text('open_store_button'.tr,
-                            style: const TextStyle(fontFamily: 'kufi')),
+                            style: const TextStyle(fontFamily: 'cairo')),
                       ),
                     if (c.error != null) ...[
-                      const SizedBox(height: 8),
+                      const Gap(8),
                       Text('app_not_found'.tr,
                           style: TextStyle(
                               color: scheme.error, fontFamily: 'cairo')),

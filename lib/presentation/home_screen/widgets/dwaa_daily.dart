@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '/core/utils/constants/extensions.dart';
 import '../../../core/services/services_locator.dart';
+import '../../../core/utils/constants/extensions/dimensions.dart';
 import '../../../core/widgets/widgets.dart';
 import '../../athkar_screen/controllers/athkar_controller.dart';
 

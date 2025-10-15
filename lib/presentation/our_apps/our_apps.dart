@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 import '../../core/services/services_locator.dart';
@@ -30,20 +31,20 @@ class OurApps extends StatelessWidget {
                 ),
                 child: Text('ourApps'.tr,
                     style:
-                        TextStyle(color: scheme.primary, fontFamily: 'kufi')),
+                        TextStyle(color: scheme.primary, fontFamily: 'cairo')),
               ),
-              const SizedBox(width: 10),
+              const Gap(10),
               Text(
                 'ourApps'.tr,
                 style: const TextStyle(
-                  fontFamily: 'kufi',
+                  fontFamily: 'cairo',
                   fontWeight: FontWeight.w700,
                   fontSize: 18,
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 12),
+          const Gap(12),
           Card(
             elevation: 0,
             color: scheme.surfaceContainerHigh,
@@ -111,7 +112,7 @@ class OurApps extends StatelessWidget {
               }),
             ),
           ),
-          const SizedBox(height: 16),
+          const Gap(16),
         ],
       ),
     );
@@ -215,14 +216,14 @@ class _AppCardState extends State<_AppCard> {
                 child: Row(
                   children: [
                     SvgPicture.network(app.appLogo, width: 22, height: 22),
-                    const SizedBox(width: 10),
+                    const Gap(10),
                     Expanded(
                       child: Text(
                         app.appTitle,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          fontFamily: 'kufi',
+                          fontFamily: 'cairo',
                           fontWeight: FontWeight.w600,
                           color: Theme.of(context).textTheme.bodyLarge?.color,
                         ),
@@ -302,7 +303,7 @@ class _AppsGridSkeleton extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              const Gap(10),
               Container(
                 height: 12,
                 margin: const EdgeInsets.symmetric(horizontal: 12),
@@ -311,7 +312,7 @@ class _AppsGridSkeleton extends StatelessWidget {
                   borderRadius: BorderRadius.circular(6),
                 ),
               ),
-              const SizedBox(height: 8),
+              const Gap(8),
               Container(
                 height: 10,
                 margin: const EdgeInsets.symmetric(horizontal: 12),

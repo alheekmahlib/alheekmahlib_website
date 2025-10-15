@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 import '../../../core/services/services_locator.dart';
 import '../../../core/utils/helpers/app_router.dart';
+import '../../../core/widgets/language_list.dart';
 
 class BottomBar extends StatelessWidget {
   const BottomBar({super.key});
@@ -38,7 +40,7 @@ class BottomBar extends StatelessWidget {
               crossAxisAlignment:
                   isWide ? CrossAxisAlignment.center : CrossAxisAlignment.start,
               children: [
-                SizedBox(height: isWide ? 6 : 4),
+                Gap(isWide ? 6 : 4),
                 // CTA + حقوق النشر
                 Row(
                   mainAxisAlignment: isWide
@@ -51,7 +53,7 @@ class BottomBar extends StatelessWidget {
                       children: [
                         Icon(Icons.copyright,
                             size: 14, color: scheme.onSurfaceVariant),
-                        const SizedBox(width: 6),
+                        const Gap(6),
                         Text(
                           '${'appName'.tr} • $year',
                           style: TextStyle(
@@ -63,40 +65,28 @@ class BottomBar extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(width: 12),
+                    const Gap(12),
                     // زر رئيسي لبدء المشروع
-                    if (isWide)
-                      ElevatedButton.icon(
-                        onPressed: () =>
-                            sl<AppRouter>().onItemTapped(4, context),
-                        icon: const Icon(Icons.send_outlined, size: 16),
-                        label: Text(
-                          'cta_start_project'.tr,
-                          style: const TextStyle(fontFamily: 'kufi'),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 14, vertical: 10),
-                          shape: const StadiumBorder(),
-                        ),
-                      )
-                    else
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
+                    Row(
+                      children: [
+                        ElevatedButton.icon(
                           onPressed: () =>
                               sl<AppRouter>().onItemTapped(4, context),
+                          icon: const Icon(Icons.send_outlined, size: 16),
+                          label: Text(
+                            'cta_start_project'.tr,
+                            style: const TextStyle(fontFamily: 'cairo'),
+                          ),
                           style: ElevatedButton.styleFrom(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 14, vertical: 12),
+                                horizontal: 14, vertical: 10),
                             shape: const StadiumBorder(),
                           ),
-                          child: Text(
-                            'cta_start_project'.tr,
-                            style: const TextStyle(fontFamily: 'kufi'),
-                          ),
                         ),
-                      ),
+                        const Gap(12),
+                        const LanguageList(),
+                      ],
+                    )
                   ],
                 ),
               ],

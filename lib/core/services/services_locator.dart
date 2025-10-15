@@ -3,8 +3,6 @@ import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../presentation/athkar_screen/controllers/athkar_controller.dart';
-import '../../presentation/books_screen/controllers/books_controller.dart';
-import '../../presentation/books_screen/controllers/details_screen_controller.dart';
 import '../../presentation/contact_us/controller/contact_controller.dart';
 import '../../presentation/controllers/general_controller.dart';
 import '../../presentation/controllers/settings_controller.dart';
@@ -64,13 +62,6 @@ class ServicesLocator {
 
     sl.registerLazySingleton<AyatController>(
         () => Get.put<AyatController>(AyatController(), permanent: true));
-
-    sl.registerLazySingleton<BooksController>(
-        () => Get.put<BooksController>(BooksController(), permanent: true));
-
-    sl.registerLazySingleton<DetailsScreenController>(() =>
-        Get.put<DetailsScreenController>(DetailsScreenController(),
-            permanent: true));
 
     sl.registerLazySingleton<AppRouter>(
         () => Get.put<AppRouter>(AppRouter(), permanent: true));

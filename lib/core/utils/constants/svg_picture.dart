@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '/core/utils/constants/extensions.dart';
+import 'extensions/dimensions.dart';
 
 alheekmah_logo(BuildContext context, {double? height, double? width}) {
   return SvgPicture.asset(

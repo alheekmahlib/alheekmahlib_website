@@ -18,3 +18,16 @@ const String LANG = "lang";
 const String LANG_NAME = "langName";
 const String LANGUAGE_FONT = "languageFont";
 const String READER_INDEX = "readerIndex";
+
+/// Books
+
+const String PAGE_NUMBER = 'PAGE_NUMBER';
+const String BOOK_NAME = 'BOOK_NAME';
+const String BOOK_NUMBER = 'BOOK_NUMBER';
+const String TOTAL_PAGES = 'TOTAL_PAGES';
+const String DOWNLOADED_BOOKS = 'downloaded_books';
+const String IS_TASHKIL = 'IS_TASHKIL';
+const String BACKGROUND_PICKER_COLOR = 'BACKGROUND_PICKER_COLOR';
+const String BACKGROUND_PICKER_COLOR_FOR_BOOK =
+    'BACKGROUND_PICKER_COLOR_FOR_BOOK';
+const String SEARCH_HISTORY = 'SEARCH_HISTORY';

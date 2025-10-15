@@ -41,28 +41,4 @@ class SettingsController extends GetxController {
     // languageFont2.value = langFont2;
     // log('get lang $initialLang');
   }
-
-  List languageList = [
-    {
-      'lang': 'ar',
-      'appLang': 'لغة التطبيق',
-      'name': 'العربية',
-      'font': 'naskh',
-      'font2': 'cairo'
-    },
-    {
-      'lang': 'en',
-      'appLang': 'App Language',
-      'name': 'English',
-      'font': 'naskh',
-      'font2': 'naskh'
-    },
-    {
-      'lang': 'be',
-      'appLang': "অ্যাপের ভাষা",
-      'name': 'বাংলা',
-      'font': 'be',
-      'font2': 'be'
-    }
-  ];
 }

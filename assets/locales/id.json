@@ -1,0 +1,275 @@
+{
+  "appName": "Perpustakaan Al Heekmah",
+  "@appName": {
+    "description": "The App Name"
+  },
+  "lastRead": "Terakhir Dibaca",
+  "@lastRead": {
+    "description": "The Last Read"
+  },
+  "appLang": "Bahasa Aplikasi",
+  "@appLang": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "Cari",
+  "@search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeTheme": "Ubah Tema",
+  "@changeTheme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "brown": "Mode Cokelat",
+  "@brown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dark": "Mode Gelap",
+  "@dark": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "books": "Kitab-kitab",
+  "@books": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home": "Beranda",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quran": "Al-Qur'an",
+  "@quran": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readMore": "Baca Selengkapnya",
+  "@readMore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readLess": "Baca Lebih Sedikit",
+  "@readLess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutBook": "Tentang Kitab",
+  "@aboutBook": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "athkar": "Azkar",
+  "@athkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAzkarText": "Zikir telah disalin",
+  "@copyAzkarText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_us": "Tentang Aplikasi",
+  "@about_us": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app": "Tentang Aplikasi",
+  "@about_app": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app2": "Fitur-fitur penting dari program ini:",
+  "@about_app2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutQuranApp3": "◉ Aplikasi ini memungkinkan Anda membaca Al-Qur'an seolah-olah Anda sedang membaca dari mushaf, dan Anda dapat membaca dalam mode vertikal dan horizontal.\n◉ Anda juga dapat membaca dalam mode variabel yang memungkinkan Anda memperbesar dan memperkecil sesuai keinginan.\n◉ Aplikasi ini memiliki fitur pencarian teks dalam ayat-ayat Al-Qur'an melalui pencarian instan dan menampilkan hasil dengan halaman serta kemungkinan untuk pergi ke halaman.\n◉ Menambahkan bookmark untuk membaca sehingga pembaca dapat menyimpan halaman dan kembali ke sana kapan pun dia mau.\n◉ Menambahkan catatan.\n◉ Mendengarkan setiap ayat dengan suara berbagai qari.\n◉ Aplikasi menyediakan tafsir untuk setiap ayat, Anda dapat mengubah antara tafsir dan Anda dapat mengubah ukuran font tafsir.\n◉ Indeks surah.\n◉ Navigasi antar surah dengan mudah.\n◉ Aplikasi memungkinkan Anda membaca tanda-tanda waqaf.\n◉ Aplikasi memungkinkan Anda membaca Hisnul Muslim lengkap dan dibagi menurut azkar sehingga mudah bagi pembaca untuk menavigasi antar bagian, dan Anda dapat menambahkan zikir apa pun ke favorit.\n◉ Aplikasi memungkinkan pembaca untuk mengubah pola warna termasuk pola gelap yang mengubah warna latar belakang menjadi hitam dan garis putih untuk memberikan kenyamanan penuh kepada pembaca saat membaca dalam lingkungan cahaya rendah.",
+  "@about_app3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutAzkaryApp3": "◉ Aplikasi ini memungkinkan Anda menyimpan azkar favorit Anda dalam daftar khusus, membuatnya mudah diakses dan ditinjau kapan saja.\n◉ Anda dapat mengontrol ukuran font dan membesarkan atau mengecilkannya sesuai preferensi Anda untuk pembacaan yang lebih nyaman.\n◉ Aplikasi juga menawarkan tiga mode untuk antarmuka pengguna - hijau, biru, dan gelap - memberi Anda kemampuan untuk menyesuaikan tampilan aplikasi sesuai dengan preferensi Anda.\n◉ Yang membedakan \"Azkar Saya dari Kitab dan Sunnah\" juga adalah kemampuan untuk berbagi azkar dengan mudah bersama teman dan keluarga.\n◉ Anda dapat berbagi langsung dalam teks atau dengan mengirim gambar yang berisi zikir, membuat pengalaman komunikasi dan interaksi dengan orang lain lebih kaya dan mendalam.\n◉ Anda dapat menentukan waktu yang Anda sukai untuk membaca azkar, dan aplikasi akan mengingatkan Anda pada waktu-waktu tersebut dengan tepat.",
+  "@aboutAzkaryApp3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreI": "Unduh dari |App Store|",
+  "@appStoreI": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "playStore": "Unduh dari |Google Store|",
+  "@playStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appGallery": "Unduh dari |App Gallery|",
+  "@appGallery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreD": "Unduh dari |App Store| untuk Desktop",
+  "@appStoreD": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete": "Hapus",
+  "@delete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dwaaDaily": "Doa Hari Ini",
+  "@dwaaDaily": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ourApps": "Aplikasi Kami",
+  "@ourApps": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aya_count": "Jumlah Ayat",
+  "@aya_count": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAyah": "Ayat telah disalin",
+  "@copyAyah": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "translation": "Terjemahan",
+  "@translation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader1": "Abdul Basit Abdul Samad",
+  "@reader1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader2": "Muhammad Siddiq Al-Minshawi",
+  "@reader2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader3": "Mahmoud Khalil Al-Hussary",
+  "@reader3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader5": "Maher Al-Muaiqly",
+  "@reader5": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader6": "Saad Al-Ghamdi",
+  "@reader6": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "select_player": "Pilih Qari",
+  "@select_player": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "azkar": "Azkar",
+  "@azkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "hero_title": "Kami membuat aplikasi mobile profesional multi-platform",
+  "hero_subtitle": "Kami mengubah ide Anda menjadi pengalaman digital yang sempurna yang bekerja di iOS, Android, dan Web dengan kualitas dan kinerja tinggi.",
+  "cta_start_project": "Mulai proyek Anda",
+  "cta_our_apps": "Aplikasi kami",
+  "cta_quran": "Al-Qur'an",
+  "cta_books": "Kitab-kitab",
+  "cta_athkar": "Azkar",
+  "services_title": "Layanan",
+  "services_head": "Apa yang kami tawarkan?",
+  "svc_quran": "Teks Mushaf",
+  "svc_quran_desc": "Pembacaan dan penjelajahan canggih dengan pencarian dan navigasi cepat.",
+  "svc_books": "Kitab-kitab",
+  "svc_books_desc": "Koleksi kitab dan referensi yang bermanfaat.",
+  "svc_azkar": "Azkar",
+  "svc_azkar_desc": "Azkar harian dengan organisasi yang indah dan notifikasi yang lembut.",
+  "svc_apps": "Pengembangan Aplikasi",
+  "svc_apps_desc": "Kami mengembangkan aplikasi mobile modern dengan kinerja tinggi dan pengalaman pengguna yang nyaman.",
+  "svc_pro": "Profesionalisme dalam Bekerja",
+  "svc_pro_desc": "Kualitas dalam pelaksanaan, komitmen pada tenggat waktu, dan perhatian pada detail dari awal hingga publikasi.",
+  "svc_multi": "Dukungan Multi-platform",
+  "svc_multi_desc": "Kami menargetkan iOS, Android, dan Web dari satu basis kode dengan optimisasi untuk setiap platform.",
+  "faq_title": "Pertanyaan yang Sering Diajukan",
+  "faq_q1": "Bagaimana cara beralih antara tema terang dan gelap?",
+  "faq_a1": "Dari ikon tema di bilah atas.",
+  "faq_q2": "Apakah berfungsi tanpa internet?",
+  "faq_a2": "Beberapa bagian berfungsi tanpa internet setelah pemuatan awal.",
+  "faq_q3": "Bagaimana cara mencari di dalam Al-Qur'an?",
+  "faq_a3": "Dari kotak pencarian atau dari tab Al-Qur'an.",
+  "faq_q4": "Apakah ada mode untuk ponsel dan komputer?",
+  "faq_a4": "Ya, antarmuka responsif untuk semua ukuran.",
+  "faq_q5": "Bagaimana cara memulai proyek aplikasi dengan Anda?",
+  "faq_a5": "Kirimkan ringkasan kepada kami melalui tombol \"Mulai proyek Anda\" dan kami akan kembali kepada Anda dalam 24-48 jam dengan langkah-langkah yang jelas.",
+  "faq_q6": "Platform apa yang Anda dukung?",
+  "faq_a6": "Kami menargetkan iOS, Android, dan Web dari satu basis kode dengan optimisasi untuk setiap platform.",
+  "faq_q7": "Berapa lama pengembangan aplikasi membutuhkan waktu?",
+  "faq_a7": "Tergantung pada ukuran dan ruang lingkup proyek; biasanya 2 hingga 8 minggu untuk proyek kecil dan menengah.",
+  "faq_q8": "Bagaimana penetapan harga ditentukan?",
+  "faq_a8": "Berdasarkan ruang lingkup dan fitur yang diperlukan. Kami mengirim penawaran harga terperinci setelah memahami persyaratan.",
+  "faq_q9": "Apakah Anda menyediakan pemeliharaan dan pembaruan?",
+  "faq_a9": "Ya, kami menawarkan paket pemeliharaan bulanan atau sesuai permintaan untuk pembaruan, perbaikan, dan perbaikan bug.",
+  "faq_q10": "Bagaimana dengan privasi data?",
+  "faq_a10": "Kami menjaga privasi data Anda dan tidak membagikannya dengan pihak ketiga, dan kami menggunakan infrastruktur terpercaya.",
+  "faq_q11": "Metode pembayaran apa yang tersedia?",
+  "faq_a11": "Transfer bank dan gateway pembayaran elektronik umum tergantung pada negara.",
+  "faq_q12": "Bagaimana cara menghubungi Anda secara langsung?",
+  "faq_a12": "Dari tab \"Kontak\" di dalam website, pesan Anda langsung sampai ke tim kami tanpa membuka aplikasi mail.",
+  "about_title": "Siapa Kami",
+  "about_head": "Perpustakaan Al Heekmah",
+  "about_body": "Kami adalah perpustakaan nirlaba yang mengkhususkan diri dalam membuat aplikasi mobile berkarakter Islami dan edukatif. Kami berusaha menyediakan solusi digital yang dapat diandalkan dan mudah digunakan yang membantu umat Muslim membaca, belajar, dan tetap berkomitmen pada zikir Allah melalui pengalaman yang indah dan sempurna. Kami fokus pada kinerja, aksesibilitas, dan dukungan multi-platform untuk memastikan manfaat mencapai sebanyak mungkin pengguna.",
+  "about_contact_cta": "Kami senang mendengar dari Anda — tulis kepada kami di bawah:",
+  "contact_title": "Kontak",
+  "contact_head": "Mari mulai proyek Anda selanjutnya",
+  "contact_name": "Nama Lengkap",
+  "contact_email": "Alamat Email",
+  "contact_subject": "Subjek",
+  "contact_message": "Pesan Anda",
+  "send": "Kirim",
+  "sending": "Mengirim...",
+  "contact_success": "Pesan Anda telah berhasil dikirim.",
+  "contact_error": "Gagal mengirim pesan. Coba lagi nanti.",
+  "required_field": "Bidang ini wajib diisi",
+  "invalid_email": "Alamat email tidak valid",
+  "download_page_title": "Unduh Aplikasi",
+  "redirecting_store": "Anda akan diarahkan ke toko yang tepat dalam beberapa saat...",
+  "open_store_button": "Buka Toko Sekarang",
+  "app_not_found": "Tidak dapat menemukan aplikasi yang diminta.",
+  "detecting_platform": "Mendeteksi platform Anda untuk pengalihan otomatis...",
+  "allBooks": "Semua Kitab",
+  "myLibrary": "Perpustakaan Saya",
+  "hadiths": "Hadits",
+  "tafsir": "Tafsir",
+  "aboutBooks": "Tentang Kitab",
+  "bookJuz": "Bagian-bagian Kitab",
+  "chapterBook": "Bab-bab Kitab",
+  "errorLoadingData": "Kesalahan memuat data",
+  "pages": "halaman",
+  "page": "halaman",
+  "chapter": "Bab",
+  "goToStartOfJuz": "Pergi ke awal bagian",
+  "noChaptersInThisJuz": "Tidak ada bab dalam bagian ini",
+  "Error": "Kesalahan",
+  "noPagesFound": "Tidak ditemukan halaman untuk kitab ini.",
+  "noBooksFoundForSearch": "Tidak ditemukan kitab untuk pencarian ini.",
+  "sixthBooks": "Kitab Keenam",
+  "ninthBooks": "Kitab Kesembilan",
+  "bookRemovedFromLastRead": "Kitab dihapus dari terakhir dibaca",
+  "noBooksReadedYet": "Belum ada kitab yang dibaca",
+  "searchInBooks": "Cari dalam kitab",
+  "downloading...": "Mengunduh...",
+  "noBooksDownloaded": "Belum ada kitab yang diunduh"
+}

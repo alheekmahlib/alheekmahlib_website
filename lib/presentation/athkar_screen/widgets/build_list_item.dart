@@ -1,4 +1,4 @@
-import 'package:alheekmahlib_website/core/utils/constants/extensions.dart';
+import 'package:alheekmahlib_website/core/utils/constants/extensions/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:go_router/go_router.dart';

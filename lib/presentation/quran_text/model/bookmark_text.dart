@@ -7,7 +7,8 @@ class BookmarksText {
   int? nomPageL;
   String? lastRead;
 
-  BookmarksText(this.id, this.sorahName, this.sorahNum, this.pageNum, this.nomPageF, this.nomPageL, this.lastRead);
+  BookmarksText(this.id, this.sorahName, this.sorahNum, this.pageNum,
+      this.nomPageF, this.nomPageL, this.lastRead);
 
   Map<String, dynamic> toJson() {
     return <String, dynamic>{

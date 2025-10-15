@@ -3,7 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 import '../../../core/services/services_locator.dart';
-import '../../../core/utils/constants/extensions.dart';
+import '../../../core/utils/constants/extensions/dimensions.dart';
 import '../../../core/utils/constants/svg_picture.dart';
 import '../../../core/utils/helpers/app_router.dart';
 import '../../controllers/general_controller.dart';

@@ -4,7 +4,7 @@ import 'expandable_text.dart';
 
 class ReadMoreLess extends StatelessWidget {
   const ReadMoreLess({
-    Key? key,
+    super.key,
     required this.text,
     this.readLessText,
     this.readMoreText,
@@ -16,7 +16,7 @@ class ReadMoreLess extends StatelessWidget {
     this.iconExpanded,
     this.iconColor = Colors.black,
     this.buttonTextStyle,
-  }) : super(key: key);
+  });
 
   /// The main text to be displayed.
   final String text;

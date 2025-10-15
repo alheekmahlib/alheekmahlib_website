@@ -1,18 +1,11 @@
-import 'dart:io';
-
-import 'package:another_xlider/another_xlider.dart';
-import 'package:another_xlider/models/handler.dart';
-import 'package:another_xlider/models/handler_animation.dart';
-import 'package:another_xlider/models/trackbar.dart';
 import 'package:arabic_numbers/arabic_numbers.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:hijri/hijri_calendar.dart';
 
-import '/core/utils/constants/extensions.dart';
-import '../../presentation/controllers/general_controller.dart';
-import '../services/services_locator.dart';
+import '../utils/constants/extensions/dimensions.dart';
 
 Route animatRoute(Widget myWidget) {
   return PageRouteBuilder(
@@ -219,68 +212,6 @@ Widget pageNumber(String num, context, Color color) {
   );
 }
 
-Widget fontSizeDropDown(BuildContext context) {
-  return PopupMenuButton(
-    position: PopupMenuPosition.under,
-    icon: Semantics(
-      button: true,
-      enabled: true,
-      label: 'Change Font Size',
-      child: Icon(
-        Icons.format_size_rounded,
-        size: 28,
-        color: context.textDarkColor,
-      ),
-    ),
-    color: context.textDarkColor.withValues(alpha: .8),
-    itemBuilder: (context) => [
-      PopupMenuItem(
-        height: 30,
-        child: SizedBox(
-          height: 30,
-          width: MediaQuery.sizeOf(context).width,
-          child: FlutterSlider(
-            values: [sl<GeneralController>().fontSizeArabic.value],
-            max: 50,
-            min: 18,
-            rtl: true,
-            trackBar: FlutterSliderTrackBar(
-              inactiveTrackBarHeight: 5,
-              activeTrackBarHeight: 5,
-              inactiveTrackBar: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: Theme.of(context).colorScheme.surface,
-              ),
-              activeTrackBar: BoxDecoration(
-                  borderRadius: BorderRadius.circular(4),
-                  color: Theme.of(context).colorScheme.surface),
-            ),
-            handlerAnimation: const FlutterSliderHandlerAnimation(
-                curve: Curves.elasticOut,
-                reverseCurve: null,
-                duration: Duration(milliseconds: 700),
-                scale: 1.4),
-            onDragging: (handlerIndex, lowerValue, upperValue) async {
-              lowerValue = lowerValue;
-              upperValue = upperValue;
-              sl<GeneralController>().fontSizeArabic.value = lowerValue;
-            },
-            handler: FlutterSliderHandler(
-              decoration: const BoxDecoration(),
-              child: Material(
-                type: MaterialType.circle,
-                color: Colors.transparent,
-                elevation: 3,
-                child: SvgPicture.asset('assets/svg/hadith_icon.svg'),
-              ),
-            ),
-          ),
-        ),
-      ),
-    ],
-  );
-}
-
 Widget beigeContainer(BuildContext context, Widget myWidget,
     {double? height, double? width}) {
   return Container(
@@ -337,7 +268,11 @@ double screenSize(BuildContext context, double n1, double n2) {
 }
 
 platformView(var p1, p2) {
-  return (Platform.isIOS || Platform.isAndroid || Platform.isFuchsia) ? p1 : p2;
+  final isMobile = !kIsWeb &&
+      (defaultTargetPlatform == TargetPlatform.iOS ||
+          defaultTargetPlatform == TargetPlatform.android ||
+          defaultTargetPlatform == TargetPlatform.fuchsia);
+  return isMobile ? p1 : p2;
 }
 
 screenModalBottomSheet(BuildContext context, Widget child) {

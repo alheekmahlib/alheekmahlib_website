@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
-import '../../../core/utils/constants/extensions.dart';
+import '../../../core/utils/constants/extensions/dimensions.dart';
 
 class ServicesSection extends StatelessWidget {
   const ServicesSection({super.key});

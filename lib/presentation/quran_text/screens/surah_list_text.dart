@@ -6,8 +6,8 @@ import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:seo_renderer/renderers/text_renderer/text_renderer_vm.dart';
 
-import '/core/utils/constants/extensions.dart';
 import '../../../core/services/services_locator.dart';
+import '../../../core/utils/constants/extensions/dimensions.dart';
 import '../../../core/utils/constants/lottie.dart';
 import '../../controllers/translate_controller.dart';
 import '../controllers/quranText_controller.dart';
