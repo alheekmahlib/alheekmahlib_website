@@ -33,7 +33,7 @@ class SearchBuild extends StatelessWidget {
                   // لا نحتاج لفعل شيء هنا، البيانات ستُحفظ في الكاش
                   // No need to do anything here, data will be saved in cache
                 });
-                chapterName = 'تحميل...'; // Loading...
+                chapterName = 'downloading...'.tr; // Loading...
               } else {
                 // الحصول على اسم الفصل من الكاش - Get chapter name from cache
                 chapterName = booksCtrl.getCurrentChapterByPage(
@@ -214,7 +214,7 @@ class SearchBuild extends StatelessWidget {
       child: Text.rich(
         TextSpan(
           children: result.text
-              .buildTextSpans(Get.theme.colorScheme.inversePrimary)
+              .buildTextSpans(context.theme.colorScheme.inversePrimary)
               .highlightSearchText(booksCtrl.state.searchController.text),
           style: TextStyle(
             fontFamily: "naskh",

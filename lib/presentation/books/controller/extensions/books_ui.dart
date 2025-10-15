@@ -74,41 +74,6 @@ extension BooksUi on BooksController {
     state.box.write(IS_TASHKIL, state.isTashkil.value);
   }
 
-  Future<void> deleteBook(int bookNumber) async {
-    try {
-      if (kIsWeb) {
-        // على الويب لا يوجد ملف محلي؛ فقط نظّف الحالة المخزنة إن وُجدت
-        state.downloaded[bookNumber] = false;
-        saveDownloadedBooks();
-        state.box.remove('lastRead_$bookNumber');
-        state.lastReadPage.remove(bookNumber);
-        state.bookTotalPages.remove(bookNumber);
-        update(['downloadedBooks']);
-        rootNavigatorKey.currentContext
-            ?.showCustomErrorSnackBar('booksDeleted'.tr);
-        log('Cleared last read data for book $bookNumber on web.');
-        return;
-      }
-      final directory = await getApplicationDocumentsDirectory();
-      final file = File('${directory.path}/$bookNumber.json');
-      if (await file.exists()) {
-        await file.delete();
-      }
-      state.downloaded[bookNumber] = false;
-      saveDownloadedBooks();
-      // حذف آخر قراءة خاصة بالكتاب
-      state.box.remove('lastRead_$bookNumber');
-      state.lastReadPage.remove(bookNumber);
-      state.bookTotalPages.remove(bookNumber);
-      rootNavigatorKey.currentContext
-          ?.showCustomErrorSnackBar('booksDeleted'.tr);
-      update(['downloadedBooks']);
-      log('Book $bookNumber deleted successfully.');
-    } catch (e) {
-      log('Error deleting book: $e');
-    }
-  }
-
   KeyEventResult controlRLByKeyboard(FocusNode node, KeyEvent event) {
     if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
       state.bookPageController.nextPage(

@@ -38,7 +38,17 @@ class MyApp extends StatelessWidget {
                   translations: Messages(languages: languages),
                   fallbackLocale: Locale(AppConstants.languages[1].languageCode,
                       AppConstants.languages[1].countryCode),
-                  builder: BotToastInit(),
+                  builder: (context, child) {
+                    final code = localizationController.locale.languageCode;
+                    const rtlLangs = ['ar', 'fa', 'he', 'ur', 'ps'];
+                    final isRtl = rtlLangs.contains(code);
+                    final botToast = BotToastInit();
+                    return Directionality(
+                      textDirection:
+                          isRtl ? TextDirection.rtl : TextDirection.ltr,
+                      child: botToast(context, child),
+                    );
+                  },
                   navigatorObservers: [
                     BotToastNavigatorObserver(),
                     seoRouteObserver

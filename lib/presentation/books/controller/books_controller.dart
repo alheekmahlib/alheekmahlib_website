@@ -121,45 +121,6 @@ class BooksController extends GetxController {
     }
   }
 
-  Future<void> downloadBook(int bookNumber) async {
-    try {
-      state.downloading[bookNumber] = true;
-      state.downloadProgress[bookNumber] = 0.0;
-
-      // رابط تحميل الكتاب - Book download URL
-      String downloadUrl =
-          'https://raw.githubusercontent.com/alheekmahlib/zad_library/main/${bookNumber.toString().padLeft(3, '0')}.json';
-
-      var response = await Dio().get(
-        downloadUrl,
-        onReceiveProgress: (received, total) {
-          if (total != -1) {
-            state.downloadProgress[bookNumber] =
-                (received / total * 100).toDouble().clamp(0.0, 100.0);
-          }
-        },
-      );
-
-      final file = File('${state.dir.path}/$bookNumber.json');
-
-      if (response.data is String) {
-        await file.writeAsString(response.data);
-      } else {
-        await file.writeAsString(json.encode(response.data));
-      }
-
-      state.downloaded[bookNumber] = true;
-      saveDownloadedBooks();
-      update(['downloadedBooks']);
-      log('Book $bookNumber downloaded successfully', name: 'BooksController');
-    } catch (e) {
-      log('Error downloading book: $e', name: 'BooksController');
-      Get.context!.showCustomErrorSnackBar('downloadError'.tr);
-    } finally {
-      state.downloading[bookNumber] = false;
-    }
-  }
-
   // التحقق من تحميل الكتاب - Check if book is downloaded
   bool isBookDownloaded(int bookNumber) =>
       kIsWeb ? true : (state.downloaded[bookNumber] ?? false);

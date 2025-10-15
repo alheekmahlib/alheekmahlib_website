@@ -97,50 +97,6 @@ class ChaptersController extends GetxController {
     log('Chapter changed to: $currentChapterName', name: 'ChaptersController');
   }
 
-  /// تحديث موضع السكرول للفصل المحدد / Update scroll position to specific chapter
-  // void scrollToChapter(String chapterName) {
-  //   final index = chapters.indexWhere((chapter) => chapter.text == chapterName);
-  //   if (index >= 0) {
-  //     // استخدام WidgetsBinding للتأكد من أن الـ Widget جاهز / Use WidgetsBinding to ensure widget is ready
-  //     WidgetsBinding.instance.addPostFrameCallback((_) {
-  //       if (itemsScrollController.hasClients) {
-  //         final targetOffset = _calculateScrollOffset(index);
-
-  //         // استخدام jumpTo للسكرول الفوري
-  //         itemsScrollController.jumpTo(targetOffset);
-
-  //         log('Scrolled to chapter: $chapterName at index: $index, offset: $targetOffset',
-  //             name: 'ChaptersController');
-  //       }
-  //     });
-  //   }
-  // }
-
-  /// التمرير إلى الفصل الحالي مع التأخير / Scroll to current chapter with delay
-  // void scrollToCurrentChapterWithDelay() {
-  //   if (currentChapterName != null) {
-  //     final chapterNames = currentChapterName!.split(',');
-  //     if (chapterNames.isNotEmpty) {
-  //       scrollToChapter(chapterNames.first);
-  //     }
-  //   }
-  // }
-
-  /// إعادة تعيين السكرول في حالة الحاجة / Reset scroll if needed
-  // void resetScrollController() {
-  //   try {
-  //     if (itemsScrollController.hasClients) {
-  //       itemsScrollController.dispose();
-  //     }
-  //   } catch (e) {
-  //     log('Error disposing old scroll controller: $e',
-  //         name: 'ChaptersController');
-  //   }
-
-  //   itemsScrollController = ScrollController();
-  //   log('ScrollController reset', name: 'ChaptersController');
-  // }
-
   Future<void> loadChapters(String selectedChapterName, int bookNumber,
       {bool loadChapters = true}) async {
     try {

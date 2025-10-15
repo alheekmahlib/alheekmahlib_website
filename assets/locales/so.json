@@ -1,0 +1,275 @@
+{
+  "appName": "Maktabadda Al Heekmah",
+  "@appName": {
+    "description": "The App Name"
+  },
+  "lastRead": "Wixii ugu dambeeya la akhriyay",
+  "@lastRead": {
+    "description": "The Last Read"
+  },
+  "appLang": "Luuqadda App-ka",
+  "@appLang": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "Raadi",
+  "@search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeTheme": "Bedel Theme-ka",
+  "@changeTheme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "brown": "Hab Bunni",
+  "@brown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dark": "Hab Gudcur",
+  "@dark": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "books": "Buugaagta",
+  "@books": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home": "Guriga",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quran": "Qur'aanka Kariimka ah",
+  "@quran": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readMore": "Akhri wax dheeraad ah",
+  "@readMore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readLess": "Akhri wax yar",
+  "@readLess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutBook": "Ku saabsan Buugga",
+  "@aboutBook": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "athkar": "Askar",
+  "@athkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAzkarText": "Sికirka waa la nuqlay",
+  "@copyAzkarText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_us": "Ku saabsan App-ka",
+  "@about_us": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app": "Ku saabsan App-ka",
+  "@about_app": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app2": "Sifooyinka ugu muhiimsan ee barnaamijka:",
+  "@about_app2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutQuranApp3": "◉ Appkan waxa uu kuu oggolaanayaa inaad akhrido Qur'aanka sida aad uga akhrisay Mushaf-ka, waxaadna u akhrin kartaa hab dheer iyo mid ballaaran.\n◉ sidoo kale waad u akhrin kartaa hab is beddela oo kuu oggolaanaya inaad weyneyso ama yarayso sida aad rabto.\n◉ App-ku waxa uu leeyahay astaanta raadinta qoraalka ayado Qur'aan ah iyada oo loo marayo raadin degdeg ah iyo muujinta natiijooyinka iyo boggaaga iyo suurtagalnimada aadida bogga.\n◉ Ku daridda calaamado akhriska si akhriyuhu uu u keydiyo bogga oo uu dib ugu soo laabto marka uu doonayo.\n◉ Ku daridda xusuusinta.\n◉ Dhageysiga aya kasta oo codka qaarilayaal kala duwan leh.\n◉ App-ku waxa uu bixiyaa tafsir aya kasta, waad beddeli kartaa tafsiirada dhexdooda waxaadna beddeli kartaa baaxadda farta tafsirka.\n◉ Fihriska suuraha.\n◉ U gudbista suuraha si fudud.\n◉ App-ku waxa uu kuu oggolaanayaa inaad akhrisid calaamadaha waqfka.\n◉ App-ku waxa uu kuu oggolaanayaa inaad u akhrisid Hisnul Muslim oo buuxa oo u qaybsan askarka si akhriyuhu uu ugu sahlaysto gudbista qaybaha dhexdooda, waxaadna ku darid kartaa sikir kasta tan jecelasha.\n◉ App-ku waxa uu u ogggolaanayaa akhriyaha inuu bedello qaabka midabka oo ay ku jiraan qaabka gudcurka oo beddela midabka asalka madow iyo khadadka cad si uu akhriyuhu u helo nasasho buuxda marka uu akhristo jawi iftiin yar leh.",
+  "@about_app3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutAzkaryApp3": "◉ Appkan waxa uu kuu oggolaanayaa inaad keydsho askarkaaga jecel liis gaar ah, taas oo ka dhigaysa kuwo si fudud loo heli karo oo dib loo eegi karo waqti kasta.\n◉ Waad xakameyn kartaa baaxadda qoraalka oo aad weynayso ama yarayso siday jeceshahay si aad u hesho akhris raaxo badan.\n◉ App-ku waxa uu sidoo kale bixiyaa saddex hab oo interface isticmaalaha ah - cagaar, buluug, iyo gudcur - kuwaas oo ku siinaya awood aad ku qurxiso muuqaalka app-ka sida ay jeceshahay.\n◉ Waxa kala saara \"Askarayga Kitaabka iyo Sunnada\" sidoo kale waa awoodda si fudud loogu wadaago askarka saaxiibada iyo qoyska.\n◉ Waad si toos ah ugu wadaagi kartaa qoraalka ama adigoo diraya sawir ku jira sikirka, taas oo ka dhigaysa khibradda isgaarsiinta iyo is dhexgalka dadka kale mid aad u qani ah oo qoto dheer.\n◉ Waad cayimin kartaa waqtiyadaad jecelaan lahayd inaad akhriso askarka, app-kuna waxa uu kuu xusuusin doonaa waqtiyadaas si sax ah.",
+  "@aboutAzkaryApp3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreI": "Ka soo dejiso |App Store|",
+  "@appStoreI": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "playStore": "Ka soo dejiso |Google Store|",
+  "@playStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appGallery": "Ka soo dejiso |App Gallery|",
+  "@appGallery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreD": "Ka soo dejiso |App Store| Desktop-ka",
+  "@appStoreD": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete": "Tirtir",
+  "@delete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dwaaDaily": "Ducada Maanta",
+  "@dwaaDaily": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ourApps": "App-yadeenna",
+  "@ourApps": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aya_count": "Tirada Aayooyinka",
+  "@aya_count": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAyah": "Aayada waa la nuqlay",
+  "@copyAyah": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "translation": "Turjumaada",
+  "@translation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader1": "Cabdi Baasid Cabdi Samad",
+  "@reader1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader2": "Maxamed Siddiq Al-Minshawi",
+  "@reader2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader3": "Maxmuud Khaliil Al-Hussary",
+  "@reader3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader5": "Maahir Al-Muaiqly",
+  "@reader5": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader6": "Sacad Al-Ghamdi",
+  "@reader6": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "select_player": "Dooro Qaari",
+  "@select_player": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "azkar": "Askar",
+  "@azkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "hero_title": "Waxaan sameynnaa apps mobile ah oo xirfadlayaal ah oo badan platform ah",
+  "hero_subtitle": "Fikradkaaga waxaan u beddelnaa khibrad dijitaal ah oo qurux badan oo ku shaqeysa iOS, Android, iyo Web-ka oo leh tayada sare iyo waxqabadka.",
+  "cta_start_project": "Bilow mashruucaaga",
+  "cta_our_apps": "App-yadeenna",
+  "cta_quran": "Qur'aanka Kariimka ah",
+  "cta_books": "Buugaagta",
+  "cta_athkar": "Askar",
+  "services_title": "Adeegyada",
+  "services_head": "Maxaan bixinnaa?",
+  "svc_quran": "Qoraalka Mushaf-ka",
+  "svc_quran_desc": "Akhris iyo baaris horumaray oo leh raadin iyo nav degdeg ah.",
+  "svc_books": "Buugaagta",
+  "svc_books_desc": "Ururinta buugaag iyo tixraacyo faa'iido leh.",
+  "svc_azkar": "Askar",
+  "svc_azkar_desc": "Askar maalinlaha ah oo habayn qurux badan iyo ogeysiisyo jilicsan.",
+  "svc_apps": "Sameeynta Application",
+  "svc_apps_desc": "Waxaan horumarinaa apps mobile ah oo casri ah oo leh waxqabad sare iyo khibrad isticmaale raaxo badan.",
+  "svc_pro": "Xirfadnimo Shaqada",
+  "svc_pro_desc": "Tayada fulinta, oogolaashaha waqtiga, iyo dareenka faahfaahinta laga bilaabo bilowga ilaa daabacaadda.",
+  "svc_multi": "Taageerada Multi-platform",
+  "svc_multi_desc": "Waxaan bartilmaameedsannaa iOS, Android, iyo Web-ka hal codebase oo leh hagaajin platform kasta.",
+  "faq_title": "Su'aalaha Badanaa La Weydiiyo",
+  "faq_q1": "Sidee u beddelaa theme-ka iftiimka iyo kan gudcurka?",
+  "faq_a1": "Iyada oo laga yimaado summadda theme-ka ee bar-ka sare.",
+  "faq_q2": "Miyey shaqeysaa iyada oo aan internet lahayn?",
+  "faq_a2": "Qaybo qaar ayaa u shaqeeya iyada oo aan internet lahayn ka dib loading-kii ugu horeeyay.",
+  "faq_q3": "Sidee ugu raadinaa gudaha Qur'aanka?",
+  "faq_a3": "Sanduuqa raadinta ama tab-ka Qur'aanka.",
+  "faq_q4": "Miyey jirtaa hab telefoonka iyo kumbuyuutarka?",
+  "faq_a4": "Haa, interface-ku waa ka jawaabaya dhammaan cabirka.",
+  "faq_q5": "Sidee ula bilawaa mashruuc app ah idinkala?",
+  "faq_a5": "Nagu soo dira soo koob iyada oo adeegsaneeysa badhanka \"Bilow mashruucaaga\" waannu idin soo celin doonnaa 24-48 saacadood oo leh tallaabooyin cad.",
+  "faq_q6": "Maxay yihiin platforms-yada aad taageertaan?",
+  "faq_a6": "Waxaan bartilmaameedsannaa iOS, Android, iyo Web-ka hal codebase oo leh hagaajin platform kasta.",
+  "faq_q7": "Immisa waqti ayuu qaadanayaa horumarinta app-ka?",
+  "faq_a7": "Waxay ku xidhan tahay baaxadda iyo baaxadda mashruuca; badanaa 2 ilaa 8 toddobaad mashruucyada yaryar iyo kuwa dhexe.",
+  "faq_q8": "Sidee loo go'aamiyaa qiimaha?",
+  "faq_a8": "Ku salaysan baaxadda iyo sifooyinka loo baahan yahay. Waxaan soo dirnaa qiimo faahfaahsan ka dib markaan fahano baahiyaha.",
+  "faq_q9": "Miyaad bixisaan dayactir iyo cusboonaysiinno?",
+  "faq_a9": "Haa, waxaan bixinnaa qorshayaal dayactir bishii ah ama codsiga ah ee cusboonaysiinta, hagaajinta iyo saxida khaladaadka.",
+  "faq_q10": "Maxaa ku saabsan sirta xogta?",
+  "faq_a10": "Waxaan ilaalinaa sirta xogtaada mana wadaagno dhinacyo saddexaad, waxaanan isticmaalnaa kaabayaal lagu kalsoon yahay.",
+  "faq_q11": "Maxay yihiin hababka lacag bixinta ee la heli karo?",
+  "faq_a11": "Wareejinta bangiga iyo irdaha lacag bixinta elektronikiga ee caadiga ah iyadoo ku xiran dalka.",
+  "faq_q12": "Sidee si toos ah ula xiriiraa?",
+  "faq_a12": "Tab-ka \"Xiriir\" gudaha websiteka, farriintaadu si toos ah ayey u gaartaa kooxdeenna iyada oo aan app mail furanayn.",
+  "about_title": "Yaa Nahay",
+  "about_head": "Maktabadda Al Heekmah",
+  "about_body": "Waxaan nahay maktabad aan faa'iido doon ahayn oo ku takhasustay samaynta applications mobile ah oo leh dabeecad Islaam iyo tacliim. Waxaan dadaalnaa inaan bixinno xallooyin dijitaal ah oo la isku hallayn karo oo si fudud loo isticmaali karo kuwaas oo ka caawiya Muslimiinta inay akhriyaan, bartaan, oo ay u sii wadan inay ku dheggan yihiin xusuusinta Eebbe iyada oo loo marayo khibradooyin qurux badan oo qurux badan. Waxaan diiradda saarnaa waxqabadka, helitaanka, iyo taageerada platform badan si aan u hubinno in faa'iidadu ay gaarto tirada ugu badan ee isticmaalayaasha.",
+  "about_contact_cta": "Waxaan ku faraxsannay xiriirka nala - noo qora hoose:",
+  "contact_title": "Xiriir",
+  "contact_head": "Aan bilaabno masharuucaaga xiga",
+  "contact_name": "Magaca Oo dhan",
+  "contact_email": "Ciwaanka Email-ka",
+  "contact_subject": "Mawduuca",
+  "contact_message": "Farriintaada",
+  "send": "Dir",
+  "sending": "Waa la dirayo...",
+  "contact_success": "Farriintaada si guul leh ayaa loo diray.",
+  "contact_error": "Waa lagu fashilmay dirista farriinta. Mar kale iskuday.",
+  "required_field": "Goobtan waa lagama maarmaam",
+  "invalid_email": "Ciwaanka email-ku waa mid aan sax ahayn",
+  "download_page_title": "Soo dejiso App-ka",
+  "redirecting_store": "Waxaa laguu weecin doonaa dukaanka saxda ah waqti yar gudihiis...",
+  "open_store_button": "Hadda Fur Dukaanka",
+  "app_not_found": "Lama helin app-ka la codday.",
+  "detecting_platform": "Waxaa la gartay platform-kaaga weecinta toos ah...",
+  "allBooks": "Buugaagta Oo dhan",
+  "myLibrary": "Maktabaddayda",
+  "hadiths": "Xadiis",
+  "tafsir": "Tafsir",
+  "aboutBooks": "Ku saabsan Buugga",
+  "bookJuz": "Qaybaha Buugga",
+  "chapterBook": "Cutubada Buugga",
+  "errorLoadingData": "Khalad loading xogta",
+  "pages": "boggag",
+  "page": "bog",
+  "chapter": "Cutub",
+  "goToStartOfJuz": "Tag bilatilka qaybta",
+  "noChaptersInThisJuz": "Ma jiraan cutubbo qaybtan",
+  "Error": "Khalad",
+  "noPagesFound": "Lama helin boggag buuggan.",
+  "noBooksFoundForSearch": "Lama helin buugag raadintaan.",
+  "sixthBooks": "Buugaagta Lixaad",
+  "ninthBooks": "Buugaagta Sagaalaad",
+  "bookRemovedFromLastRead": "Buugga waa laga saaray kii ugu dambeeyay ee la akhriyay",
+  "noBooksReadedYet": "Weli ma jirto buugag la akhriyay",
+  "searchInBooks": "Ku raadi buugaagta",
+  "downloading...": "Waa la soo dejinayaa...",
+  "noBooksDownloaded": "Weli ma jirto buugag la soo dejiyay"
+}

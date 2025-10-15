@@ -61,17 +61,20 @@ class BooksLastRead extends StatelessWidget {
               ),
               child: RotatedBox(
                 quarterTurns: 3,
-                child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                  alignment: Alignment.center,
-                  child: Text(
-                    'lastRead'.tr,
-                    style: TextStyle(
-                        color: context.theme.dividerColor,
-                        fontFamily: 'cairo',
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.center,
+                    child: Text(
+                      'lastRead'.tr,
+                      style: TextStyle(
+                          color: context.theme.dividerColor,
+                          fontFamily: 'cairo',
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16),
+                    ),
                   ),
                 ),
               ),
@@ -172,7 +175,7 @@ class BooksLastRead extends StatelessWidget {
 
                                       // إظهار رسالة تأكيد الحذف - Show delete confirmation message
                                       Get.context!.showCustomErrorSnackBar(
-                                        'تم حذف الكتاب من آخر قراءة',
+                                        'bookRemovedFromLastRead'.tr,
                                         isDone: true,
                                       );
                                     },

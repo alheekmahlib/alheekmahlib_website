@@ -55,13 +55,10 @@ class AllBooksBuild extends StatelessWidget {
       },
       child: ListView(
         children: [
-          Hero(
-            tag: 'lastReadBooks',
-            child: BooksLastRead(
-              horizontalMargin: 32.0,
-              horizontalPadding: 0.0,
-              verticalMargin: 16.0,
-            ),
+          BooksLastRead(
+            horizontalMargin: 32.0,
+            horizontalPadding: 0.0,
+            verticalMargin: 16.0,
           ),
           FutureBuilder<void>(
             future: booksCtrl.state.booksList.isEmpty

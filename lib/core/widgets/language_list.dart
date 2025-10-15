@@ -8,7 +8,9 @@ import '../services/services_locator.dart';
 import '../services/shared_pref_services.dart';
 import '../utils/constants/extensions/dimensions.dart';
 import '../utils/constants/shared_preferences_constants.dart';
+import '../utils/helpers/languages/app_constants.dart';
 import '../utils/helpers/languages/language_controller.dart';
+import '../utils/helpers/languages/language_models.dart';
 
 class LanguageList extends StatelessWidget {
   const LanguageList({super.key});
@@ -16,11 +18,8 @@ class LanguageList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<LocalizationController>(
-      builder: (localizationController) => Directionality(
-        textDirection: TextDirection.rtl,
-        child:
-            _LanguageDropdown(localizationController: localizationController),
-      ),
+      builder: (localizationController) =>
+          _LanguageDropdown(localizationController: localizationController),
     );
   }
 }
@@ -33,7 +32,7 @@ class _LanguageDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final settings = sl<SettingsController>();
-    final List languages = settings.languageList;
+    final List<LanguageModel> languages = AppConstants.languages;
 
     // Current language code and name
     final String currentCode =
@@ -57,22 +56,27 @@ class _LanguageDropdown extends StatelessWidget {
         value: currentCode,
         // Show only the selected label on the button
         selectedItemBuilder: (ctx) {
-          return languages.map<Widget>((_) {
+          return languages.map<Widget>((LanguageModel _) {
             return Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text(
-                  currentName,
-                  textAlign: TextAlign.right,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontFamily: currentFont,
-                    fontSize: 16,
-                    color: context.isDark
-                        ? Colors.white
-                        : Theme.of(context).primaryColorDark,
+                Expanded(
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      currentName,
+                      textAlign: TextAlign.right,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontFamily: currentFont,
+                        fontSize: 16,
+                        color: context.isDark
+                            ? Colors.white
+                            : Theme.of(context).primaryColorDark,
+                      ),
+                    ),
                   ),
                 ),
                 const Gap(8),
@@ -85,10 +89,10 @@ class _LanguageDropdown extends StatelessWidget {
             );
           }).toList();
         },
-        items: languages.map<DropdownMenuItem<String>>((dynamic lang) {
-          final bool isSelected = currentCode == lang['lang'];
+        items: languages.map<DropdownMenuItem<String>>((LanguageModel lang) {
+          final bool isSelected = 'appLang'.tr == lang.appLang;
           return DropdownMenuItem<String>(
-            value: lang['lang'] as String,
+            value: lang.languageCode,
             child: SizedBox(
               width: dropdownWidth,
               child: Container(
@@ -131,7 +135,7 @@ class _LanguageDropdown extends StatelessWidget {
                     ),
                     Expanded(
                       child: Text(
-                        lang['name'] as String,
+                        lang.languageName,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           color: isSelected
@@ -150,14 +154,15 @@ class _LanguageDropdown extends StatelessWidget {
         }).toList(),
         onChanged: (String? code) async {
           if (code == null) return;
-          final lang = languages.firstWhere((e) => e['lang'] == code);
+          final lang = languages.firstWhere((e) => e.languageCode == code);
           localizationController.setLanguage(Locale(code, ''));
           await sl<SharedPrefServices>().saveString(LANG, code);
-          await sl<SharedPrefServices>().saveString(LANG_NAME, lang['name']);
           await sl<SharedPrefServices>()
-              .saveString(LANGUAGE_FONT, lang['font']);
-          settings.languageName.value = lang['name'];
-          settings.languageFont.value = lang['font'];
+              .saveString(LANG_NAME, lang.languageName);
+          await sl<SharedPrefServices>()
+              .saveString(LANGUAGE_FONT, 'noto'); // استخدام خط افتراضي
+          settings.languageName.value = lang.languageName;
+          settings.languageFont.value = 'noto'; // استخدام خط افتراضي
         },
         style: TextStyle(
           fontFamily: currentFont,

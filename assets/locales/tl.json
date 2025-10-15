@@ -1,0 +1,275 @@
+{
+  "appName": "Al Heekmah Library",
+  "@appName": {
+    "description": "The App Name"
+  },
+  "lastRead": "Huling Binasa",
+  "@lastRead": {
+    "description": "The Last Read"
+  },
+  "appLang": "Wika ng App",
+  "@appLang": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "Maghanap",
+  "@search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeTheme": "Baguhin ang Theme",
+  "@changeTheme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "brown": "Brown Mode",
+  "@brown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dark": "Dark Mode",
+  "@dark": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "books": "Mga Libro",
+  "@books": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home": "Home",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quran": "Ang Banal na Quran",
+  "@quran": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readMore": "Magbasa pa",
+  "@readMore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readLess": "Magbasa ng kaunti",
+  "@readLess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutBook": "Tungkol sa Libro",
+  "@aboutBook": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "athkar": "Athkar",
+  "@athkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAzkarText": "Nakopya ang Zikr",
+  "@copyAzkarText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_us": "Tungkol sa App",
+  "@about_us": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app": "Tungkol sa App",
+  "@about_app": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app2": "Mga pinakamahalagang katangian ng program:",
+  "@about_app2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutQuranApp3": "◉ Ang application na ito ay nagbibigay-daan sa iyo na basahin ang Quran na parang binabasa mo sa Mushaf, at maaari mong basahin sa vertical at horizontal mode.\n◉ Maaari ka ring magbasa sa variable mode na nagbibigay-daan sa iyo na mag-zoom in at zoom out ayon sa inyong gusto.\n◉ Ang application ay may feature ng text search sa mga verses ng Quran sa pamamagitan ng instant search at pagpapakita ng mga resulta kasama ang mga pahina at ang posibilidad na pumunta sa pahina.\n◉ Pagdadagdag ng mga bookmark para sa pagbabasa upang makapag-save ang reader ng pahina at makabalik dito kahit kailan niya gusto.\n◉ Pagdadagdag ng mga notes.\n◉ Pakikinig sa bawat verse sa boses ng iba't ibang mga Qari.\n◉ Ang app ay nagbibigay ng tafsir para sa bawat verse, maaari mong baguhin ang pagitan ng mga tafsir at maaari mong baguhin ang laki ng font ng tafsir.\n◉ Index ng mga Surah.\n◉ Madaling pag-navigate sa pagitan ng mga Surah.\n◉ Ang app ay nagbibigay-daan sa iyo na basahin ang mga stop signs.\n◉ Ang application ay nagbibigay-daan sa iyo na basahin ang Hisnul Muslim nang buo at nahahati ayon sa mga athkar upang madaling mag-navigate ang reader sa pagitan ng mga seksyon, at maaari mong idagdag ang anumang zikr sa mga paborito.\n◉ Ang application ay nagbibigay-daan sa reader na magbasa ng pagbabago ng mga pattern ng kulay kasama ang dark pattern na nagbabago ng kulay ng background sa itim at mga puting linya upang bigyan ang reader ng kumpletong kaginhawahan kapag nagbabasa sa low-light na kapaligiran.",
+  "@about_app3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutAzkaryApp3": "◉ Ang application na ito ay nagbibigay sa iyo ng kakayahang i-save ang inyong mga paboritong athkar sa isang espesyal na listahan, na ginagawa silang madaling ma-access at ma-review anumang oras.\n◉ Maaari mong kontrolin ang laki ng font at palakihin o paliitin ito ayon sa inyong preference para sa mas komportableng pagbabasa.\n◉ Ang application ay nag-aalok din ng tatlong modes para sa user interface - luntian, asul, at madilim - na nagbibigay sa iyo ng kakayahang i-customize ang hitsura ng app ayon sa inyong mga kagustuhan.\n◉ Ang nagpapangilin sa \"Mga Athkar Ko mula sa Libro at Sunnah\" ay ang kakayahang madaling magbahagi ng mga athkar sa mga kaibigan at pamilya.\n◉ Maaari kang magbahagi nang direkta sa text o sa pamamagitan ng pagpapadala ng larawan na naglalaman ng zikr, na ginagawang mas mayaman at malalim ang karanasan ng komunikasyon at pakikipag-ugnayan sa iba.\n◉ Maaari mong tukuyin ang mga oras na mas gusto mong basahin ang mga athkar, at papaalalahanin ka ng application sa mga oras na iyon nang tumpak.",
+  "@aboutAzkaryApp3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreI": "I-download mula sa |App Store|",
+  "@appStoreI": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "playStore": "I-download mula sa |Google Store|",
+  "@playStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appGallery": "I-download mula sa |App Gallery|",
+  "@appGallery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreD": "I-download mula sa |App Store| para sa Desktop",
+  "@appStoreD": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete": "Tanggalin",
+  "@delete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dwaaDaily": "Dua ng Araw",
+  "@dwaaDaily": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ourApps": "Aming mga App",
+  "@ourApps": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aya_count": "Bilang ng mga Verse",
+  "@aya_count": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAyah": "Nakopya ang Verse",
+  "@copyAyah": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "translation": "Ang Salin",
+  "@translation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader1": "Abdul Basit Abdul Samad",
+  "@reader1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader2": "Muhammad Siddiq Al-Minshawi",
+  "@reader2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader3": "Mahmoud Khalil Al-Hussary",
+  "@reader3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader5": "Maher Al-Muaiqly",
+  "@reader5": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader6": "Saad Al-Ghamdi",
+  "@reader6": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "select_player": "Pumili ng Qari",
+  "@select_player": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "azkar": "Athkar",
+  "@azkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "hero_title": "Gumagawa kami ng propesyonal na multi-platform mobile apps",
+  "hero_subtitle": "Ginagawa namin ang inyong ideya sa isang refined na digital experience na gumagana sa iOS, Android, at Web na may mataas na kalidad at performance.",
+  "cta_start_project": "Simulan ang inyong project",
+  "cta_our_apps": "Aming mga app",
+  "cta_quran": "Ang Banal na Quran",
+  "cta_books": "Mga Libro",
+  "cta_athkar": "Athkar",
+  "services_title": "Mga Serbisyo",
+  "services_head": "Ano ang aming ino-offer?",
+  "svc_quran": "Mushaf Text",
+  "svc_quran_desc": "Advanced na pagbabasa at browsing na may search at mabilis na navigation.",
+  "svc_books": "Mga Libro",
+  "svc_books_desc": "Koleksyon ng mga kapaki-pakinabang na libro at references.",
+  "svc_azkar": "Athkar",
+  "svc_azkar_desc": "Araw-araw na athkar na may magandang organisasyon at malumanay na notifications.",
+  "svc_apps": "Paggawa ng Application",
+  "svc_apps_desc": "Gumagawa kami ng modernong mobile applications na may mataas na performance at komportableng user experience.",
+  "svc_pro": "Propesyonalismo sa Trabaho",
+  "svc_pro_desc": "Kalidad sa pagpapatupad, pagsunod sa deadline, at attention sa mga detalye mula sa simula hanggang sa paglabas.",
+  "svc_multi": "Multi-platform Support",
+  "svc_multi_desc": "Target namin ang iOS, Android, at Web mula sa isang codebase na may optimization para sa bawat platform.",
+  "faq_title": "Mga Madalas na Tanong",
+  "faq_q1": "Paano magpalit sa pagitan ng light at dark theme?",
+  "faq_a1": "Mula sa theme icon sa upper bar.",
+  "faq_q2": "Gumagana ba ito nang walang internet?",
+  "faq_a2": "Ang ilang mga seksyon ay gumagana nang walang internet pagkatapos ng initial loading.",
+  "faq_q3": "Paano maghanap sa loob ng Quran?",
+  "faq_a3": "Mula sa search box o mula sa Quran tab.",
+  "faq_q4": "May mode ba para sa phone at computer?",
+  "faq_a4": "Oo, ang interface ay responsive para sa lahat ng laki.",
+  "faq_q5": "Paano magsisimula ng app project kasama ninyo?",
+  "faq_a5": "Magpadala sa amin ng summary sa pamamagitan ng \"Simulan ang inyong project\" na button at babalik kami sa inyo sa loob ng 24-48 oras na may malinaw na mga hakbang.",
+  "faq_q6": "Anong mga platform ang inyong sinusuportahan?",
+  "faq_a6": "Target namin ang iOS, Android, at Web mula sa isang codebase na may optimization para sa bawat platform.",
+  "faq_q7": "Gaano katagal ang application development?",
+  "faq_a7": "Depende sa laki at saklaw ng project; karaniwang 2 hanggang 8 linggo para sa maliliit at medium na mga project.",
+  "faq_q8": "Paano natutukoy ang presyo?",
+  "faq_a8": "Ayon sa saklaw at mga kinakailangang features. Nagpapadala kami ng detalyadong price quote pagkatapos maintindihan ang mga requirements.",
+  "faq_q9": "Nagbibigay ba kayo ng maintenance at updates?",
+  "faq_a9": "Oo, nag-o-offer kami ng monthly maintenance plans o on-demand para sa mga updates, improvements, at bug fixes.",
+  "faq_q10": "Paano ang tungkol sa data privacy?",
+  "faq_a10": "Pinapangalagaan namin ang privacy ng inyong data at hindi namin ito ibinabahagi sa third parties, at gumagamit kami ng trusted infrastructure.",
+  "faq_q11": "Anong mga payment methods ang available?",
+  "faq_a11": "Bank transfer at common electronic payment gateways depende sa bansa.",
+  "faq_q12": "Paano makikipag-ugnayan sa inyo nang direkta?",
+  "faq_a12": "Mula sa \"Contact\" tab sa loob ng website, ang inyong mensahe ay direktang naaabot sa aming team nang hindi binubuksan ang mail app.",
+  "about_title": "Sino Kami",
+  "about_head": "Al Heekmah Library",
+  "about_body": "Kami ay isang non-profit library na dalubhasa sa paggawa ng mobile applications na may Islamic at educational na karakter. Nagsusumikap kaming magbigay ng maaasahang at madaling gamitin na digital solutions na tumutulong sa mga Muslim na magbasa, matuto, at manatiling committed sa pag-alala sa Allah sa pamamagitan ng mga magagandang at refined na experiences. Nakatuon kami sa performance, accessibility, at multi-platform support upang masiguro na maabot ang benepisyo sa pinakamaraming users na maaari.",
+  "about_contact_cta": "Masaya kaming makipag-ugnayan sa inyo — sulat sa amin sa ibaba:",
+  "contact_title": "Makipag-ugnayan",
+  "contact_head": "Simulan natin ang inyong susunod na project",
+  "contact_name": "Buong Pangalan",
+  "contact_email": "Email Address",
+  "contact_subject": "Paksa",
+  "contact_message": "Inyong Mensahe",
+  "send": "Ipadala",
+  "sending": "Ipinapadala...",
+  "contact_success": "Matagumpay na naipadala ang inyong mensahe.",
+  "contact_error": "Hindi naipadala ang mensahe. Subukan ulit mamaya.",
+  "required_field": "Kinakailangan ang field na ito",
+  "invalid_email": "Hindi valid ang email address",
+  "download_page_title": "I-download ang App",
+  "redirecting_store": "Mare-redirect kayo sa tamang store sa ilang sandali...",
+  "open_store_button": "Buksan ang Store Ngayon",
+  "app_not_found": "Hindi nahanap ang hiniling na app.",
+  "detecting_platform": "Tinutukoy ang inyong platform para sa automatic redirection...",
+  "allBooks": "Lahat ng mga Libro",
+  "myLibrary": "Aking Library",
+  "hadiths": "Hadith",
+  "tafsir": "Tafsir",
+  "aboutBooks": "Tungkol sa Libro",
+  "bookJuz": "Mga Bahagi ng Libro",
+  "chapterBook": "Mga Kabanata ng Libro",
+  "errorLoadingData": "Error sa pag-load ng data",
+  "pages": "mga pahina",
+  "page": "pahina",
+  "chapter": "Kabanata",
+  "goToStartOfJuz": "Pumunta sa simula ng bahagi",
+  "noChaptersInThisJuz": "Walang mga kabanata sa bahaging ito",
+  "Error": "Error",
+  "noPagesFound": "Walang nahanap na mga pahina para sa librong ito.",
+  "noBooksFoundForSearch": "Walang nahanap na mga libro para sa search na ito.",
+  "sixthBooks": "Ikaanim na mga Libro",
+  "ninthBooks": "Ikasiyam na mga Libro",
+  "bookRemovedFromLastRead": "Natanggal ang libro sa huling binasa",
+  "noBooksReadedYet": "Wala pang mga libro na nabasa",
+  "searchInBooks": "Maghanap sa mga libro",
+  "downloading...": "Nagda-download...",
+  "noBooksDownloaded": "Wala pang mga libro na na-download"
+}

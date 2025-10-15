@@ -1,0 +1,275 @@
+{
+  "appName": "Al Heekmah Kütüphanesi",
+  "@appName": {
+    "description": "The App Name"
+  },
+  "lastRead": "Son Okunan",
+  "@lastRead": {
+    "description": "The Last Read"
+  },
+  "appLang": "Uygulama Dili",
+  "@appLang": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "Ara",
+  "@search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeTheme": "Tema Değiştir",
+  "@changeTheme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "brown": "Kahverengi Mod",
+  "@brown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dark": "Karanlık Mod",
+  "@dark": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "books": "Kitaplar",
+  "@books": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home": "Ana Sayfa",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quran": "Kur'an-ı Kerim",
+  "@quran": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readMore": "Daha Fazla Oku",
+  "@readMore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "readLess": "Daha Az Oku",
+  "@readLess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutBook": "Kitap Hakkında",
+  "@aboutBook": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "athkar": "Ezkar",
+  "@athkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAzkarText": "Zikir kopyalandı",
+  "@copyAzkarText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_us": "Uygulama Hakkında",
+  "@about_us": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app": "Uygulama Hakkında",
+  "@about_app": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about_app2": "Programın en önemli özellikleri:",
+  "@about_app2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutQuranApp3": "◉ Bu uygulama size Kur'an'ı sanki mushaftan okuyormuş gibi okuma imkanı sağlar ve dikey ile yatay modda okuyabilirsiniz.\n◉ Ayrıca istediğiniz gibi yakınlaştırma ve uzaklaştırma yapmanızı sağlayan değişken modda da okuyabilirsiniz.\n◉ Uygulama, anlık arama ve sonuçları sayfalarla birlikte gösterme ve gerektiğinde sayfaya gitme imkanı ile Kur'an ayetlerinde metin arama özelliğine sahiptir.\n◉ Okuyucunun sayfayı kaydetmesi ve istediği zaman geri dönmesi için okuma için yer imleri ekleme.\n◉ Not ekleme.\n◉ Her ayeti farklı kari sesleriyle dinleme.\n◉ Uygulama her ayet için tefsir sağlar, tefsirler arasında değişiklik yapabilir ve tefsir yazı tipi boyutunu değiştirebilirsiniz.\n◉ Sureler dizini.\n◉ Sureler arasında kolayca gezinme.\n◉ Uygulama vakf işaretlerini okuma imkanı sağlar.\n◉ Uygulama size Hisnul Müslim'i tam olarak okuma ve ezkar'a göre bölümlere ayırma imkanı sağlar ki okuyucunun bölümler arasında gezinmesi kolay olsun ve herhangi bir zikri favorilere ekleyebilirsiniz.\n◉ Uygulama okuyucuya renk desenlerini değiştirme imkanı sağlar; bunların arasında arka plan rengini siyah ve çizgileri beyaz yapan karanlık desen de vardır ki düşük ışık ortamlarında okurken okuyucuya tam rahatlık sağlar.",
+  "@about_app3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutAzkaryApp3": "◉ Bu uygulama size favori ezkarlarınızı özel bir listede kaydetme imkanı sağlar, onları her zaman kolayca erişilebilir ve incelenebilir hale getirir.\n◉ Yazı tipi boyutunu kontrol edebilir ve daha rahat okuma için tercihinize göre büyütebilir veya küçültebilirsiniz.\n◉ Uygulama ayrıca kullanıcı arayüzü için üç mod sunar - yeşil, mavi ve karanlık - size tercihlerinize göre uygulamanın görünümünü özelleştirme yeteneği verir.\n◉ \"Kitap ve Sünnet'ten Ezkarım\"ı da ayıran özellik, ezkarları arkadaşlar ve aileyle kolayca paylaşma yeteneğidir.\n◉ Doğrudan metin olarak paylaşabilir veya zikir içeren bir resim göndererek paylaşabilirsiniz, bu da başkalarıyla iletişim ve etkileşim deneyimini daha zengin ve derin hale getirir.\n◉ Ezkarları okumak için tercih ettiğiniz zamanları belirleyebilirsiniz ve uygulama o zamanlarda size doğru bir şekilde hatırlatacaktır.",
+  "@aboutAzkaryApp3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreI": "|App Store|'dan İndir",
+  "@appStoreI": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "playStore": "|Google Store|'dan İndir",
+  "@playStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appGallery": "|App Gallery|'den İndir",
+  "@appGallery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appStoreD": "Masaüstü için |App Store|'dan İndir",
+  "@appStoreD": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete": "Sil",
+  "@delete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dwaaDaily": "Günün Duası",
+  "@dwaaDaily": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ourApps": "Uygulamalarımız",
+  "@ourApps": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aya_count": "Ayet Sayısı",
+  "@aya_count": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "copyAyah": "Ayet kopyalandı",
+  "@copyAyah": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "translation": "Çeviri",
+  "@translation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader1": "Abdülbasit Abdüssamed",
+  "@reader1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader2": "Muhammed Sıddık el-Minşavi",
+  "@reader2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader3": "Mahmud Halil el-Husari",
+  "@reader3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader5": "Maher el-Muaykıli",
+  "@reader5": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reader6": "Sa'd el-Gamidi",
+  "@reader6": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "select_player": "Kari Seç",
+  "@select_player": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "azkar": "Ezkar",
+  "@azkar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "hero_title": "Profesyonel çok platformlu mobil uygulamalar yapıyoruz",
+  "hero_subtitle": "Fikrinizi iOS, Android ve Web'de yüksek kalite ve performansla çalışan mükemmel bir dijital deneyime dönüştürüyoruz.",
+  "cta_start_project": "Projenizi başlatın",
+  "cta_our_apps": "Uygulamalarımız",
+  "cta_quran": "Kur'an-ı Kerim",
+  "cta_books": "Kitaplar",
+  "cta_athkar": "Ezkar",
+  "services_title": "Hizmetler",
+  "services_head": "Ne sunuyoruz?",
+  "svc_quran": "Mushaf Metni",
+  "svc_quran_desc": "Arama ve hızlı gezinme ile gelişmiş okuma ve tarama.",
+  "svc_books": "Kitaplar",
+  "svc_books_desc": "Faydalı kitaplar ve referansların koleksiyonu.",
+  "svc_azkar": "Ezkar",
+  "svc_azkar_desc": "Güzel organizasyon ve nazik bildirimlerle günlük ezkar.",
+  "svc_apps": "Uygulama Geliştirme",
+  "svc_apps_desc": "Yüksek performans ve rahat kullanıcı deneyimi ile modern mobil uygulamalar geliştiriyoruz.",
+  "svc_pro": "İşte Profesyonellik",
+  "svc_pro_desc": "Uygulamada kalite, teslim tarihlerine bağlılık ve başlangıçtan yayına kadar detaylara dikkat.",
+  "svc_multi": "Çok Platform Desteği",
+  "svc_multi_desc": "Her platform için optimizasyonlarla tek kod tabanından iOS, Android ve Web'i hedefliyoruz.",
+  "faq_title": "Sık Sorulan Sorular",
+  "faq_q1": "Açık ve koyu tema arasında nasıl geçiş yaparım?",
+  "faq_a1": "Üst çubukta tema simgesinden.",
+  "faq_q2": "İnternet olmadan çalışır mı?",
+  "faq_a2": "Bazı bölümler ilk yüklemeden sonra internet olmadan çalışır.",
+  "faq_q3": "Kur'an içinde nasıl arama yaparım?",
+  "faq_a3": "Arama kutusundan veya Kur'an sekmesinden.",
+  "faq_q4": "Telefon ve bilgisayar için mod var mı?",
+  "faq_a4": "Evet, arayüz tüm boyutlar için duyarlıdır.",
+  "faq_q5": "Sizinle nasıl bir uygulama projesi başlatırım?",
+  "faq_a5": "\"Projenizi başlatın\" düğmesi aracılığıyla bize bir özet gönderin ve 24-48 saat içinde net adımlarla size geri döneceğiz.",
+  "faq_q6": "Hangi platformları destekliyorsunuz?",
+  "faq_a6": "Her platform için optimizasyonlarla tek kod tabanından iOS, Android ve Web'i hedefliyoruz.",
+  "faq_q7": "Uygulama geliştirme ne kadar sürer?",
+  "faq_a7": "Projenin boyutu ve kapsamına bağlıdır; genellikle küçük ve orta projeler için 2 ila 8 hafta.",
+  "faq_q8": "Fiyatlandırma nasıl belirlenir?",
+  "faq_a8": "Kapsam ve gerekli özelliklere göre. Gereksinimleri anladıktan sonra ayrıntılı fiyat teklifi gönderiyoruz.",
+  "faq_q9": "Bakım ve güncellemeler sağlıyor musunuz?",
+  "faq_a9": "Evet, güncellemeler, iyileştirmeler ve hata düzeltmeleri için aylık bakım planları veya talep üzerine hizmet sunuyoruz.",
+  "faq_q10": "Veri gizliliği hakkında ne var?",
+  "faq_a10": "Verilerinizin gizliliğini koruyoruz ve üçüncü taraflarla paylaşmıyoruz, güvenilir altyapı kullanıyoruz.",
+  "faq_q11": "Hangi ödeme yöntemleri mevcut?",
+  "faq_a11": "Ülkeye göre banka havalesi ve yaygın elektronik ödeme geçitleri.",
+  "faq_q12": "Sizinle doğrudan nasıl iletişim kurabilir?",
+  "faq_a12": "Web sitesi içindeki \"İletişim\" sekmesinden, mesajınız posta uygulaması açmadan doğrudan ekibimize ulaşır.",
+  "about_title": "Biz Kimiz",
+  "about_head": "Al Heekmah Kütüphanesi",
+  "about_body": "İslami ve eğitici karakterde mobil uygulamalar yapmakta uzmanlaşmış kar amacı gütmeyen bir kütüphaneyiz. Müslümanların güzel ve mükemmel deneyimler aracılığıyla okumalarına, öğrenmelerine ve Allah'ı zikretmeye bağlı kalmalarına yardımcı olan güvenilir ve kullanımı kolay dijital çözümler sunmaya çalışıyoruz. Faydanın mümkün olan en fazla kullanıcıya ulaşmasını sağlamak için performans, erişilebilirlik ve çok platform desteğine odaklanıyoruz.",
+  "about_contact_cta": "Bizimle iletişiminiz bizi mutlu ediyor — aşağıda bize yazın:",
+  "contact_title": "İletişim",
+  "contact_head": "Bir sonraki projenizi başlatalım",
+  "contact_name": "Tam Ad",
+  "contact_email": "E-posta Adresi",
+  "contact_subject": "Konu",
+  "contact_message": "Mesajınız",
+  "send": "Gönder",
+  "sending": "Gönderiliyor...",
+  "contact_success": "Mesajınız başarıyla gönderildi.",
+  "contact_error": "Mesaj gönderilemedi. Daha sonra tekrar deneyin.",
+  "required_field": "Bu alan gereklidir",
+  "invalid_email": "E-posta adresi geçersiz",
+  "download_page_title": "Uygulamayı İndir",
+  "redirecting_store": "Kısa süre içinde uygun mağazaya yönlendirileceksiniz...",
+  "open_store_button": "Mağazayı Şimdi Aç",
+  "app_not_found": "İstenen uygulama bulunamadı.",
+  "detecting_platform": "Otomatik yönlendirme için platformunuz tespit ediliyor...",
+  "allBooks": "Tüm Kitaplar",
+  "myLibrary": "Kütüphanem",
+  "hadiths": "Hadis",
+  "tafsir": "Tefsir",
+  "aboutBooks": "Kitap Hakkında",
+  "bookJuz": "Kitap Bölümleri",
+  "chapterBook": "Kitap Fasılları",
+  "errorLoadingData": "Veri yükleme hatası",
+  "pages": "sayfalar",
+  "page": "sayfa",
+  "chapter": "Fasıl",
+  "goToStartOfJuz": "Bölümün başına git",
+  "noChaptersInThisJuz": "Bu bölümde fasıl yok",
+  "Error": "Hata",
+  "noPagesFound": "Bu kitap için sayfa bulunamadı.",
+  "noBooksFoundForSearch": "Bu arama için kitap bulunamadı.",
+  "sixthBooks": "Altıncı Kitaplar",
+  "ninthBooks": "Dokuzuncu Kitaplar",
+  "bookRemovedFromLastRead": "Kitap son okunanlardan kaldırıldı",
+  "noBooksReadedYet": "Henüz hiç kitap okunmadı",
+  "searchInBooks": "Kitaplarda ara",
+  "downloading...": "İndiriliyor...",
+  "noBooksDownloaded": "Henüz hiç kitap indirilmedi"
+}

@@ -17,41 +17,38 @@ class HomeScreen extends StatelessWidget {
     double height = MediaQuery.sizeOf(context).height;
     double width = MediaQuery.sizeOf(context).width;
 
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Container(
-        height: height,
-        width: width,
-        color: Theme.of(context).colorScheme.surface,
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 32.0, bottom: 48.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  child: HeroHeader(),
-                ),
-                const Gap(32),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  child: ServicesSection(),
-                ),
-                const Gap(32),
-                KeyedSubtree(
-                    key: sl<GeneralController>().ourAppsKey,
-                    child: const OurApps()),
-                const Gap(32),
-                const AboutUsSection(),
-                const Gap(32),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  child: FaqSection(),
-                ),
-                const Gap(32),
-              ],
-            ),
+    return Container(
+      height: height,
+      width: width,
+      color: Theme.of(context).colorScheme.surface,
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 32.0, bottom: 48.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: HeroHeader(),
+              ),
+              const Gap(32),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: ServicesSection(),
+              ),
+              const Gap(32),
+              KeyedSubtree(
+                  key: sl<GeneralController>().ourAppsKey,
+                  child: const OurApps()),
+              const Gap(32),
+              const AboutUsSection(),
+              const Gap(32),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: FaqSection(),
+              ),
+              const Gap(32),
+            ],
           ),
         ),
       ),

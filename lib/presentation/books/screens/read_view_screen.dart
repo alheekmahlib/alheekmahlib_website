@@ -74,8 +74,8 @@ class ReadViewBody extends StatelessWidget {
             }
             final pages = snapshot.data;
             if (pages == null || pages.isEmpty) {
-              return const Center(
-                child: Text('لم يتم العثور على صفحات لهذا الكتاب.'),
+              return Center(
+                child: Text('noPagesFound'.tr),
               );
             }
             return ReadPagesView(bookNumber: bookNumber, pages: pages);
