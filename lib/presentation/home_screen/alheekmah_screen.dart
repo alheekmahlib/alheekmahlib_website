@@ -25,52 +25,57 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
     general.screenHeight = MediaQuery.sizeOf(context).height;
     general.topPadding = general.screenHeight * 0.05;
     general.bottomPadding = general.screenHeight * 0.03;
+    final width = MediaQuery.sizeOf(context).width;
+    final isWide = width > 820;
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              MediaQuery.of(context).size.width <= 770
-                  ? Flexible(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+          !isWide
+              ? Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 24.0, vertical: 8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           InkWell(
                             onTap: () =>
                                 sl<AppRouter>().onItemTapped(0, context),
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 24.0, vertical: 8.0),
-                              child: alheekmah_logo(context, height: 30.0),
-                            ),
+                            child: alheekmah_logo(context, height: 30.0),
                           ),
-                          TabBarUI(),
+                          ChangeThemeWidget(
+                            svgColor: context.theme.colorScheme.primary,
+                            borderColor: context.theme.colorScheme.primary
+                                .withValues(alpha: .2),
+                          ),
                         ],
                       ),
-                    )
-                  : InkWell(
-                      onTap: () => sl<AppRouter>().onItemTapped(0, context),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    ),
+                    TabBarUI(),
+                  ],
+                )
+              : Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      InkWell(
+                        onTap: () => sl<AppRouter>().onItemTapped(0, context),
                         child: alheekmah_logo(context, height: 30.0),
                       ),
-                    ),
-              MediaQuery.of(context).size.width <= 770
-                  ? const SizedBox.shrink()
-                  : TabBarUI(),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: ChangeThemeWidget(
-                  svgColor: context.theme.colorScheme.primary,
-                  borderColor:
-                      context.theme.colorScheme.primary.withValues(alpha: .2),
+                      TabBarUI(),
+                      ChangeThemeWidget(
+                        svgColor: context.theme.colorScheme.primary,
+                        borderColor: context.theme.colorScheme.primary
+                            .withValues(alpha: .2),
+                      ),
+                    ],
+                  ),
                 ),
-              )
-            ],
-          ),
           Expanded(
             child: Stack(
               children: [

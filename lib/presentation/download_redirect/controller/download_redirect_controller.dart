@@ -95,7 +95,30 @@ class DownloadRedirectController extends GetxController {
   Future<String> _pickUrlForCurrentPlatform(OurAppInfo a) async {
     // Web: نفضّل المتجر بحسب userAgent إن أمكن
     if (kIsWeb) {
+      bool? isHuawei = await GoogleHuaweiAvailability.isHuaweiServiceAvailable;
+
       final agent = platformUserAgent();
+      // تفضيل هواوي على الويب إذا ظهر في userAgent
+      final looksHuawei = agent.contains('huawei') ||
+          agent.contains('huaweibrowser') ||
+          agent.contains('hms') ||
+          agent.contains('hmscore') ||
+          agent.contains('build/huawei') ||
+          agent.contains('build/honor') ||
+          agent.contains(' hw-') ||
+          agent.contains('harmony') ||
+          agent.contains('honor') ||
+          agent.contains('hisilicon') ||
+          agent.contains('petal');
+      if (looksHuawei || isHuawei == true) {
+        return a.urlAppGallery.isNotEmpty
+            ? a.urlAppGallery
+            : (a.urlPlayStore.isNotEmpty
+                ? a.urlPlayStore
+                : (a.urlAppStore.isNotEmpty
+                    ? a.urlAppStore
+                    : a.urlMacAppStore));
+      }
       if (agent.contains('iphone') ||
           agent.contains('ipad') ||
           agent.contains('mac os')) {
@@ -133,7 +156,8 @@ class DownloadRedirectController extends GetxController {
         } catch (_) {
           // تجاهل الأخطاء واستخدم fallback
         }
-        return a.urlPlayStore.isNotEmpty ? a.urlPlayStore : a.urlAppGallery;
+        // في حال عدم القدرة على تحديد هواوي/جوجل، نفضّل AppGallery أولًا على أجهزة أندرويد
+        return a.urlAppGallery.isNotEmpty ? a.urlAppGallery : a.urlPlayStore;
       case TargetPlatform.macOS:
         return a.urlMacAppStore.isNotEmpty ? a.urlMacAppStore : a.urlAppStore;
       case TargetPlatform.windows:

@@ -181,10 +181,9 @@
   "@azkar": {
     "type": "text",
     "placeholders": {}
-  }
-  ,
-  "hero_title": "We build professional multi‑platform mobile apps",
-  "hero_subtitle": "Turn your idea into a polished experience for iOS, Android, and Web with great performance.",
+  },
+  "hero_title": "We build professional apps for mobile, web, and desktop",
+  "hero_subtitle": "Turn your idea into a polished digital experience that works smoothly on iOS, Android, Web, and Desktop with high quality and performance.",
   "cta_start_project": "Start your project",
   "cta_our_apps": "Our apps",
   "cta_quran": "Quran",
@@ -231,7 +230,7 @@
   "faq_a12": "From the \"Contact\" tab on this site; your message goes straight to our team without opening a mail app.",
   "about_title": "About Us",
   "about_head": "Al Heekmah Library",
-  "about_body": "We are a non-profit library specialized in building mobile applications with Islamic and educational focus. We strive to deliver trustworthy, easy-to-use digital experiences that help Muslims read, learn, and keep up with daily remembrance. We care about performance, accessibility, and multi-platform support to reach as many users as possible.",
+  "about_body": "We are a library specialized in developing and building applications with Islamic and educational character. We aim to provide reliable and easy-to-use digital solutions that help Muslims read, learn, and stay committed to remembering Allah through beautiful and refined technical experiences. We focus on high performance, accessibility, and multi-platform support to ensure benefits reach the largest number of users.",
   "about_contact_cta": "We'd love to hear from you — write to us below:",
   "contact_title": "Contact",
   "contact_head": "Let’s talk about your next project",

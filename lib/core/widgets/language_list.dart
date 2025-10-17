@@ -48,7 +48,7 @@ class _LanguageDropdown extends StatelessWidget {
         ? maxMenuHeight
         : (itemsCount * itemHeight);
     final double dropdownWidth =
-        (MediaQuery.sizeOf(context).width * 0.9).clamp(220.0, 220.0);
+        (MediaQuery.sizeOf(context).width * 0.9).clamp(200.0, 200.0);
 
     return DropdownButtonHideUnderline(
       child: DropdownButton2<String>(
@@ -171,7 +171,7 @@ class _LanguageDropdown extends StatelessWidget {
         ),
         buttonStyleData: ButtonStyleData(
           height: buttonHeight - 4,
-          width: 160,
+          width: 220,
           padding: const EdgeInsets.symmetric(horizontal: 12),
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.surface,

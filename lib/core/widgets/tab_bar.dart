@@ -1,7 +1,7 @@
-import 'package:alheekmahlib_website/core/utils/constants/extensions/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '/core/utils/constants/extensions/dimensions.dart';
 import '../../presentation/controllers/general_controller.dart';
 import '../services/services_locator.dart';
 import '../utils/helpers/app_router.dart';
@@ -24,38 +24,36 @@ class TabBarUI extends StatelessWidget {
     final general = sl<GeneralController>();
     final navigation = sl<AppRouter>();
 
-    return Flexible(
-      child: Container(
-        // height: screenSize(context, 240.0, 56.0),
-        // width: MediaQuery.sizeOf(context).width * .65,
-        margin: const EdgeInsets.symmetric(horizontal: 16.0),
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.surface,
-          borderRadius: const BorderRadius.all(Radius.circular(14)),
-          border: Border.all(
-            color: Theme.of(context).dividerColor.withValues(alpha: 0.12),
-            width: 1,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: Theme.of(context).shadowColor.withValues(alpha: 0.04),
-              blurRadius: 16,
-              offset: const Offset(0, 6),
-            ),
-          ],
+    return Container(
+      // height: screenSize(context, 240.0, 56.0),
+      width: MediaQuery.sizeOf(context).width,
+      margin: const EdgeInsets.symmetric(horizontal: 16.0),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.surface,
+        borderRadius: const BorderRadius.all(Radius.circular(14)),
+        border: Border.all(
+          color: Theme.of(context).dividerColor.withValues(alpha: 0.12),
+          width: 1,
         ),
-        child: Obx(() => _WebTabs(
-              labels: tapViews,
-              selectedIndex: general.tapIndex.value,
-              onTap: (i) {
-                general.tapIndex.value = i;
-                navigation.calculateSelectedIndex(context);
-                navigation.onItemTapped(i, context);
-              },
-              hoveredIndex: generalCtrl.hoveredIndex?.value,
-              onHover: (i) => generalCtrl.hoveredIndex?.value = i!,
-            )),
+        boxShadow: [
+          BoxShadow(
+            color: Theme.of(context).shadowColor.withValues(alpha: 0.04),
+            blurRadius: 16,
+            offset: const Offset(0, 6),
+          ),
+        ],
       ),
+      child: Obx(() => _WebTabs(
+            labels: tapViews,
+            selectedIndex: general.tapIndex.value,
+            onTap: (i) {
+              general.tapIndex.value = i;
+              navigation.calculateSelectedIndex(context);
+              navigation.onItemTapped(i, context);
+            },
+            hoveredIndex: generalCtrl.hoveredIndex?.value,
+            onHover: (i) => generalCtrl.hoveredIndex?.value = i!,
+          )),
     );
   }
 }
@@ -91,7 +89,7 @@ class _WebTabs extends StatelessWidget {
             final selected = selectedIndex == i;
 
             return SizedBox(
-              width: 120,
+              width: 110,
               child: Padding(
                 padding: const EdgeInsets.all(4.0),
                 child: MouseRegion(
