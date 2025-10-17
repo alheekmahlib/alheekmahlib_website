@@ -88,7 +88,7 @@ class DownloadRedirectController extends GetxController {
     final url = await _pickUrlForCurrentPlatform(a);
     final uri = Uri.tryParse(url);
     if (uri != null && await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.platformDefault);
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     }
   }
 
