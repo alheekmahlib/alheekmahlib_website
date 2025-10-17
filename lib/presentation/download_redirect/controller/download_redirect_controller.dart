@@ -95,8 +95,6 @@ class DownloadRedirectController extends GetxController {
   Future<String> _pickUrlForCurrentPlatform(OurAppInfo a) async {
     // Web: نفضّل المتجر بحسب userAgent إن أمكن
     if (kIsWeb) {
-      bool? isHuawei = await GoogleHuaweiAvailability.isHuaweiServiceAvailable;
-
       final agent = platformUserAgent();
       // تفضيل هواوي على الويب إذا ظهر في userAgent
       final looksHuawei = agent.contains('huawei') ||
@@ -110,7 +108,7 @@ class DownloadRedirectController extends GetxController {
           agent.contains('honor') ||
           agent.contains('hisilicon') ||
           agent.contains('petal');
-      if (looksHuawei || isHuawei == true) {
+      if (looksHuawei) {
         return a.urlAppGallery.isNotEmpty
             ? a.urlAppGallery
             : (a.urlPlayStore.isNotEmpty
@@ -139,22 +137,28 @@ class DownloadRedirectController extends GetxController {
       case TargetPlatform.iOS:
         return a.urlAppStore.isNotEmpty ? a.urlAppStore : a.urlPlayStore;
       case TargetPlatform.android:
-        // استخدم كشف هواوي/جوجل على أجهزة أندرويد فقط
-        try {
-          final isHuawei =
-              await GoogleHuaweiAvailability.isHuaweiServiceAvailable;
-          final isGoogle =
-              await GoogleHuaweiAvailability.isGoogleServiceAvailable;
-          if (isHuawei == true) {
-            return a.urlAppGallery.isNotEmpty
-                ? a.urlAppGallery
-                : (a.urlPlayStore.isNotEmpty ? a.urlPlayStore : a.urlAppStore);
+        // استخدم كشف هواوي/جوجل على أجهزة أندرويد المحلية فقط (ليس الويب)
+        if (!kIsWeb) {
+          try {
+            final isHuawei =
+                await GoogleHuaweiAvailability.isHuaweiServiceAvailable;
+            final isGoogle =
+                await GoogleHuaweiAvailability.isGoogleServiceAvailable;
+            if (isHuawei == true) {
+              return a.urlAppGallery.isNotEmpty
+                  ? a.urlAppGallery
+                  : (a.urlPlayStore.isNotEmpty
+                      ? a.urlPlayStore
+                      : a.urlAppStore);
+            }
+            if (isGoogle == true) {
+              return a.urlPlayStore.isNotEmpty
+                  ? a.urlPlayStore
+                  : a.urlAppGallery;
+            }
+          } catch (_) {
+            // تجاهل الأخطاء واستخدم fallback
           }
-          if (isGoogle == true) {
-            return a.urlPlayStore.isNotEmpty ? a.urlPlayStore : a.urlAppGallery;
-          }
-        } catch (_) {
-          // تجاهل الأخطاء واستخدم fallback
         }
         // في حال عدم القدرة على تحديد هواوي/جوجل، نفضّل AppGallery أولًا على أجهزة أندرويد
         return a.urlAppGallery.isNotEmpty ? a.urlAppGallery : a.urlPlayStore;
