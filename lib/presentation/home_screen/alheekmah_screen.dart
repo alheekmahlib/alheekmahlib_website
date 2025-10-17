@@ -67,7 +67,7 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
                         onTap: () => sl<AppRouter>().onItemTapped(0, context),
                         child: alheekmah_logo(context, height: 30.0),
                       ),
-                      TabBarUI(),
+                      Flexible(child: TabBarUI()),
                       ChangeThemeWidget(
                         svgColor: context.theme.colorScheme.primary,
                         borderColor: context.theme.colorScheme.primary
