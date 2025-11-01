@@ -271,5 +271,13 @@
   "noBooksReadedYet": "এখনো কোনো বই পড়া হয়নি",
   "searchInBooks": "বইসমূহে অনুসন্ধান করুন",
   "downloading...": "ডাউনলোড হচ্ছে...",
-  "noBooksDownloaded": "এখনো কোনো বই ডাউনলোড হয়নি"
+  "noBooksDownloaded": "এখনো কোনো বই ডাউনলোড হয়নি",
+  "juz": "জুজ়",
+  "sajda": "সিজদা",
+  "surahNames": "সূরার নাম",
+  "aboutSurah": "সূরা সম্পর্কে",
+  "ayah_copied": "আয়াত কপি হয়েছে",
+  "translate": "অনুবাদসমূহ",
+  "tafsirIsEmptyNote": "\n\nএই আয়াতের তাফসীর পূর্ববর্তী আয়াতগুলিতে রয়েছে",
+  "footnotes": "ফুটনোট"
 }

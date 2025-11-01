@@ -271,5 +271,13 @@
   "noBooksReadedYet": "Wala pang mga libro na nabasa",
   "searchInBooks": "Maghanap sa mga libro",
   "downloading...": "Nagda-download...",
-  "noBooksDownloaded": "Wala pang mga libro na na-download"
+  "noBooksDownloaded": "Wala pang mga libro na na-download",
+  "juz": "Juz",
+  "sajda": "Sujud",
+  "surahNames": "Mga Pangalan ng Surah",
+  "aboutSurah": "Tungkol sa Surah",
+  "ayah_copied": "Nakopya ang talata",
+  "translate": "Mga Pagsasalin",
+  "tafsirIsEmptyNote": "\n\nAng interpretasyon ng talatang ito ay nasa mga nakaraang talata",
+  "footnotes": "Mga Talababa"
 }

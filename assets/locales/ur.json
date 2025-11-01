@@ -271,5 +271,13 @@
   "noBooksReadedYet": "ابھی تک کوئی کتابیں نہیں پڑھی گئیں",
   "searchInBooks": "کتابوں میں تلاش کریں",
   "downloading...": "ڈاؤن لوڈ ہو رہا ہے...",
-  "noBooksDownloaded": "ابھی تک کوئی کتابیں ڈاؤن لوڈ نہیں ہوئیں"
+  "noBooksDownloaded": "ابھی تک کوئی کتاب ڈاؤن لوڈ نہیں ہوئی",
+  "juz": "پارہ",
+  "sajda": "سجدہ",
+  "surahNames": "سورتوں کے نام",
+  "aboutSurah": "سورت کے بارے میں",
+  "ayah_copied": "آیت کاپی ہو گئی",
+  "translate": "ترجمے",
+  "tafsirIsEmptyNote": "\n\nاس آیت کی تفسیر سابقہ آیات میں ہے",
+  "footnotes": "حاشیہ"
 }

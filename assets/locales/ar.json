@@ -273,5 +273,13 @@
   "noBooksReadedYet": "لا توجد كتب مقروءة بعد",
   "searchInBooks": "ابحث في الكتب",
   "downloading...": "تحميل...",
-  "noBooksDownloaded": "لا توجد كتب تم تحميلها بعد"
+  "noBooksDownloaded": "لا توجد كتب تم تحميلها بعد",
+  "juz": "الجزء",
+  "sajda": "سجدة",
+  "surahNames": "أسماء السورة",
+  "aboutSurah": "عن السورة",
+  "ayah_copied": "تم نسخ الآية",
+  "translate": "الترجمات",
+  "tafsirIsEmptyNote": "\n\nتفسير هذه الآية في الأيات السابقة",
+  "footnotes": "الحاشية"
 }

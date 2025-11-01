@@ -15,9 +15,11 @@ extension Dimensions on BuildContext {
       ? Theme.of(this).colorScheme.surface
       : Theme.of(this).primaryColorDark;
 
-  Color get iconsDarkColor => Theme.of(this).colorScheme.surface;
-
   Color get iconsLightColor => isDark
       ? Theme.of(this).primaryColorDark
       : Theme.of(this).colorScheme.surface;
+
+  Color get iconsDarkColor => isDark
+      ? Theme.of(this).colorScheme.primary
+      : Theme.of(this).colorScheme.onPrimary;
 }

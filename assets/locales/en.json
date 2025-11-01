@@ -272,5 +272,13 @@
   "noBooksReadedYet": "No books read yet",
   "searchInBooks": "Search in books",
   "downloading...": "Downloading...",
-  "noBooksDownloaded": "No books downloaded yet"
+  "noBooksDownloaded": "No books downloaded yet",
+  "juz": "Juz",
+  "sajda": "Prostration",
+  "surahNames": "Surah Names",
+  "aboutSurah": "About the Surah",
+  "ayah_copied": "Verse copied",
+  "translate": "Translations",
+  "tafsirIsEmptyNote": "\n\nThe interpretation of this verse is in the previous verses",
+  "footnotes": "Footnotes"
 }

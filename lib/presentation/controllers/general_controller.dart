@@ -13,7 +13,7 @@ import '../books/books.dart';
 import '../contact_us/screens/contact_us_page.dart';
 import '../home_screen/home_screen.dart';
 import '../our_apps/data/model/our_app_info_model.dart';
-import '../quran_text/screens/surah_text_screen.dart';
+import '../quran/screens/quran_screen.dart';
 
 class GeneralController extends GetxController {
   static GeneralController get instance =>
@@ -102,8 +102,8 @@ class GeneralController extends GetxController {
 
   List screensViews = [
     const HomeScreen(),
-    const SurahTextScreen(),
-    BooksScreen(),
+    const QuranScreen(),
+    const BooksScreen(),
     const AzkarView(),
     const ContactUsPage(),
   ];
@@ -118,12 +118,5 @@ class GeneralController extends GetxController {
     } else {
       throw Exception('Failed to load data');
     }
-  }
-
-  /// Greeting
-  updateGreeting() {
-    final now = DateTime.now();
-    final isMorning = now.hour < 12;
-    greeting.value = isMorning ? 'صبحكم الله بالخير' : 'مساكم الله بالخير';
   }
 }

@@ -271,5 +271,13 @@
   "noBooksReadedYet": "Henüz hiç kitap okunmadı",
   "searchInBooks": "Kitaplarda ara",
   "downloading...": "İndiriliyor...",
-  "noBooksDownloaded": "Henüz hiç kitap indirilmedi"
+  "noBooksDownloaded": "Henüz hiç kitap indirilmedi",
+  "juz": "Cüz",
+  "sajda": "Secde",
+  "surahNames": "Sure İsimleri",
+  "aboutSurah": "Sure Hakkında",
+  "ayah_copied": "Ayet kopyalandı",
+  "translate": "Tercümeler",
+  "tafsirIsEmptyNote": "\n\nBu ayetin tefsiri önceki ayetlerdedir",
+  "footnotes": "Dipnotlar"
 }

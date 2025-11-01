@@ -271,5 +271,13 @@
   "noBooksReadedYet": "Belum ada kitab yang dibaca",
   "searchInBooks": "Cari dalam kitab",
   "downloading...": "Mengunduh...",
-  "noBooksDownloaded": "Belum ada kitab yang diunduh"
+  "noBooksDownloaded": "Belum ada buku yang diunduh",
+  "juz": "Juz",
+  "sajda": "Sujud",
+  "surahNames": "Nama-nama Surah",
+  "aboutSurah": "Tentang Surah",
+  "ayah_copied": "Ayat disalin",
+  "translate": "Terjemahan",
+  "tafsirIsEmptyNote": "\n\nTafsir ayat ini ada di ayat-ayat sebelumnya",
+  "footnotes": "Catatan Kaki"
 }

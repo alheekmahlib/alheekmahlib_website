@@ -270,6 +270,14 @@
   "bookRemovedFromLastRead": "کتێب لە دوایین خوێندنەوە لابرا",
   "noBooksReadedYet": "هێشتا هیچ کتێبێک نەخوێندراوەتەوە",
   "searchInBooks": "لە کتێبەکاندا بگەڕێ",
-  "downloading...": "داگیرساندن...",
-  "noBooksDownloaded": "هێشتا هیچ کتێبێک داگیرساو نەکراوە"
+  "downloading...": "دابەزاندن...",
+  "noBooksDownloaded": "هێشتا هیچ کتێبێک دانەبەزراوە",
+  "juz": "بەش",
+  "sajda": "سوجدە",
+  "surahNames": "ناوی سورەکان",
+  "aboutSurah": "دەربارەی سورەکە",
+  "ayah_copied": "ئایەت کۆپی کرا",
+  "translate": "وەرگێڕانەکان",
+  "tafsirIsEmptyNote": "\n\nلێکدانەوەی ئەم ئایەتە لە ئایەتە پێشووەکاندایە",
+  "footnotes": "تێبینیەکان"
 }

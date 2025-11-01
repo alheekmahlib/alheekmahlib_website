@@ -271,5 +271,13 @@
   "noBooksReadedYet": "Aún no se han leído libros",
   "searchInBooks": "Buscar en libros",
   "downloading...": "Descargando...",
-  "noBooksDownloaded": "Aún no se han descargado libros"
+  "noBooksDownloaded": "Aún no se han descargado libros",
+  "juz": "Juz",
+  "sajda": "Postración",
+  "surahNames": "Nombres de las Suras",
+  "aboutSurah": "Sobre la Sura",
+  "ayah_copied": "Aleya copiada",
+  "translate": "Traducciones",
+  "tafsirIsEmptyNote": "\n\nLa interpretación de esta aleya está en las aleyas anteriores",
+  "footnotes": "Notas al pie"
 }

@@ -15,7 +15,6 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:go_router/go_router.dart';
-import 'package:path_provider/path_provider.dart';
 
 import '/core/utils/constants/extensions/custom_error_snack_bar.dart';
 import '/core/utils/constants/extensions/extensions.dart';

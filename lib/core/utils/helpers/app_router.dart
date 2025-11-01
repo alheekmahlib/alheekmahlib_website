@@ -1,10 +1,11 @@
 import 'dart:developer';
 
-import 'package:alheekmahlib_website/presentation/athkar_screen/controllers/athkar_controller.dart';
-import 'package:alheekmahlib_website/presentation/controllers/general_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quran_library/quran.dart';
 
+import '/presentation/athkar_screen/controllers/athkar_controller.dart';
+import '/presentation/controllers/general_controller.dart';
 import '../../../presentation/athkar_screen/models/all_azkar.dart';
 import '../../../presentation/athkar_screen/screens/alzkar_view.dart';
 import '../../../presentation/athkar_screen/screens/azkar_item.dart';
@@ -13,16 +14,13 @@ import '../../../presentation/contact_us/screens/contact_us_page.dart';
 import '../../../presentation/download_redirect/screens/download_redirect_screen.dart';
 import '../../../presentation/home_screen/alheekmah_screen.dart';
 import '../../../presentation/home_screen/home_screen.dart';
-import '../../../presentation/quran_text/controllers/quranText_controller.dart';
-import '../../../presentation/quran_text/controllers/surahTextController.dart';
-import '../../../presentation/quran_text/screens/surah_text_screen.dart';
-import '../../../presentation/quran_text/screens/text_page_view.dart';
+import '../../../presentation/quran/screens/quran_screen.dart';
 import '../../services/services_locator.dart';
+import 'navigation_keys.dart';
 
-final GlobalKey<NavigatorState> rootNavigatorKey =
-    GlobalKey<NavigatorState>(debugLabel: 'root');
-final GlobalKey<NavigatorState> shellNavigatorKey =
-    GlobalKey<NavigatorState>(debugLabel: 'shell');
+export 'navigation_keys.dart';
+
+// المفاتيح مُعلنة الآن في navigation_keys.dart
 
 /// A lightweight navigation manager that owns the app router and page controller.
 ///
@@ -78,48 +76,17 @@ class AppRouter {
           GoRoute(
             path: routeQuran,
             builder: (BuildContext context, GoRouterState state) {
-              return const SurahTextScreen();
+              // إذا وُجد رقم صفحة في الرابط (?page=123) اقفز إلى تلك الصفحة
+              final pageParam = state.uri.queryParameters['page'];
+              final pageNumber = int.tryParse(pageParam ?? '');
+              if (pageNumber != null && pageNumber > 0) {
+                WidgetsBinding.instance.addPostFrameCallback((_) {
+                  QuranLibrary().jumpToPage(pageNumber);
+                });
+              }
+              return const QuranScreen();
             },
-            routes: <RouteBase>[
-              GoRoute(
-                path: 'surah/:surahId',
-                parentNavigatorKey: rootNavigatorKey,
-                builder: (BuildContext context, GoRouterState state) {
-                  final raw = state.pathParameters['surahId'];
-                  final surahId = int.tryParse(raw ?? '');
-                  log('surahId: $surahId');
-                  if (surahId == null || surahId <= 0) {
-                    return const Text('Invalid surah id');
-                  }
-                  return FutureBuilder<void>(
-                      future: sl<SurahTextController>().loadQuranData(),
-                      builder: (context, snapshot) {
-                        if (snapshot.connectionState ==
-                            ConnectionState.waiting) {
-                          return const SizedBox.shrink();
-                        } else if (snapshot.hasError) {
-                          return Text('Error: ${snapshot.error}');
-                        } else {
-                          sl<QuranTextController>().currentSurahIndex = surahId;
-                          return TextPageView(
-                            surah:
-                                sl<SurahTextController>().surahs[surahId - 1],
-                            nomPageF: sl<SurahTextController>()
-                                .surahs[surahId - 1]
-                                .ayahs!
-                                .first
-                                .page!,
-                            nomPageL: sl<SurahTextController>()
-                                .surahs[surahId - 1]
-                                .ayahs!
-                                .last
-                                .page!,
-                          );
-                        }
-                      });
-                },
-              ),
-            ],
+            routes: const <RouteBase>[],
           ),
           GoRoute(
             path: routeBooks,
@@ -278,29 +245,34 @@ class AppRouter {
   }
 
   void itemRouter(BuildContext context) {
-    final String location = GoRouterState.of(context).uri.toString();
+    // استخدم المسار فقط بدون الاستعلامات للمطابقة، لكن احتفظ بـ uri لقراءة query params
+    final uri = GoRouterState.of(context).uri;
+    final String path = uri.path; // مثل /quran أو /books
     int? pageIndex;
-    switch (location) {
-      case routeHome:
-        pageIndex = 0;
-        sl<GeneralController>().tapIndex.value = 0;
-        break;
-      case routeContactUs:
-        pageIndex = 4;
-        sl<GeneralController>().tapIndex.value = 4;
-        break;
-      case routeQuran:
-        pageIndex = 1;
-        sl<GeneralController>().tapIndex.value = 1;
-        break;
-      case routeBooks:
-        pageIndex = 2;
-        sl<GeneralController>().tapIndex.value = 2;
-        break;
-      case routeAthkar:
-        pageIndex = 3;
-        sl<GeneralController>().tapIndex.value = 3;
-        break;
+
+    if (path == routeHome) {
+      pageIndex = 0;
+      sl<GeneralController>().tapIndex.value = 0;
+    } else if (path.startsWith(routeContactUs)) {
+      pageIndex = 4;
+      sl<GeneralController>().tapIndex.value = 4;
+    } else if (path.startsWith(routeQuran)) {
+      pageIndex = 1;
+      sl<GeneralController>().tapIndex.value = 1;
+      // دعم ?page= للانتقال إلى صفحة معيّنة داخل المصحف عند فتح الرابط مباشرة
+      final pageParam = uri.queryParameters['page'];
+      final pageNumber = int.tryParse(pageParam ?? '');
+      if (pageNumber != null && pageNumber > 0) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          QuranLibrary().jumpToPage(pageNumber);
+        });
+      }
+    } else if (path.startsWith(routeBooks)) {
+      pageIndex = 2;
+      sl<GeneralController>().tapIndex.value = 2;
+    } else if (path.startsWith(routeAthkar)) {
+      pageIndex = 3;
+      sl<GeneralController>().tapIndex.value = 3;
     }
     if (pageIndex != null) {
       // Don't recreate controllers in build; just move to the right page.

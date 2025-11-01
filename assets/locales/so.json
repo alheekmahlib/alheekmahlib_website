@@ -270,5 +270,13 @@
   "noBooksReadedYet": "Weli ma jirto buugag la akhriyay",
   "searchInBooks": "Ku raadi buugaagta",
   "downloading...": "Waa la soo dejinayaa...",
-  "noBooksDownloaded": "Weli ma jirto buugag la soo dejiyay"
+  "noBooksDownloaded": "Weli ma jirto buugag la soo dejiyay",
+  "juz": "Qayb",
+  "sajda": "Sujuud",
+  "surahNames": "Magacyada Suuradaha",
+  "aboutSurah": "Ku saabsan Suuradda",
+  "ayah_copied": "Aayada waa la nuqlay",
+  "translate": "Turjumaadaha",
+  "tafsirIsEmptyNote": "\n\nTafsirka aayadan wuxuu ku jiraa aayooyinka hore",
+  "footnotes": "Qoraalada Hoose"
 }

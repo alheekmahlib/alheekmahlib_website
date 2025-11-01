@@ -12,7 +12,6 @@ import '../../../core/utils/constants/extensions/dimensions.dart';
 import '../../../core/widgets/font_size_drop_down.dart';
 import '../../../core/widgets/widgets.dart';
 import '../../controllers/general_controller.dart';
-import '../../quran_text/controllers/quranText_controller.dart';
 import '../controllers/athkar_controller.dart';
 
 class AzkarItem extends StatelessWidget {
@@ -90,7 +89,6 @@ class AzkarItem extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
               sl<GeneralController>().textWidgetPosition.value = -240.0;
-              sl<QuranTextController>().selected.value = false;
             },
             icon: Icon(
               Icons.arrow_back,
