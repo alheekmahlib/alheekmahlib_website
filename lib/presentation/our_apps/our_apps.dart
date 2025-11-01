@@ -63,11 +63,11 @@ class OurApps extends StatelessWidget {
                 // اختر نسبة أبعاد تمنح ارتفاعًا أكبر على الشاشات الصغيرة لمنع overflow
                 double aspect;
                 if (crossAxisCount == 1) {
-                  aspect = 1.18; // ارتفاع أكبر
+                  aspect = 1.12; // ارتفاع أكبر
                 } else if (crossAxisCount == 2) {
                   aspect = 1.25;
                 } else {
-                  aspect = 4 / 3.1; // المناسب للشاشات العريضة
+                  aspect = 4 / 3.2; // المناسب للشاشات العريضة
                 }
                 return FutureBuilder<List<OurAppInfo>>(
                   future: sl<GeneralController>().fetchApps(),

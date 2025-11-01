@@ -88,7 +88,7 @@ class DownloadRedirectController extends GetxController {
     final url = await _pickUrlForCurrentPlatform(a);
     final uri = Uri.tryParse(url);
     if (uri != null && await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.platformDefault);
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     }
   }
 
@@ -96,6 +96,27 @@ class DownloadRedirectController extends GetxController {
     // Web: نفضّل المتجر بحسب userAgent إن أمكن
     if (kIsWeb) {
       final agent = platformUserAgent();
+      // تفضيل هواوي على الويب إذا ظهر في userAgent
+      final looksHuawei = agent.contains('huawei') ||
+          agent.contains('huaweibrowser') ||
+          agent.contains('hms') ||
+          agent.contains('hmscore') ||
+          agent.contains('build/huawei') ||
+          agent.contains('build/honor') ||
+          agent.contains(' hw-') ||
+          agent.contains('harmony') ||
+          agent.contains('honor') ||
+          agent.contains('hisilicon') ||
+          agent.contains('petal');
+      if (looksHuawei) {
+        return a.urlAppGallery.isNotEmpty
+            ? a.urlAppGallery
+            : (a.urlPlayStore.isNotEmpty
+                ? a.urlPlayStore
+                : (a.urlAppStore.isNotEmpty
+                    ? a.urlAppStore
+                    : a.urlMacAppStore));
+      }
       if (agent.contains('iphone') ||
           agent.contains('ipad') ||
           agent.contains('mac os')) {
@@ -116,24 +137,31 @@ class DownloadRedirectController extends GetxController {
       case TargetPlatform.iOS:
         return a.urlAppStore.isNotEmpty ? a.urlAppStore : a.urlPlayStore;
       case TargetPlatform.android:
-        // استخدم كشف هواوي/جوجل على أجهزة أندرويد فقط
-        try {
-          final isHuawei =
-              await GoogleHuaweiAvailability.isHuaweiServiceAvailable;
-          final isGoogle =
-              await GoogleHuaweiAvailability.isGoogleServiceAvailable;
-          if (isHuawei == true) {
-            return a.urlAppGallery.isNotEmpty
-                ? a.urlAppGallery
-                : (a.urlPlayStore.isNotEmpty ? a.urlPlayStore : a.urlAppStore);
+        // استخدم كشف هواوي/جوجل على أجهزة أندرويد المحلية فقط (ليس الويب)
+        if (!kIsWeb) {
+          try {
+            final isHuawei =
+                await GoogleHuaweiAvailability.isHuaweiServiceAvailable;
+            final isGoogle =
+                await GoogleHuaweiAvailability.isGoogleServiceAvailable;
+            if (isHuawei == true) {
+              return a.urlAppGallery.isNotEmpty
+                  ? a.urlAppGallery
+                  : (a.urlPlayStore.isNotEmpty
+                      ? a.urlPlayStore
+                      : a.urlAppStore);
+            }
+            if (isGoogle == true) {
+              return a.urlPlayStore.isNotEmpty
+                  ? a.urlPlayStore
+                  : a.urlAppGallery;
+            }
+          } catch (_) {
+            // تجاهل الأخطاء واستخدم fallback
           }
-          if (isGoogle == true) {
-            return a.urlPlayStore.isNotEmpty ? a.urlPlayStore : a.urlAppGallery;
-          }
-        } catch (_) {
-          // تجاهل الأخطاء واستخدم fallback
         }
-        return a.urlPlayStore.isNotEmpty ? a.urlPlayStore : a.urlAppGallery;
+        // في حال عدم القدرة على تحديد هواوي/جوجل، نفضّل AppGallery أولًا على أجهزة أندرويد
+        return a.urlAppGallery.isNotEmpty ? a.urlAppGallery : a.urlPlayStore;
       case TargetPlatform.macOS:
         return a.urlMacAppStore.isNotEmpty ? a.urlMacAppStore : a.urlAppStore;
       case TargetPlatform.windows:

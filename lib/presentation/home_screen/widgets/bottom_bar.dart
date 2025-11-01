@@ -68,21 +68,24 @@ class BottomBar extends StatelessWidget {
                     const Gap(12),
                     // زر رئيسي لبدء المشروع
                     Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        ElevatedButton.icon(
-                          onPressed: () =>
-                              sl<AppRouter>().onItemTapped(4, context),
-                          icon: const Icon(Icons.send_outlined, size: 16),
-                          label: Text(
-                            'cta_start_project'.tr,
-                            style: const TextStyle(fontFamily: 'cairo'),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 14, vertical: 10),
-                            shape: const StadiumBorder(),
-                          ),
-                        ),
+                        isWide
+                            ? ElevatedButton.icon(
+                                onPressed: () =>
+                                    sl<AppRouter>().onItemTapped(4, context),
+                                icon: const Icon(Icons.send_outlined, size: 16),
+                                label: Text(
+                                  'cta_start_project'.tr,
+                                  style: const TextStyle(fontFamily: 'cairo'),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 14, vertical: 10),
+                                  shape: const StadiumBorder(),
+                                ),
+                              )
+                            : const SizedBox.shrink(),
                         const Gap(12),
                         const LanguageList(),
                       ],

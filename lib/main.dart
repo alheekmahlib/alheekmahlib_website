@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran_library/quran.dart';
 
 import 'core/services/services_locator.dart';
 import 'core/utils/helpers/languages/dependency_inj.dart' as dep;
@@ -11,6 +12,8 @@ void main() async {
   // Configure hash-based URL strategy for web so links like #/download/quran work
   configureAppUrlStrategy();
   Map<String, Map<String, String>> languages = await dep.init();
+  await QuranLibrary.init();
+  QuranLibrary().setFontsSelected = 1;
   await ServicesLocator().init();
   runApp(MyApp(languages: languages));
 }

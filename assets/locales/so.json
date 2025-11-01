@@ -5,7 +5,6 @@
   },
   "lastRead": "Wixii ugu dambeeya la akhriyay",
   "@lastRead": {
-    "description": "The Last Read"
   },
   "appLang": "Luuqadda App-ka",
   "@appLang": {
@@ -67,7 +66,7 @@
     "type": "text",
     "placeholders": {}
   },
-  "copyAzkarText": "Sికirka waa la nuqlay",
+  "copyAzkarText": "Sikirka waa la nuqlay",
   "@copyAzkarText": {
     "type": "text",
     "placeholders": {}
@@ -181,9 +180,9 @@
   "@azkar": {
     "type": "text",
     "placeholders": {}
-  },
-  "hero_title": "Waxaan sameynnaa apps mobile ah oo xirfadlayaal ah oo badan platform ah",
-  "hero_subtitle": "Fikradkaaga waxaan u beddelnaa khibrad dijitaal ah oo qurux badan oo ku shaqeysa iOS, Android, iyo Web-ka oo leh tayada sare iyo waxqabadka.",
+  },    
+  "hero_title": "Waxaan dhisnaa apps xirfadaysan oo loogu talagalay mobile, web, iyo desktop",
+    "hero_subtitle": "Waxaan u beddelnaa fikraddaada khibrad dijitaal ah oo nadiif ah oo si siman uga shaqeysa iOS, Android, Web, iyo Desktop iyadoo leh tayo iyo waxqabad sare.",
   "cta_start_project": "Bilow mashruucaaga",
   "cta_our_apps": "App-yadeenna",
   "cta_quran": "Qur'aanka Kariimka ah",
@@ -230,7 +229,7 @@
   "faq_a12": "Tab-ka \"Xiriir\" gudaha websiteka, farriintaadu si toos ah ayey u gaartaa kooxdeenna iyada oo aan app mail furanayn.",
   "about_title": "Yaa Nahay",
   "about_head": "Maktabadda Al Heekmah",
-  "about_body": "Waxaan nahay maktabad aan faa'iido doon ahayn oo ku takhasustay samaynta applications mobile ah oo leh dabeecad Islaam iyo tacliim. Waxaan dadaalnaa inaan bixinno xallooyin dijitaal ah oo la isku hallayn karo oo si fudud loo isticmaali karo kuwaas oo ka caawiya Muslimiinta inay akhriyaan, bartaan, oo ay u sii wadan inay ku dheggan yihiin xusuusinta Eebbe iyada oo loo marayo khibradooyin qurux badan oo qurux badan. Waxaan diiradda saarnaa waxqabadka, helitaanka, iyo taageerada platform badan si aan u hubinno in faa'iidadu ay gaarto tirada ugu badan ee isticmaalayaasha.",
+  "about_body": "Waxaan nahay maktabad ku takhasustay horumarinta iyo samaynta applications ah oo leh dabeecad Islaam iyo tacliim. Hadafkeennu waa inaan bixinno xallooyin dijitaal ah oo la isku hallayn karo oo si fudud loo isticmaali karo kuwaas oo ka caawiya Muslimiinta inay akhriyaan, bartaan, oo ay u sii wadan inay ku dheggan yihiin xusuusinta Eebbe iyada oo loo marayo khibradooyin farsamaysan oo qurux badan. Waxaan diiradda saarnaa waxqabad sare, helitaan, iyo taageerada platform badan si aan u hubinno in faa'iidadu ay gaarto tirada ugu badan ee isticmaalayaasha.",
   "about_contact_cta": "Waxaan ku faraxsannay xiriirka nala - noo qora hoose:",
   "contact_title": "Xiriir",
   "contact_head": "Aan bilaabno masharuucaaga xiga",
@@ -271,5 +270,13 @@
   "noBooksReadedYet": "Weli ma jirto buugag la akhriyay",
   "searchInBooks": "Ku raadi buugaagta",
   "downloading...": "Waa la soo dejinayaa...",
-  "noBooksDownloaded": "Weli ma jirto buugag la soo dejiyay"
+  "noBooksDownloaded": "Weli ma jirto buugag la soo dejiyay",
+  "juz": "Qayb",
+  "sajda": "Sujuud",
+  "surahNames": "Magacyada Suuradaha",
+  "aboutSurah": "Ku saabsan Suuradda",
+  "ayah_copied": "Aayada waa la nuqlay",
+  "translate": "Turjumaadaha",
+  "tafsirIsEmptyNote": "\n\nTafsirka aayadan wuxuu ku jiraa aayooyinka hore",
+  "footnotes": "Qoraalada Hoose"
 }
