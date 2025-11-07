@@ -14,6 +14,7 @@ import '../contact_us/screens/contact_us_page.dart';
 import '../home_screen/home_screen.dart';
 import '../our_apps/data/model/our_app_info_model.dart';
 import '../quran/screens/quran_screen.dart';
+import '../quran_sound/screen/quran_sound_screen.dart';
 
 class GeneralController extends GetxController {
   static GeneralController get instance =>
@@ -100,12 +101,20 @@ class GeneralController extends GetxController {
   //   }
   // }
 
-  List screensViews = [
-    const HomeScreen(),
-    const QuranScreen(),
-    const BooksScreen(),
-    const AzkarView(),
-    const ContactUsPage(),
+  // ترتيب الصفحات يجب أن يطابق ترتيب التبويبات والمسارات:
+  // 0: Home (/)
+  // 1: Quran (/quran)
+  // 2: Quran Sound (/sound)
+  // 3: Books (/books)
+  // 4: Athkar (/athkar)
+  // 5: Contact Us (/contact-us)
+  List screensViews = const [
+    HomeScreen(),
+    QuranScreen(),
+    QuranSoundScreen(),
+    BooksScreen(),
+    AzkarView(),
+    ContactUsPage(),
   ];
 
   Future<List<OurAppInfo>> fetchApps() async {

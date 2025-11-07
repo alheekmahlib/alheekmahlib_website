@@ -278,5 +278,19 @@
   "ayah_copied": "Aayada waa la nuqlay",
   "translate": "Turjumaadaha",
   "tafsirIsEmptyNote": "\n\nTafsirka aayadan wuxuu ku jiraa aayooyinka hore",
-  "footnotes": "Qoraalada Hoose"
+  "footnotes": "Qoraalada Hoose",
+  "ayah": "Aayad",
+  "ayahs": "Aayooyin",
+  "last_listen": "Dhageysi ugu dambeeyay",
+  "readers": "Akhristayaasha",
+  "index": "Tusmada",
+  "bookmarks": "Calaamadaha",
+  "surahs": "Suuradaha",
+  "juzz": "Qaybaha",
+  "quran_sounds": "Dhageyso Quraanka",
+  "no_bookmarks_yet": "Weli ma jiraan calaamado",
+  "greenBookmarks": "Calaamado Cagaar",
+  "yellowBookmarks": "Calaamado Jaalle",
+  "redBookmarks": "Calaamado Guduudan",
+  "hizb": "Hizb"
 }

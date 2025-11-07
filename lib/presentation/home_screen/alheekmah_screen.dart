@@ -1,6 +1,7 @@
 import 'package:alheekmahlib_website/core/utils/helpers/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quran_library/quran_library.dart';
 
 import '../../core/services/services_locator.dart';
 import '../../core/utils/constants/svg_picture.dart';
@@ -55,7 +56,12 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
                         ],
                       ),
                     ),
-                    TabBarUI(),
+                    Obx(
+                      () => QuranLibrary.quranCtrl.isShowControl.value &&
+                              general.tapIndex.value == 1
+                          ? TabBarUI()
+                          : const SizedBox.shrink(),
+                    ),
                   ],
                 )
               : Padding(

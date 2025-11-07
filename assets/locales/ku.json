@@ -279,5 +279,19 @@
   "ayah_copied": "ئایەت کۆپی کرا",
   "translate": "وەرگێڕانەکان",
   "tafsirIsEmptyNote": "\n\nلێکدانەوەی ئەم ئایەتە لە ئایەتە پێشووەکاندایە",
-  "footnotes": "تێبینیەکان"
+  "footnotes": "تێبینیەکان",
+  "ayah": "ئایەت",
+  "ayahs": "ئایەتەکان",
+  "last_listen": "کۆتا گوێگرتن",
+  "readers": "خوێنەرەکان",
+  "index": "پێڕست",
+  "bookmarks": "نیشانەکان",
+  "surahs": "سورەکان",
+  "juzz": "بەشەکان",
+  "quran_sounds": "گوێگرتن بۆ قورئان",
+  "no_bookmarks_yet": "هێشتا هیچ نیشانەیەک نییە",
+  "greenBookmarks": "نیشانە سەوزەکان",
+  "yellowBookmarks": "نیشانە زەردەکان",
+  "redBookmarks": "نیشانە سوورەکان",
+  "hizb": "حیزب"
 }

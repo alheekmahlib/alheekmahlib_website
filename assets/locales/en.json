@@ -280,5 +280,19 @@
   "ayah_copied": "Verse copied",
   "translate": "Translations",
   "tafsirIsEmptyNote": "\n\nThe interpretation of this verse is in the previous verses",
-  "footnotes": "Footnotes"
+  "footnotes": "Footnotes",
+  "ayah": "Verse",
+  "ayahs": "Verses",
+  "last_listen": "Last Listen",
+  "readers": "Reciters",
+  "index": "Index",
+  "bookmarks": "Bookmarks",
+  "surahs": "Surahs",
+  "juzz": "Parts",
+  "quran_sounds": "Listen to Quran",
+  "no_bookmarks_yet": "No bookmarks yet",
+  "greenBookmarks": "Green Bookmarks",
+  "yellowBookmarks": "Yellow Bookmarks",
+  "redBookmarks": "Red Bookmarks",
+  "hizb": "Hizb"
 }

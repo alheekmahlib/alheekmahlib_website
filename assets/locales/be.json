@@ -279,5 +279,19 @@
   "ayah_copied": "আয়াত কপি হয়েছে",
   "translate": "অনুবাদসমূহ",
   "tafsirIsEmptyNote": "\n\nএই আয়াতের তাফসীর পূর্ববর্তী আয়াতগুলিতে রয়েছে",
-  "footnotes": "ফুটনোট"
+  "footnotes": "ফুটনোট",
+  "ayah": "আয়াত",
+  "ayahs": "আয়াতসমূহ",
+  "last_listen": "সর্বশেষ শোনা",
+  "readers": "কারীগণ",
+  "index": "সূচি",
+  "bookmarks": "বুকমার্ক",
+  "surahs": "সূরাসমূহ",
+  "juzz": "পারাসমূহ",
+  "quran_sounds": "কুরআন শুনুন",
+  "no_bookmarks_yet": "এখনো কোনো বুকমার্ক নেই",
+  "greenBookmarks": "সবুজ বুকমার্ক",
+  "yellowBookmarks": "হলুদ বুকমার্ক",
+  "redBookmarks": "লাল বুকমার্ক",
+  "hizb": "হিযব"
 }

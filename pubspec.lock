@@ -771,7 +771,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: c34a127c942580eaf39eaf52fe533dfe5d37f238
+      resolved-ref: d9999eae7a7e72bf23a908eee62a9a3f32b63d5e
       url: "https://github.com/alheekmahlib/quran_library.git"
     source: git
     version: "2.2.4"
