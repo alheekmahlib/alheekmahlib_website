@@ -279,5 +279,19 @@
   "ayah_copied": "Nakopya ang talata",
   "translate": "Mga Pagsasalin",
   "tafsirIsEmptyNote": "\n\nAng interpretasyon ng talatang ito ay nasa mga nakaraang talata",
-  "footnotes": "Mga Talababa"
+  "footnotes": "Mga Talababa",
+  "ayah": "Talata",
+  "ayahs": "Mga Talata",
+  "last_listen": "Huling Pakikinig",
+  "readers": "Mga Mambabasa",
+  "index": "Indeks",
+  "bookmarks": "Mga Bookmark",
+  "surahs": "Mga Surah",
+  "juzz": "Mga Bahagi",
+  "quran_sounds": "Makinig sa Quran",
+  "no_bookmarks_yet": "Walang bookmark pa",
+  "greenBookmarks": "Berdeng Mga Bookmark",
+  "yellowBookmarks": "Dilaw na Mga Bookmark",
+  "redBookmarks": "Pulang Mga Bookmark",
+  "hizb": "Hizb"
 }

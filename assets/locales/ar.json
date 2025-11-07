@@ -281,5 +281,19 @@
   "ayah_copied": "تم نسخ الآية",
   "translate": "الترجمات",
   "tafsirIsEmptyNote": "\n\nتفسير هذه الآية في الأيات السابقة",
-  "footnotes": "الحاشية"
+  "footnotes": "الحاشية",
+  "ayah": "آية",
+  "ayahs": "آيات",
+  "last_listen": "آخر استماع",
+  "readers": "القراء",
+  "index": "الفهرس",
+  "bookmarks": "الفواصل",
+  "surahs": "السور",
+  "juzz": "الأجزاء",
+  "quran_sounds": "الإستماع للقرآن",
+  "no_bookmarks_yet": "لا توجد فواصل بعد",
+  "greenBookmarks": "فواصل خضراء",
+  "yellowBookmarks": "فواصل صفراء",
+  "redBookmarks": "فواصل حمراء",
+  "hizb": "الحزب"
 }

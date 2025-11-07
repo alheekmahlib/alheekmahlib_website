@@ -279,5 +279,19 @@
   "ayah_copied": "Aleya copiada",
   "translate": "Traducciones",
   "tafsirIsEmptyNote": "\n\nLa interpretación de esta aleya está en las aleyas anteriores",
-  "footnotes": "Notas al pie"
+  "footnotes": "Notas al pie",
+  "ayah": "Aleya",
+  "ayahs": "Aleyas",
+  "last_listen": "Última escucha",
+  "readers": "Recitadores",
+  "index": "Índice",
+  "bookmarks": "Marcadores",
+  "surahs": "Suras",
+  "juzz": "Partes",
+  "quran_sounds": "Escuchar el Corán",
+  "no_bookmarks_yet": "No hay marcadores aún",
+  "greenBookmarks": "Marcadores Verdes",
+  "yellowBookmarks": "Marcadores Amarillos",
+  "redBookmarks": "Marcadores Rojos",
+  "hizb": "Hizb"
 }

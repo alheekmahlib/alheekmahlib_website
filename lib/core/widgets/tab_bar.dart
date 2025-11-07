@@ -16,6 +16,7 @@ class TabBarUI extends StatelessWidget {
     final tapViews = [
       'home'.tr,
       'quran'.tr,
+      'quran_sounds'.tr,
       'books'.tr,
       'azkar'.tr,
       'contact_title'.tr

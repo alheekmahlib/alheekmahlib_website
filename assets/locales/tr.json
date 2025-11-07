@@ -279,5 +279,19 @@
   "ayah_copied": "Ayet kopyalandı",
   "translate": "Tercümeler",
   "tafsirIsEmptyNote": "\n\nBu ayetin tefsiri önceki ayetlerdedir",
-  "footnotes": "Dipnotlar"
+  "footnotes": "Dipnotlar",
+  "ayah": "Ayet",
+  "ayahs": "Ayetler",
+  "last_listen": "Son Dinlenen",
+  "readers": "Okuyucular",
+  "index": "Dizin",
+  "bookmarks": "Yer İmleri",
+  "surahs": "Sureler",
+  "juzz": "Cüzler",
+  "quran_sounds": "Kuran Dinle",
+  "no_bookmarks_yet": "Henüz yer imi yok",
+  "greenBookmarks": "Yeşil Yer İmleri",
+  "yellowBookmarks": "Sarı Yer İmleri",
+  "redBookmarks": "Kırmızı Yer İmleri",
+  "hizb": "Hizb"
 }

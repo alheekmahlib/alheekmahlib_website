@@ -279,5 +279,19 @@
   "ayah_copied": "Ayat disalin",
   "translate": "Terjemahan",
   "tafsirIsEmptyNote": "\n\nTafsir ayat ini ada di ayat-ayat sebelumnya",
-  "footnotes": "Catatan Kaki"
+  "footnotes": "Catatan Kaki",
+  "ayah": "Ayat",
+  "ayahs": "Ayat-ayat",
+  "last_listen": "Terakhir Didengar",
+  "readers": "Para Qari",
+  "index": "Indeks",
+  "bookmarks": "Penanda",
+  "surahs": "Surah-surah",
+  "juzz": "Juz-juz",
+  "quran_sounds": "Dengarkan Quran",
+  "no_bookmarks_yet": "Belum ada penanda",
+  "greenBookmarks": "Penanda Hijau",
+  "yellowBookmarks": "Penanda Kuning",
+  "redBookmarks": "Penanda Merah",
+  "hizb": "Hizb"
 }

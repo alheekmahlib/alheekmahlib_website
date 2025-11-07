@@ -15,6 +15,7 @@ import '../../../presentation/download_redirect/screens/download_redirect_screen
 import '../../../presentation/home_screen/alheekmah_screen.dart';
 import '../../../presentation/home_screen/home_screen.dart';
 import '../../../presentation/quran/screens/quran_screen.dart';
+import '../../../presentation/quran_sound/screen/quran_sound_screen.dart';
 import '../../services/services_locator.dart';
 import 'navigation_keys.dart';
 
@@ -30,6 +31,7 @@ class AppRouter {
   // Centralized route names to avoid magic strings.
   static const String routeHome = '/';
   static const String routeQuran = '/quran';
+  static const String routeQuranSound = '/sound';
   static const String routeBooks = '/books';
   static const String routeAthkar = '/athkar';
   static const String routeContactUs = '/contact-us';
@@ -85,6 +87,13 @@ class AppRouter {
                 });
               }
               return const QuranScreen();
+            },
+            routes: const <RouteBase>[],
+          ),
+          GoRoute(
+            path: routeQuranSound,
+            builder: (BuildContext context, GoRouterState state) {
+              return const QuranSoundScreen();
             },
             routes: const <RouteBase>[],
           ),
@@ -208,9 +217,10 @@ class AppRouter {
     log('Current Location: $location');
     if (location == routeHome) return 0;
     if (location.startsWith(routeQuran)) return 1;
-    if (location.startsWith(routeBooks)) return 2;
-    if (location.startsWith(routeAthkar)) return 3;
-    if (location.startsWith(routeContactUs)) return 4;
+    if (location.startsWith(routeQuranSound)) return 2;
+    if (location.startsWith(routeBooks)) return 3;
+    if (location.startsWith(routeAthkar)) return 4;
+    if (location.startsWith(routeContactUs)) return 5;
     return 0;
   }
 
@@ -227,14 +237,18 @@ class AppRouter {
         break;
       case 2:
         pageIndex = 2;
-        GoRouter.of(context).go(routeBooks);
+        GoRouter.of(context).go(routeQuranSound);
         break;
       case 3:
         pageIndex = 3;
-        GoRouter.of(context).go(routeAthkar);
+        GoRouter.of(context).go(routeBooks);
         break;
       case 4:
         pageIndex = 4;
+        GoRouter.of(context).go(routeAthkar);
+        break;
+      case 5:
+        pageIndex = 5;
         GoRouter.of(context).go(routeContactUs);
         break;
     }
@@ -254,8 +268,8 @@ class AppRouter {
       pageIndex = 0;
       sl<GeneralController>().tapIndex.value = 0;
     } else if (path.startsWith(routeContactUs)) {
-      pageIndex = 4;
-      sl<GeneralController>().tapIndex.value = 4;
+      pageIndex = 5;
+      sl<GeneralController>().tapIndex.value = 5;
     } else if (path.startsWith(routeQuran)) {
       pageIndex = 1;
       sl<GeneralController>().tapIndex.value = 1;
@@ -267,12 +281,15 @@ class AppRouter {
           QuranLibrary().jumpToPage(pageNumber);
         });
       }
-    } else if (path.startsWith(routeBooks)) {
+    } else if (path.startsWith(routeQuranSound)) {
       pageIndex = 2;
       sl<GeneralController>().tapIndex.value = 2;
-    } else if (path.startsWith(routeAthkar)) {
+    } else if (path.startsWith(routeBooks)) {
       pageIndex = 3;
       sl<GeneralController>().tapIndex.value = 3;
+    } else if (path.startsWith(routeAthkar)) {
+      pageIndex = 4;
+      sl<GeneralController>().tapIndex.value = 4;
     }
     if (pageIndex != null) {
       // Don't recreate controllers in build; just move to the right page.

@@ -279,5 +279,19 @@
   "ayah_copied": "آیت کاپی ہو گئی",
   "translate": "ترجمے",
   "tafsirIsEmptyNote": "\n\nاس آیت کی تفسیر سابقہ آیات میں ہے",
-  "footnotes": "حاشیہ"
+  "footnotes": "حاشیہ",
+  "ayah": "آیت",
+  "ayahs": "آیات",
+  "last_listen": "آخری سماعت",
+  "readers": "قاری حضرات",
+  "index": "فہرست",
+  "bookmarks": "نشانیاں",
+  "surahs": "سورتیں",
+  "juzz": "پارے",
+  "quran_sounds": "قرآن سنیں",
+  "no_bookmarks_yet": "ابھی تک کوئی نشانی نہیں",
+  "greenBookmarks": "سبز نشانیاں",
+  "yellowBookmarks": "زرد نشانیاں",
+  "redBookmarks": "سرخ نشانیاں",
+  "hizb": "حزب"
 }
