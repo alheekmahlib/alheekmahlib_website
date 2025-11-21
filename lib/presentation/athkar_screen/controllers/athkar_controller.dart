@@ -44,14 +44,14 @@ class AthkarController extends GetxController {
     final now = DateTime.now();
     // استخرج الفهرس الحالي بناءً على اليوم
     final dayOfYear = _dayOfYear(now);
-    final baseIndex = (now.year * 367 + dayOfYear) % athkar_list.length;
+    final baseIndex = (now.year * 367 + dayOfYear) % athkarList.length;
     // اختر فهرسًا آخر مختلفًا باستخدام مولّد عشوائي بسيط
     int altIndex = baseIndex;
-    if (athkar_list.length > 1) {
-      altIndex = (baseIndex + 1 + rnd.nextInt(athkar_list.length - 1)) %
-          athkar_list.length;
+    if (athkarList.length > 1) {
+      altIndex = (baseIndex + 1 + rnd.nextInt(athkarList.length - 1)) %
+          athkarList.length;
     }
-    dailyDua.value = athkar_list[altIndex];
+    dailyDua.value = athkarList[altIndex];
     element = dailyDua.value; // توافق للخلف
   }
 
@@ -60,8 +60,8 @@ class AthkarController extends GetxController {
     final dayOfYear = _dayOfYear(date);
     // ندمج السنة لضمان تغيّر الاختيار بين السنوات مع ثباته خلال اليوم
     final seed = date.year * 367 + dayOfYear;
-    final index = seed % athkar_list.length;
-    return athkar_list[index];
+    final index = seed % athkarList.length;
+    return athkarList[index];
   }
 
   int _dayOfYear(DateTime d) {

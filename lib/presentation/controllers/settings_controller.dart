@@ -1,9 +1,7 @@
 import 'dart:ui';
 
 import 'package:get/get.dart';
-
-import '../../core/services/services_locator.dart';
-import '../../core/services/shared_pref_services.dart';
+import 'package:get_storage/get_storage.dart';
 
 class SettingsController extends GetxController {
   Locale? initialLang;
@@ -24,11 +22,10 @@ class SettingsController extends GetxController {
   }
 
   Future<void> loadLang() async {
-    String? langCode = await sl<SharedPrefServices>().getString("lang");
-    String? langName = await sl<SharedPrefServices>()
-        .getString("langName", defaultValue: 'العربية');
-    String? langFont = await sl<SharedPrefServices>().getString("languageFont");
-    // String? langFont2 = await sl<SharedPrefServices>().getString("languageFont2");
+    String? langCode = GetStorage().read("lang") ?? 'ar';
+    String? langName = GetStorage().read("langName") ?? 'العربية';
+    String? langFont = GetStorage().read("languageFont") ?? 'naskh';
+    // String? langFont2 = GetStorage().read("languageFont2");
 
     if (langCode.isEmpty) {
       initialLang = const Locale('ar', 'AE');

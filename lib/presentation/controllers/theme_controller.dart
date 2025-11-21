@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
-
-import '../../core/services/services_locator.dart';
-import '../../core/services/shared_pref_services.dart';
+import 'package:get_storage/get_storage.dart';
 
 /// Simple theme controller using GetX that replaces `theme_provider`.
 ///
@@ -27,11 +25,18 @@ class ThemeController extends GetxController {
   }
 
   Future<void> _loadTheme() async {
-    final String saved = await sl<SharedPrefServices>().getString(_prefKey);
-    if (saved.isNotEmpty) {
-      themeId.value = saved;
-    } else {
-      // Fallback to system preference on first run
+    // قراءة آمنة للقيمة المخزّنة (قد تكون null في أول تشغيل)
+    final String? saved = GetStorage().read<String>(_prefKey);
+    if (saved != null && saved.isNotEmpty) {
+      // نتحقق أيضاً من صحة القيمة قبل اعتمادها
+      if (saved == 'dark' || saved == 'brown') {
+        themeId.value = saved;
+      }
+    }
+    if (saved == null ||
+        saved.isEmpty ||
+        (saved != 'dark' && saved != 'brown')) {
+      // fallback إلى تفضيل النظام عند عدم وجود قيمة صالحة
       final platformBrightness =
           SchedulerBinding.instance.platformDispatcher.platformBrightness;
       themeId.value = platformBrightness == Brightness.dark ? 'dark' : 'brown';
@@ -42,7 +47,7 @@ class ThemeController extends GetxController {
   Future<void> setTheme(String id) async {
     if (id != 'brown' && id != 'dark') return;
     themeId.value = id;
-    await sl<SharedPrefServices>().saveString(_prefKey, id);
+    await GetStorage().write(_prefKey, id);
     update();
   }
 

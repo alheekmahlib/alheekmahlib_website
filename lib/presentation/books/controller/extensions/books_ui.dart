@@ -9,7 +9,7 @@ extension BooksUi on BooksController {
       state.currentPageNumber.value = initialPage + 1;
       // بعد اختيار فصل، افتح شاشة القراءة
       final ctx = rootNavigatorKey.currentContext;
-      if (ctx != null) {
+      if (ctx!.mounted) {
         // استخدم ?page= للتمرير كصفحة 1-based لسهولة المشاركة
         final sharePage = (initialPage + 1).clamp(1, 1 << 20);
         ctx.go('/books/read/$bookNumber?page=$sharePage');
@@ -48,7 +48,7 @@ extension BooksUi on BooksController {
           loadChapters: false);
       // افتح شاشة القراءة عند التنقل لصفحة برقم
       final ctx = rootNavigatorKey.currentContext;
-      if (ctx != null) {
+      if (ctx!.mounted) {
         final sharePage = (pageNumber + 1).clamp(1, 1 << 20);
         ctx.go('/books/read/$bookNumber?page=$sharePage');
       }

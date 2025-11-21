@@ -11,14 +11,9 @@ import '../books/books.dart';
 import '../controllers/general_controller.dart';
 import 'widgets/bottom_bar.dart';
 
-class AlheekmahScreen extends StatefulWidget {
+class AlheekmahScreen extends StatelessWidget {
   const AlheekmahScreen({super.key});
 
-  @override
-  State<AlheekmahScreen> createState() => _AlheekmahScreenState();
-}
-
-class _AlheekmahScreenState extends State<AlheekmahScreen> {
   @override
   Widget build(BuildContext context) {
     sl<AppRouter>().itemRouter(context);
@@ -46,7 +41,7 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
                           InkWell(
                             onTap: () =>
                                 sl<AppRouter>().onItemTapped(0, context),
-                            child: alheekmah_logo(context, height: 30.0),
+                            child: alheekmahLogo(context, height: 30.0),
                           ),
                           ChangeThemeWidget(
                             svgColor: context.theme.colorScheme.primary,
@@ -71,7 +66,7 @@ class _AlheekmahScreenState extends State<AlheekmahScreen> {
                     children: [
                       InkWell(
                         onTap: () => sl<AppRouter>().onItemTapped(0, context),
-                        child: alheekmah_logo(context, height: 30.0),
+                        child: alheekmahLogo(context, height: 30.0),
                       ),
                       Flexible(child: TabBarUI()),
                       ChangeThemeWidget(

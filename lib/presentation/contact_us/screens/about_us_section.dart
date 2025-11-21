@@ -17,7 +17,7 @@ class AboutUsSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Gap(32),
-          alheekmah_logo(context, height: 100.0),
+          alheekmahLogo(context, height: 100.0),
           const Gap(8),
           Row(
             mainAxisSize: MainAxisSize.min,

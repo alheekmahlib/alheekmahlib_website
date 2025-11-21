@@ -140,7 +140,10 @@ Widget hijriDateLand(BuildContext context) {
       ),
       SvgPicture.asset(
         'assets/svg/hijri/${today.hMonth}.svg',
-        color: Theme.of(context).colorScheme.surface,
+        colorFilter: ColorFilter.mode(
+          Theme.of(context).colorScheme.surface,
+          BlendMode.srcIn,
+        ),
       ),
       const VerticalDivider(
         width: 2,
