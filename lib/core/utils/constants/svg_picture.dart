@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import 'extensions/dimensions.dart';
 
-alheekmah_logo(BuildContext context, {double? height, double? width}) {
+alheekmahLogo(BuildContext context, {double? height, double? width}) {
   return SvgPicture.asset(
     'assets/svg/alheekmah_logo.svg',
     height: height,

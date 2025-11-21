@@ -36,6 +36,8 @@ class QuranScreen extends StatelessWidget {
             ayahSelectedBackgroundColor:
                 context.theme.colorScheme.primary.withValues(alpha: .2),
             ayahIconColor: context.theme.colorScheme.primary,
+            // onPageChanged: (p) =>
+            //     QuranScreenController.instance.onPageChanged(p),
             surahInfoStyle:
                 SurahInfoStyle.defaults(isDark: isDark, context: context)
                     .copyWith(

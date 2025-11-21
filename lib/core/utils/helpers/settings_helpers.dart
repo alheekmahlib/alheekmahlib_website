@@ -1,27 +1,19 @@
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:get_storage/get_storage.dart';
 
 class SettingsHelpers {
-  SharedPreferences? prefs;
-
   static final SettingsHelpers instance = SettingsHelpers._internal();
-  SettingsHelpers._internal() {
-    _init();
-  }
+  SettingsHelpers._internal();
 
   factory SettingsHelpers() => instance;
 
-  void _init() async {
-    prefs = await SharedPreferences.getInstance();
-  }
-
   void fontSizeArabic(double fontSize) async {
-    await prefs!.setString('fontSizeArabic', fontSize.toString());
+    GetStorage().write('fontSizeArabic', fontSize.toString());
   }
 
   static const double minFontSizeArabic = 20;
 
   double? get getFontSizeArabic {
-    final fontSizeString = prefs?.getString('fontSizeArabic');
+    final fontSizeString = GetStorage().read('fontSizeArabic');
     if (fontSizeString == null || fontSizeString.isEmpty) {
       return minFontSizeArabic;
     }

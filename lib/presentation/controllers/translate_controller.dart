@@ -2,9 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
-import '../../core/services/services_locator.dart';
-import '../../core/services/shared_pref_services.dart';
 import '../../core/utils/constants/shared_preferences_constants.dart';
 
 class TranslateDataController extends GetxController {
@@ -28,43 +27,41 @@ class TranslateDataController extends GetxController {
     switch (transValue.value) {
       case 0:
         trans.value = 'en';
-        await sl<SharedPrefServices>().saveString(TRANS, 'en');
+        GetStorage().write(TRANS, 'en');
       case 1:
         trans.value = 'es';
-        await sl<SharedPrefServices>().saveString(TRANS, 'es');
+        GetStorage().write(TRANS, 'es');
       case 2:
         trans.value = 'be';
-        await sl<SharedPrefServices>().saveString(TRANS, 'be');
+        GetStorage().write(TRANS, 'be');
       case 3:
         trans.value = 'urdu';
-        await sl<SharedPrefServices>().saveString(TRANS, 'urdu');
+        GetStorage().write(TRANS, 'urdu');
       case 4:
         trans.value = 'so';
-        await sl<SharedPrefServices>().saveString(TRANS, 'so');
+        GetStorage().write(TRANS, 'so');
       case 5:
         trans.value = 'in';
-        await sl<SharedPrefServices>().saveString(TRANS, 'in');
+        GetStorage().write(TRANS, 'in');
       case 6:
         trans.value = 'ku';
-        await sl<SharedPrefServices>().saveString(TRANS, 'ku');
+        GetStorage().write(TRANS, 'ku');
       case 7:
         trans.value = 'tr';
-        await sl<SharedPrefServices>().saveString(TRANS, 'tr');
+        GetStorage().write(TRANS, 'tr');
       default:
         trans.value = 'en';
     }
   }
 
   Future<void> loadTranslateValue() async {
-    transValue.value = await sl<SharedPrefServices>()
-        .getInteger(TRANSLATE_VALUE, defaultValue: 0);
-    // String? tValue = await sl<SharedPrefServices>().getString(TRANS);
+    transValue.value = GetStorage().read(TRANSLATE_VALUE) ?? 0;
+    // String? tValue = GetStorage().read(TRANS);
     // if (tValue == null) {
     //   trans.value = tValue;
     // } else {
     //   trans.value = 'en'; // Setting to a valid default value
     // }
-    trans.value =
-        await sl<SharedPrefServices>().getString(TRANS, defaultValue: 'en');
+    trans.value = GetStorage().read(TRANS) ?? 'en';
   }
 }

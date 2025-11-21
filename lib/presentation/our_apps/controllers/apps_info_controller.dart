@@ -1,13 +1,14 @@
-import 'dart:developer';
-
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:infinite_carousel/infinite_carousel.dart';
-import 'package:url_launcher/url_launcher.dart';
+part of '../our_apps.dart';
 
 class AppsInfoController extends GetxController {
+  static AppsInfoController get instance =>
+      GetInstance().putOrFind(() => AppsInfoController());
+
   late InfiniteScrollController controller;
   int selectedIndex = 0;
+
+  /// معرف البطاقة الحالية التي عليها مؤشر الفأرة
+  final RxnInt hoveredId = RxnInt();
 
   @override
   void onInit() {

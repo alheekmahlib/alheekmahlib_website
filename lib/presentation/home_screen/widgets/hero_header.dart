@@ -87,7 +87,7 @@ class HeroHeader extends StatelessWidget {
           return Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(child: content),
+              content,
               const Gap(24),
               SizedBox(width: 380, child: _heroVisual(context)),
             ],
@@ -101,7 +101,7 @@ class HeroHeader extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        alheekmah_logo(context, height: 80.0),
+        alheekmahLogo(context, height: 80.0),
         Container(
           height: 240,
           decoration: BoxDecoration(

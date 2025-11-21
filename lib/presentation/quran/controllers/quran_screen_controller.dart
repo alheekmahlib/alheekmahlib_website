@@ -1,11 +1,14 @@
 import 'package:alheekmahlib_website/core/utils/helpers/navigation_keys.dart';
+import 'package:alheekmahlib_website/core/utils/helpers/url_updater.dart';
 import 'package:get/get.dart';
-import 'package:go_router/go_router.dart';
 import 'package:quran_library/quran.dart';
 
 /// Controller لمزامنة رقم الصفحة الحالي مع رابط المتصفح (?page=...)
 /// دون التأثير على أداء الواجهة.
 class QuranScreenController extends GetxController {
+  static QuranScreenController get instance =>
+      GetInstance().putOrFind(() => QuranScreenController());
+
   Worker? _pageUrlSyncWorker;
 
   @override
@@ -13,17 +16,16 @@ class QuranScreenController extends GetxController {
     super.onInit();
     _pageUrlSyncWorker = debounce<int>(
       QuranCtrl.instance.state.currentPageNumber,
-      _onPageChanged,
+      onPageChanged,
       time: const Duration(milliseconds: 200),
     );
   }
 
-  void _onPageChanged(int page) {
+  void onPageChanged(int page) {
     if (page <= 0) return;
     // استخدم rootNavigatorKey للحصول على سياق النافيجيتور ثم استخرج GoRouter مباشرة
     final ctx = rootNavigatorKey.currentContext;
     if (ctx == null) return;
-    final router = GoRouter.of(ctx);
     // استخلص الموقع الحالي بشكل متوافق مع الويب (يدعم Hash strategy)
     final uri = () {
       final frag = Uri.base.fragment; // مثال: '/quran?page=123'
@@ -44,8 +46,8 @@ class QuranScreenController extends GetxController {
       ...uri.queryParameters,
       'page': '$page',
     });
-    // استبدال الرابط دون إضافة سجل جديد
-    router.replace(newUri.toString());
+    // حدّث الرابط دون تحفيز إعادة بناء الملاح (على الويب)، أو عبر go_router في المنصات الأخرى
+    updateBrowserUrl(newUri.toString(), replace: true);
   }
 
   @override
