@@ -10,15 +10,22 @@ class QuranScreenController extends GetxController {
       GetInstance().putOrFind(() => QuranScreenController());
 
   Worker? _pageUrlSyncWorker;
+  int? _initialTargetPage; // الصفحة المطلوبة من رابط الدخول
+  bool _initialApplied = false;
+  int _attempts = 0;
+  static const int _maxAttempts = 20;
 
   @override
   void onInit() {
     super.onInit();
+    _readInitialPageFromUrl();
     _pageUrlSyncWorker = debounce<int>(
       QuranCtrl.instance.state.currentPageNumber,
       onPageChanged,
       time: const Duration(milliseconds: 200),
     );
+    // محاولات متكررة خفيفة لتطبيق الصفحة المطلوبة بعد البناء
+    _scheduleRetryApply();
   }
 
   void onPageChanged(int page) {
@@ -48,6 +55,44 @@ class QuranScreenController extends GetxController {
     });
     // حدّث الرابط دون تحفيز إعادة بناء الملاح (على الويب)، أو عبر go_router في المنصات الأخرى
     updateBrowserUrl(newUri.toString(), replace: true);
+  }
+
+  void _readInitialPageFromUrl() {
+    final frag = Uri.base.fragment; // مع استراتيجية الهاش
+    final full = frag.isNotEmpty ? Uri.parse(frag) : Uri.base;
+    final raw = full.queryParameters['page'];
+    final parsed = int.tryParse(raw ?? '');
+    if (parsed != null && parsed > 0) {
+      _initialTargetPage = parsed.clamp(1, 700); // حد أعلى احتياطي
+    }
+  }
+
+  void _scheduleRetryApply() {
+    if (_initialTargetPage == null || _initialApplied) return;
+    // إذا كانت الصفحة الحالية بالفعل الهدف اعتبرها مطبقة
+    if (QuranCtrl.instance.state.currentPageNumber.value ==
+        _initialTargetPage) {
+      _initialApplied = true;
+      return;
+    }
+    // جرّب القفز ثم أعد المحاولة لاحقًا حتى تنجح أو تنتهي المحاولات
+    Future.delayed(const Duration(milliseconds: 250), () {
+      if (_initialApplied) return;
+      _attempts++;
+      try {
+        if (_initialTargetPage != null) {
+          QuranLibrary().jumpToPage(_initialTargetPage!);
+        }
+        // تحقق إن تم التغيير فعلاً
+        if (QuranCtrl.instance.state.currentPageNumber.value ==
+            _initialTargetPage) {
+          _initialApplied = true;
+        }
+      } catch (_) {}
+      if (!_initialApplied && _attempts < _maxAttempts) {
+        _scheduleRetryApply();
+      }
+    });
   }
 
   @override

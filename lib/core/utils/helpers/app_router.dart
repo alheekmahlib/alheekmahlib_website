@@ -78,14 +78,6 @@ class AppRouter {
           GoRoute(
             path: routeQuran,
             builder: (BuildContext context, GoRouterState state) {
-              // إذا وُجد رقم صفحة في الرابط (?page=123) اقفز إلى تلك الصفحة
-              final pageParam = state.uri.queryParameters['page'];
-              final pageNumber = int.tryParse(pageParam ?? '');
-              if (pageNumber != null && pageNumber > 0) {
-                WidgetsBinding.instance.addPostFrameCallback((_) {
-                  QuranLibrary().jumpToPage(pageNumber);
-                });
-              }
               return const QuranScreen();
             },
             routes: const <RouteBase>[],
